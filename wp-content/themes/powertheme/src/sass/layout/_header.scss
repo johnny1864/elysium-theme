@@ -1,0 +1,58 @@
+.gheader {
+    z-index: 0;
+    margin: 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &-content {
+        padding: .75rem 1rem;
+    }
+
+    &__logo {
+        z-index: 100;
+        max-width: 180px;
+    }
+
+    &.sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        border-bottom: 1px solid transparent;
+        transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
+
+        &--scrolled {
+            @include box-shadow;
+            margin: 0;
+
+            background: $white;
+            border-bottom-color: $xlgray;
+        }
+    }
+}
+
+@media (max-width: $mobile - 1) {
+    .gheader {
+        &__logo {
+            max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: $laptop - 1) {
+    .gheader {
+
+        &__logo {
+            margin-right: auto;
+
+            svg, img {
+                max-height: 46px;
+            }
+        }
+    }
+}

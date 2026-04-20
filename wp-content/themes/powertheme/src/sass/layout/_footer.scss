@@ -1,0 +1,30 @@
+.gfooter {
+    color: $white;
+    background-color: $black;
+
+    &__content, &__bottom {
+        padding: 2rem 1.5rem;
+        overflow: hidden;
+    }
+
+    &__bottom {
+        padding: 1rem 1.5rem;
+        font-size: .9rem;
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    @media (min-width: $laptop) {
+        &__content {
+            padding: 3rem;
+        }
+
+        &__bottom {
+            padding: 1rem 3rem;
+        }
+    }
+}
