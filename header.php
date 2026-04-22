@@ -33,6 +33,7 @@
     <link rel="shortcut icon" href="<?php echo $site_favicon['url']; ?>" type="<?php echo $site_favicon['mime_type']; ?>" />
     <?php endif; ?>
 
+    <!-- fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ptm6tzn.css">
     
     <?php wp_head(); ?>
