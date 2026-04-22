@@ -1,11 +1,19 @@
-/*
-!.gitignore
-!bitbucket-pipelines*
-!gulpfile.js
-!package.json
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.DS_Store
+*.css.map
+*.js.map
 
-!/wp-content/
-/wp-content/*
-!/wp-content/themes/
-/wp-content/themes/*
-!/wp-content/themes/powertheme
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore specific theme files/assets
+node_modules
