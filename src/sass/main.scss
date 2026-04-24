@@ -1,18 +1,23 @@
-@use './includes/variables';
-@use './includes/reset';
-@use './includes/fonts';
-@use './includes/base';
+@import './includes/variables';
+@import './includes/reset';
+@import './includes/fonts';
+@import './includes/base';
+@import './includes/utils';
 
+@import './layout/header';
+@import './layout/footer';
+@import './layout/menus';
 
-@use './vendor/swiper';  
+@import './vendor/swiper';  
 
-@use './section/hero';
-@use './section/story-slides';
-@use './section/awards';
-@use './section/solutions';
-@use './section/instrusty-solutions';
-@use './section/testimonials';
-@use './section/brands';
-@use './section/bottom-form';
+@import './section/hero';
+@import './section/story-slides';
+@import './section/awards';
+@import './section/solutions';
+@import './section/instrusty-solutions';
+@import './section/testimonials';
+@import './section/brands';
+@import './section/bottom-form';
 
-@use './parts/button'; 
+@import './parts/button';
+@import './parts/forms'; 

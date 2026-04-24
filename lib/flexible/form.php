@@ -2,8 +2,9 @@
 $heading_thin = get_sub_field('heading_thin');
 $heading_bold = get_sub_field('heading_bold');
 $heading_line = get_sub_field('heading_line');
-$content      = get_sub_field('content');
-$cta          = get_sub_field('cta');
+$content = get_sub_field('content');
+$cta = get_sub_field('cta');
+$form_shortcode = get_sub_field('form_shortcode');
 ?>
 
 <section class="bottom-form">
@@ -41,13 +42,16 @@ $cta          = get_sub_field('cta');
 
         <?php if ($cta): ?>
             <div class="bottom-form__cta">
-                <a 
-                    href="<?php echo esc_url($cta['url']); ?>" 
-                    class="btn btn--pink"
-                    target="<?php echo esc_attr($cta['target'] ?: '_self'); ?>"
-                >
+                <a href="<?php echo esc_url($cta['url']); ?>" class="btn btn--pink"
+                    target="<?php echo esc_attr($cta['target'] ?: '_self'); ?>">
                     <?php echo esc_html($cta['title']); ?>
                 </a>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($form_shortcode): ?>
+            <div class="bottom-form__form">
+                <?php echo do_shortcode($form_shortcode); ?>
             </div>
         <?php endif; ?>
 

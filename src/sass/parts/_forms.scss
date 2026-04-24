@@ -1,3 +1,5 @@
+
+
 [type="text"],
 [type="email"],
 [type="password"],
@@ -32,21 +34,12 @@ select,
 [type="reset"] {
     @extend .btn;
 
-    > .svg-icon {
+    >.svg-icon {
         vertical-align: middle;
 
     }
 }
 
-.gform_next_button,
-[type="submit"] {
-    @extend .btn--secondary;
-}
-
-.gform_previous_button,
-[type="reset"] {
-    @extend .btn--outline;
-}
 
 span.required {
     color: $input_error;
@@ -96,14 +89,14 @@ span.required {
 
     &:disabled {
         // background: lighten($input_inactive, 10);
-        background: color-mix(in srgb,$input_inactive,#fff 15%);
+        background: color-mix(in srgb, $input_inactive, #fff 15%);
         cursor: not-allowed;
 
         &:checked {
             &:after {
                 background: $input_inactive;
                 // border-color: lighten($input_inactive, 10);
-                border-color: color-mix(in srgb,$input_inactive,#fff 15%);
+                border-color: color-mix(in srgb, $input_inactive, #fff 15%);
             }
         }
     }
@@ -190,7 +183,8 @@ textarea {
         pointer-events: none;
     }
 
-    select, [type="text"] {
+    select,
+    [type="text"] {
         background: transparent;
         z-index: 1;
         margin: 0;
