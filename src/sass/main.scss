@@ -1,21 +1,18 @@
-// Vendors
-@import "vendor/*";
+@use './includes/variables';
+@use './includes/reset';
+@use './includes/fonts';
+@use './includes/base';
 
-// Layout
-@import "layout/reset";
-@import "layout/global";
-@import "layout/header";
-@import "layout/menus";
-@import "layout/footer";
 
-//flexible
-@import "flexible/*";
+@use './vendor/swiper';  
 
-//atomic
-@import "atomic/*";
+@use './section/hero';
+@use './section/story-slides';
+@use './section/awards';
+@use './section/solutions';
+@use './section/instrusty-solutions';
+@use './section/testimonials';
+@use './section/brands';
+@use './section/bottom-form';
 
-//flexible
-@import "parts/*";
-
-// Pages
-@import "pages/*";
+@use './parts/button'; 

@@ -1,3 +1,5 @@
+@use './variables';
+
 @mixin clearfix() {
     &:after {
         content: "";
@@ -20,7 +22,7 @@
     }
 }
 
-@media (max-width: ($laptop - 1)) {
+@media (max-width: (1240px - 1)) {
     .full-mobile {
         width: calc(100% + 3rem);
         margin-left: -1.5rem;
@@ -37,7 +39,7 @@
         flex: 1 auto;
     }
 
-    @media (min-width: $laptop) {
+    @media (min-width: 1240px) {
         flex-direction: row;
         flex-wrap: wrap;
 
@@ -52,13 +54,13 @@
 }
 
 .desk-only {
-    @media (max-width: ($laptop - 1)) {
+    @media (max-width: (1240px - 1)) {
         display: none !important;
     }
 }
 
 .mob-only {
-    @media (min-width: $laptop) {
+    @media (min-width: 1240px) {
         display: none !important;
     }
 }
@@ -248,25 +250,25 @@
 }
 
 .margin-top-desk {
-    @media only screen and (min-width:$laptop) {
+    @media only screen and (min-width:1240px) {
         margin-top: 3rem;
     }
 }
 
 .margin-bottom-desk {
-    @media only screen and (min-width:$laptop) {
+    @media only screen and (min-width:1240px) {
         margin-bottom: 3rem;
     }
 }
 
 .margin-top-mob {
-    @media only screen and (max-width: ($laptop - 1)) {
+    @media only screen and (max-width: (1240px - 1)) {
         margin-top: 1.5rem;
     }
 }
 
 .margin-bottom-mob {
-    @media only screen and (max-width: ($laptop - 1)) {
+    @media only screen and (max-width: (1240px - 1)) {
         margin-bottom: 1.5rem;
     }
 }
@@ -280,25 +282,25 @@
 }
 
 .nopad-top-mob {
-    @media only screen and (max-width: ($laptop - 1)) {
+    @media only screen and (max-width: (1240px - 1)) {
         padding-top: 0;
     }
 }
 
 .nopad-bottom-mob {
-    @media only screen and (max-width: ($laptop - 1)) {
+    @media only screen and (max-width: (1240px - 1)) {
         padding-bottom: 0;
     }
 }
 
 .nopad-top-desk {
-    @media only screen and (min-width:$laptop) {
+    @media only screen and (min-width:1240px) {
         padding-top: 0rem;
     }
 }
 
 .nopad-bottom-desk {
-    @media only screen and (min-width:$laptop) {
+    @media only screen and (min-width:1240px) {
         padding-bottom: 0rem;
     }
 }
