@@ -95,6 +95,8 @@
             top: -50px;
         }
 
+
+
         &__heading {
 
             .thin {
@@ -109,8 +111,24 @@
             .lined {
                 vertical-align: middle;
                 margin-top: -15px;
+
+                &::after {
+                    right: -290px;
+                    top: 110px;
+                }
             }
         }
     }
 
+    &__form {
+        margin-top: 4.5rem;
+
+        .gform_wrapper {
+            max-width: 980px;
+        }
+    }
+
+    .gform_heading {
+        display: none;
+    }
 }

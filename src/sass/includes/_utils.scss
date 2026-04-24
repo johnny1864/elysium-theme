@@ -1,4 +1,4 @@
-@use './variables';
+
 
 @mixin clearfix() {
     &:after {
@@ -6,7 +6,7 @@
         clear: both;
         display: block;
     }
-}
+} 
 
 @mixin box-shadow($type: undefined) {
 
@@ -18,7 +18,7 @@
     }
 
     @else if $type=='reset' {
-        box-shadow: none;
+        box-shadow: none; 
     }
 }
 

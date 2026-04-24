@@ -1,6 +1,6 @@
 .gfooter {
-    color: $white;
-    background-color: $black;
+    color: #fff;
+    background-color: #000;
 
     &__content, &__bottom {
         padding: 2rem 1.5rem;
@@ -18,7 +18,7 @@
         }
     }
 
-    @media (min-width: $laptop) {
+    @media (min-width: 1140px) {
         &__content {
             padding: 3rem;
         }

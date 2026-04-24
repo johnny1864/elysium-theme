@@ -35,12 +35,11 @@
             left: 0;
             height: 3px;
             width: 100%;
-            background: $black;
+            background: #000;
             margin: auto;
             transition: background .16s ease, width .16s ease, transform .16s ease;
 
             &:before, &:after {
-                @extend span;
                 content: "";
             }
 
@@ -79,7 +78,7 @@
 
     }
 
-    @media(min-width:$laptop) {
+    @media(min-width: 1140px) {
         display: none;
     }
 }
@@ -108,7 +107,7 @@
             transform-origin: center;
         }
 
-        @media (min-width: $laptop) {
+        @media (min-width: 1140px) {
             height: 2.5rem;
             width: 2.5rem;
         }
@@ -127,7 +126,7 @@
             text-decoration: none;
             padding: 1rem;
             font-size: 1rem;
-            font-weight: $bold;
+            font-weight: 700;
 
             &:hover {
                 text-decoration: none;
@@ -153,7 +152,7 @@
         }
 
 
-        @media (min-width: $laptop) {
+        @media (min-width: 1140px) {
 
             &__link {
                 padding: 0;
@@ -170,7 +169,7 @@
 
 .menu--main {
     padding: inherit;
-    background: $white;
+    background: #fff;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -182,14 +181,14 @@
     margin-top: 3.5rem;
 
     .menu-item__submenu {
-        background: $xxlgray;
+        background: gray;
     }
 
     &.active {
         left: 0;
     }
 
-    @media (min-width: $laptop) {
+    @media (min-width: 1140px) {
         position: relative;
         top: initial;
         left: initial;
@@ -224,7 +223,7 @@
             }
 
             &__submenu {
-                background: $white;
+                background: #fff;
                 box-shadow: 0 .25rem .5rem rgba($black, .1);
                 border: 1px solid $xlgray;
                 position: absolute;
