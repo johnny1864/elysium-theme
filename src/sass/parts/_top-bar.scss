@@ -1,0 +1,23 @@
+.top-bar {
+    background-color: var(--color-blue);
+    padding: 0.25rem 1rem;
+
+    &__phone-number {
+        margin-right: 0.5rem;
+        font-weight: bold;
+        color: var(--color-white);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+        @media screen and (min-width: 980px) {
+            justify-content: flex-end;
+        }
+    }
+
+    
+} 

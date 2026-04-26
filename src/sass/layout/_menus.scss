@@ -17,6 +17,7 @@
     &__text {
         margin: 5px;
         vertical-align: middle;
+        display: none;
     }
 
     &__icon {
@@ -35,11 +36,12 @@
             left: 0;
             height: 3px;
             width: 100%;
-            background: #000;
+            background: var(--color-white);
             margin: auto;
             transition: background .16s ease, width .16s ease, transform .16s ease;
 
             &:before, &:after {
+                @extend span;
                 content: "";
             }
 
@@ -123,10 +125,13 @@
 
         &__link {
             display: block;
+            font-family: var(--heading-font-pt);
+            color: var(--color-white);
             text-decoration: none;
             padding: 1rem;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: normal;
+            text-transform: uppercase;
 
             &:hover {
                 text-decoration: none;
@@ -169,7 +174,7 @@
 
 .menu--main {
     padding: inherit;
-    background: #fff;
+    background: transparent;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -186,6 +191,9 @@
 
     &.active {
         left: 0;
+        @media (max-width: 989px) {
+            background-color: var(--color-blue);
+        }
     }
 
     @media (min-width: 1140px) {
@@ -195,11 +203,11 @@
         right: initial;
         bottom: initial;
         margin: 0;
-        margin-left: 2rem;
+        margin-left: 4rem;
 
-        > ul {
+         ul#menu-main-menu {
             display: flex;
-            align-items: center;
+            align-items: center; 
         }
 
         .mobile-arrow {
@@ -224,8 +232,8 @@
 
             &__submenu {
                 background: #fff;
-                box-shadow: 0 .25rem .5rem rgba($black, .1);
-                border: 1px solid $xlgray;
+                box-shadow: 0 .25rem .5rem rgba(var(--color-black), .1);
+                border: 1px solid var(--color-xdgray);
                 position: absolute;
                 top: 100%;
                 margin-top: 1rem;
@@ -255,7 +263,7 @@
         }
     }
 
-    @media (min-width: $laptop) {
+    @media (min-width: 980px) {
         .mobile-arrow {
             display: none;
         }

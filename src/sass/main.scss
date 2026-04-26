@@ -3,7 +3,9 @@
 @use './includes/variables';
 @use './includes/fonts';
 
+@use './layout/general';
 @use './layout/header';
+@use './layout/menus';
 @use './layout/footer';
 
 @use './vendor/swiper';  
@@ -18,4 +20,7 @@
 @use './section/bottom-form';
 
 @use './parts/button';  
-@use './parts/forms';  
+@use './parts/forms';
+@use './parts/top-bar';
+@use './parts/social-links';  
+

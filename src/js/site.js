@@ -13,7 +13,7 @@ if (window.location.hash) {
 jQuery(document).ready(function ($) {
   /*-----------------------------------------------------------------------------GLOBAL ON LOAD----*/
 
-  var SmoothScroll = (function () {
+  var SmoothScroll = (function () { 
     var $anchorLinks = $('a[href^="#"]').not('a[href="#"]');
 
     $('a[href="#"]').click(function (e) {
@@ -361,6 +361,7 @@ jQuery(document).ready(function ($) {
       return;
     }
 
+    var $topbar = $(".top-bar");
     var $header = $("header.gheader");
     var $nav = $header.find("nav.global");
     var $adminBar = $("#wpadminbar");
@@ -369,6 +370,10 @@ jQuery(document).ready(function ($) {
     if ($adminBar.length) {
       header_height += $adminBar.innerHeight();
     }
+    console.log("test");
+    // if($topbar.length) {
+    //   header_height += $top.innerHeight();
+    // }
     if (window.innerWidth < 960) {
       $nav.css({ marginTop: header_height });
     }
@@ -396,9 +401,9 @@ jQuery(document).ready(function ($) {
         $burgerMenu.removeClass("active").attr("title", "Menu");
         $text.text("Menu");
         $nav.removeClass("active").find(".active").removeClass("active");
-        $body.removeClass("no-scroll");
+        $body.removeClass("no-scroll"); 
 
-        var styles = { position: "sticky" };
+        var styles = { position: "fixed" };
         if ($adminBar.length) {
           styles.top = $adminBar.innerHeight();
         }
@@ -467,7 +472,7 @@ jQuery(document).ready(function ($) {
     })();
 
     window.addEventListener("resize", function () {
-      $header.css({ position: "sticky" });
+      $header.css({ position: "fixed" });
       BurgerMenu.close();
 
       var styles = { marginTop: window.innerWidth < 960 ? header_height : 0 };

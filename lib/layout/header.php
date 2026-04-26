@@ -12,6 +12,16 @@
 ?>
 
 <header <?php echo $class; ?>>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__content">
+                <div class="top-bar__phone-number">
+                    Call Us: 123-1323-13431
+                </div>
+                <?php echo getSocialLinks(); ?>
+            </div>
+        </div>
+    </div>
     <div class="gheader-content">
         <div class="container">
 
@@ -31,7 +41,7 @@
             </nav>
 
             <button type="button" class="menu-burger" title="Menu">
-                <span class="menu-burger__text">Menu</span>
+                <span class="menu-burger__text hidden">Menu</span>
                 <span class="menu-burger__icon"><span></span></span>
             </button>
 

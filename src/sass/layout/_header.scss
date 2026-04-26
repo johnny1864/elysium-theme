@@ -17,22 +17,23 @@
     &__logo {
         z-index: 100;
         max-width: 180px;
+        img {
+            height: auto;
+        }
     }
 
     &.sticky {
-        position: sticky;
+        position: fixed !important;
         top: 0;
         left: 0;
         right: 0;
         z-index: 999;
         border-bottom: 1px solid transparent;
         transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
-
         &--scrolled {
+            position: fixed;
             margin: 0;
-
-            background: #fff;
-            border-bottom-color: gray;
+            background-color: var(--color-blue);
         }
     }
 }
@@ -56,4 +57,8 @@
             }
         }
     }
+}
+
+.no-scroll .gheader {
+    background-color: var(--color-blue);
 }
