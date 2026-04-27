@@ -1272,6 +1272,7 @@ main {
   top: 0;
   left: 0;
   z-index: -1;
+  background: linear-gradient(to right, #f676af, #6c9aba);
 }
 .hero__bg img {
   width: 100%;
@@ -2137,6 +2138,7 @@ main {
 }
 .brands-slider .swiper-slide img {
   max-height: 180px;
+  object-fit: cover;
 }
 .brands-button-prev, .brands-button-next {
   width: 15px;

@@ -48,7 +48,7 @@ $slides = get_sub_field('slides');
                                     <?php
                                     echo wp_get_attachment_image(
                                         $slide['ID'],
-                                        'full',
+                                        'xl',
                                         false,
                                         [
                                             'alt' => esc_attr($slide['alt'] ?: 'Testimonial ' . ($index + 1)),
