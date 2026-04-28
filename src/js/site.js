@@ -712,9 +712,9 @@ jQuery(document).ready(function ($) {
     new Swiper(".brands-slider .swiper", {
       loop: true,
       spaceBetween: 30,
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         nextEl: ".brands-button-next",
         prevEl: ".brands-button-prev",
