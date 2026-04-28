@@ -37,7 +37,7 @@ $cta = get_sub_field('cta'); // Add this field if needed
                     $body = $item['content'] ?? '';
                     ?>
 
-                    <div class="industry-solutions__item <?php echo $index === 0 ? 'active' : ''; ?>">
+                    <div class="industry-solutions__item">
                         <button class="industry-solutions__trigger" type="button">
                             <?php if ($title): ?>
                                 <span class="industry-solutions__label">

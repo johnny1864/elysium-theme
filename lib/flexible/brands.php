@@ -20,21 +20,23 @@ $cta = get_sub_field('cta');
 
                         <?php foreach ($logos as $index => $logo): ?>
                             <div class="swiper-slide">
-                                <?php
-                                echo wp_get_attachment_image(
-                                    is_array($logo) ? $logo['ID'] : $logo,
-                                    'full',
-                                    false,
-                                    [
-                                        'alt' => esc_attr(
-                                            is_array($logo) && !empty($logo['alt'])
-                                            ? $logo['alt']
-                                            : 'Brand ' . ($index + 1)
-                                        ),
-                                        'loading' => 'lazy'
-                                    ]
-                                );
-                                ?>
+                                <div class="brands-slider__logo">
+                                    <?php
+                                    echo wp_get_attachment_image(
+                                        is_array($logo) ? $logo['ID'] : $logo,
+                                        'full',
+                                        false,
+                                        [
+                                            'alt' => esc_attr(
+                                                is_array($logo) && !empty($logo['alt'])
+                                                ? $logo['alt']
+                                                : 'Brand ' . ($index + 1)
+                                            ),
+                                            'loading' => 'lazy'
+                                        ]
+                                    );
+                                    ?>
+                                </div>
                             </div>
                         <?php endforeach; ?>
 

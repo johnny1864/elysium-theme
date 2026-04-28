@@ -74,7 +74,67 @@
         &__pagination {
             text-align: center;
         }
+
+        &__card {
+            position: relative;
+            max-width: 550px;
+            margin: 0 auto;
+            &-bg-image{
+                position: absolute;
+                height: calc(90% - 1rem);
+                width: calc(95% - 1rem);
+                top: 5%;
+                left: 5%;
+                object-fit: cover;
+            }
+
+            &-stars {
+                @media screen and (max-width: 749px) {
+                    max-width: 100px;
+                }
+            }
+
+            &-frame {
+                position: relative;
+            }
+
+            &-author {
+                font-family: var(--manus-font);
+                font-size: 1.75rem;
+                color: var(--color-turquoise-blue);
+                margin-bottom: 0.25rem;
+            }
+
+            &-quote {
+                margin-bottom: 1rem;
+            }
+
+            &-content {
+                position: absolute;
+                width: 65%;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1025px) {
+                &-content {
+                    top: 10%;
+                }
+                &-quote {
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+
+                &-author {
+                    font-size: 2.5rem;
+                }
+            }
+        }
     }
+
+    
 
 
     @media (min-width: 1024px) {

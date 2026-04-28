@@ -574,14 +574,13 @@ jQuery(document).ready(function ($) {
   (function () {
     const container = document.querySelector(".story-slides");
     if (!container) return;
-
     const swiper = new Swiper(".story-slides .swiper", {
       loop: false,
       effect: "fade",
       fadeEffect: {
         crossFade: true,
       },
-    });
+    }); 
 
     const bullets = document.querySelectorAll(".custom-bullet");
     const bgClasses = ["bg-1", "bg-2", "bg-3"];
@@ -617,8 +616,11 @@ jQuery(document).ready(function ($) {
     if (!document.querySelector(".awards-slider .swiper")) return;
 
     new Swiper(".awards-slider .swiper", {
-      loop: false,
+      loop: true,
       spaceBetween: 70,
+      autoplay: {
+        delay: 3000
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -708,8 +710,11 @@ jQuery(document).ready(function ($) {
     if (!document.querySelector(".brands-slider .swiper")) return;
 
     new Swiper(".brands-slider .swiper", {
-      loop: false,
-      spaceBetween: 70,
+      loop: true,
+      spaceBetween: 30,
+      // autoplay: {
+      //   delay: 5000,
+      // },
       navigation: {
         nextEl: ".brands-button-next",
         prevEl: ".brands-button-prev",

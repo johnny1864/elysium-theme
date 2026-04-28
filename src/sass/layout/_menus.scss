@@ -211,12 +211,15 @@
         }
 
         .mobile-arrow {
-            height: 1.5rem;
+            height: 1.25rem;
             width: 1rem;
 
             .svg-icon {
                 height: .75rem;
                 width: .75rem;
+                path {
+                    fill: var(--color-white);
+                }
             }
         }
 
@@ -227,21 +230,28 @@
             &__dropdown {
                 .menu-item__link {
                     padding-right: 1.5rem;
+                    
                 }
             }
 
             &__submenu {
                 background: #fff;
                 box-shadow: 0 .25rem .5rem rgba(var(--color-black), .1);
-                border: 1px solid var(--color-xdgray);
+                border: 1px solid #fff;
                 position: absolute;
                 top: 100%;
                 margin-top: 1rem;
-                padding: 1rem;
-                min-width: 15rem;
+                padding: 1rem 1rem 0.5rem;
+                min-width: 12rem;
                 transform: translate(-1rem);
                 border-radius: .5rem;
                 left: 0;
+                // box-shadow: 0 1rem .9rem -4px rgba(var(--color-black), .05);
+
+                .menu-item__link {
+                    color: var(--color-blue);
+                    padding-bottom: 0.5rem;
+                }
             }
 
         }

@@ -66,8 +66,14 @@
             text-align: center;
 
             img {
-                max-height: 180px;
-                object-fit: cover;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        @media (min-width: 980px) {
+            &__logo {
+                padding: 2rem 0;
             }
         }
     }
@@ -78,6 +84,10 @@
     }
 
     @media (min-width: 980px) {
+
+        &__logo {
+            padding: 1rem 0;
+        }
 
         &{
             padding-bottom: 2rem;

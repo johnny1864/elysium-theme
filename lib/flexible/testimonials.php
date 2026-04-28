@@ -41,26 +41,38 @@ $slides = get_sub_field('slides');
                 <div class="testimonial-slider">
                     <div class="swiper testimonial-swiper">
                         <div class="swiper-wrapper">
-
                             <?php foreach ($slides as $index => $slide): ?>
                                 <div class="swiper-slide">
-
-                                    <?php
-                                    echo wp_get_attachment_image(
-                                        $slide['ID'],
-                                        'xl',
-                                        false,
-                                        [
-                                            'alt' => esc_attr($slide['alt'] ?: 'Testimonial ' . ($index + 1)),
-                                            'loading' => 'lazy',
-                                        ]
-                                    );
-                                    ?>
+                                    <div class="testimonial-slider__card">
+                                        <?php
+                                            echo wp_get_attachment_image(
+                                                $slide['bg_image']['ID'],
+                                                'xl',
+                                                false,
+                                                [
+                                                    'class' => 'testimonial-slider__card-bg-image',
+                                                    'alt' => esc_attr($slide['bg_image']['alt'] ?: 'Testimonial ' . ($index + 1)),
+                                                    'loading' => 'lazy',
+                                                ]
+                                            );
+                                        ?>
+                                        <img class="testimonial-slider__card-frame" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/picture-frame.webp'); ?>" alt="">
+                                        <div class="testimonial-slider__card-content">
+                                            <img class="testimonial-slider__card-stars" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/stars.png'); ?>" alt="">
+                                            <p class="testimonial-slider__card-quote">
+                                                <?php echo $slide['quote'] ?>
+                                            </p>
+                                             <h5 class="testimonial-slider__card-author">
+                                                <?php echo $slide['author'] ?>
+                                             </h5>
+                                            <span class="testimonial-slider__card-author-title">
+                                                 <?php echo $slide['author_title'] ?>
+                                            </span>
                                         </div>
+                                    </div>
+                                </div>
                                 <?php endforeach; ?>
-
                             </div>
-
                             <div class="testimonial-slider__pagination"></div>
                         </div>
                     </div>

@@ -31,13 +31,13 @@
 
             <nav class="global menu menu--main" aria-label="main navigation">
                 <?php
-				wp_nav_menu(array(
-					'container' => false,
-					'items_wrap' => '<ul id="%1$s">%3$s</ul>',
-					'walker' => new PDM_Navwalker(),
-					'theme_location' => 'main'
-				));
-			?>
+				    wp_nav_menu(array(
+                        'container' => false,
+                        'items_wrap' => '<ul id="%1$s">%3$s</ul>',
+                        'walker' => new PDM_Navwalker(),
+                        'theme_location' => 'main'
+                    ));
+                ?>
             </nav>
 
             <button type="button" class="menu-burger" title="Menu">
