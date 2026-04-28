@@ -45,12 +45,12 @@
     </div>
 </footer>
 
-<div class="pdm-lightbox pdm-lightbox--reset">
+<!-- <div class="pdm-lightbox pdm-lightbox--reset">
     <div class="pdm-lightbox__container">
         <button class="pdm-lightbox__close" type="button">Close Popup</button>
         <div class="pdm-lightbox__content"></div>
     </div>
-</div>
+</div> -->
 
 <?php wp_footer(); ?>
 

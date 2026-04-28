@@ -7,7 +7,7 @@
 
     li {
         margin: 0;
-        padding: 0.25em;
+        padding: 0.3em;
         background-color: var(--color-pink);
         border-radius: 50%;
         + li {
@@ -16,8 +16,8 @@
     }
 
     .svg-icon {
-        height: 0.75em;
-        width: 0.75em;
+        height: 0.7em;
+        width: 0.7em;
 
         path {
             fill: var(--color-white);

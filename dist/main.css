@@ -337,6 +337,7 @@ main {
   height: 3.5rem;
   width: 3.5rem;
   color: inherit;
+  cursor: pointer;
 }
 .menu .mobile-arrow .svg-icon {
   position: absolute;
@@ -2094,6 +2095,15 @@ main {
     font-size: 2.5rem;
   }
 }
+@media screen and (max-width: 560px) {
+  .testimonials .testimonial-slider__card-quote {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .testimonials .testimonial-slider__card-author-title {
+    font-size: 0.8rem;
+  }
+}
 @media (min-width: 1024px) {
   .testimonials {
     padding-top: 6rem;
@@ -2112,6 +2122,9 @@ main {
   }
   .testimonials__eyebrow strong {
     margin-top: 0;
+  }
+  .testimonials__intro {
+    width: 40%;
   }
   .testimonials__heading {
     text-align: left;
@@ -2484,7 +2497,6 @@ main {
 }
 .top-bar__phone-number {
   margin-right: 0.5rem;
-  font-weight: bold;
   color: var(--color-white);
 }
 .top-bar__content {
@@ -2508,7 +2520,7 @@ main {
 }
 .social-links ul li {
   margin: 0;
-  padding: 0.25em;
+  padding: 0.3em;
   background-color: var(--color-pink);
   border-radius: 50%;
 }
@@ -2516,8 +2528,8 @@ main {
   margin-left: 0.5rem;
 }
 .social-links ul .svg-icon {
-  height: 0.75em;
-  width: 0.75em;
+  height: 0.7em;
+  width: 0.7em;
 }
 .social-links ul .svg-icon path {
   fill: var(--color-white);
