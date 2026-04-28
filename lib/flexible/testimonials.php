@@ -17,6 +17,7 @@ $slides = get_sub_field( 'slides' );
         height: 700px;
         perspective: 1000px;
         margin: 4rem 0 1rem;
+        transform: translateX(10%);
     }
 
     .card {
@@ -96,7 +97,7 @@ $slides = get_sub_field( 'slides' );
 
     .stack {
         height: 450px;
-        transform: translate(10%);
+        transform: translateX(10%);
     }
 
   }

@@ -220,9 +220,15 @@ main {
 .gheader__logo {
   z-index: 100;
   max-width: 180px;
+  transition: all 200ms ease;
 }
 .gheader__logo img {
   height: auto;
+}
+@media screen and (min-width: 1200px) {
+  .gheader:not(.sticky--scrolled) .gheader__logo {
+    max-width: 240px;
+  }
 }
 .gheader.sticky {
   position: fixed !important;
@@ -237,6 +243,7 @@ main {
   position: fixed;
   margin: 0;
   background-color: var(--color-blue);
+  box-shadow: 0 1rem 0.9rem -4px rgba(0, 0, 0, 0.05), 0 0.35rem 0.5rem -2px rgba(0, 0, 0, 0.1), 0 2px 1rem -0.25rem rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 399px) {

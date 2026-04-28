@@ -17,8 +17,17 @@
     &__logo {
         z-index: 100;
         max-width: 180px;
+        transition: all 200ms ease;
         img {
             height: auto;
+        }
+    }
+
+    &:not(.sticky--scrolled) {
+        @media screen and (min-width: 1200px) {
+            .gheader__logo {
+                max-width: 240px;    
+            }
         }
     }
 
@@ -34,6 +43,9 @@
             position: fixed;
             margin: 0;
             background-color: var(--color-blue);
+            box-shadow: 0 1rem .9rem -4px rgba(0,0,0, .05),
+            0 .35rem .5rem -2px rgba(0,0,0, .1),
+            0 2px 1rem -.25rem rgba(0,0,0, .08);
         }
     }
 }
