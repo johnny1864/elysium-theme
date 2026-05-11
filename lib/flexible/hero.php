@@ -54,43 +54,33 @@ $mobile_image_id = get_sub_field( 'mobile_image' )['ID'];
 			<p class="hero__bottom-text">Now, the best brands do too.</p>
 
 			<a href="#contact" class="btn">Let’s talk</a>
-		</div>
-
-		<div class="hero__video-wrapper">
-
-			<?php
-			$video_mp4 = get_sub_field( 'video_mp4' );
-			$video_webm = get_sub_field( 'video_webm' );
-			$video_poster = get_sub_field( 'video_poster' );
-			?>
-
-			<?php if ( $video_mp4 || $video_webm ) : ?>
-				<div class="hero__video">
-					<video autoplay loop muted playsinline preload="metadata"
-						poster="<?php echo $video_poster ? esc_url( $video_poster ) : ''; ?>">
-						<?php if ( $video_webm ) : ?>
-							<source src="<?php echo esc_url( $video_webm ); ?>" type="video/webm">
-						<?php endif; ?>
-						<?php if ( $video_mp4 ) : ?>
-							<source src="<?php echo esc_url( $video_mp4 ); ?>" type="video/mp4">
-						<?php endif; ?>
-					</video>
-				</div>
-			<?php endif; ?>
-
-			<?php if ( $img1 = get_sub_field( 'desktop_image_1' ) ) : ?>
-				<img class="hero__video-img hero__video-img1" src="<?php echo esc_url( $img1 ); ?>" alt="" loading="lazy"
-					aria-hidden="true" />
-			<?php endif; ?>
-
-			<?php if ( $img2 = get_sub_field( 'desktop_image_2' ) ) : ?>
-				<img class="hero__video-img hero__video-img2" src="<?php echo esc_url( $img2 ); ?>" alt="" loading="lazy"
-					aria-hidden="true" />
-			<?php endif; ?>
-
 			<img class="hero__video-arrow"
 				src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/video-arrow.svg' ); ?>" alt=""
 				aria-hidden="true" loading="lazy" />
 		</div>
+
+		<div class="hero__video-spacer desk-only"></div>
+	</div>
+
+	<div class="hero__video-wrapper desk-only">
+		<?php
+		$video_mp4 = get_sub_field( 'video_mp4' );
+		$video_webm = get_sub_field( 'video_webm' );
+		$video_poster = get_sub_field( 'video_poster' );
+		?>
+
+		<?php if ( $video_mp4 || $video_webm ) : ?>
+			<div class="hero__video">
+				<video autoplay loop muted playsinline preload="metadata"
+					poster="<?php echo $video_poster ? esc_url( $video_poster ) : ''; ?>">
+					<?php if ( $video_webm ) : ?>
+						<source src="<?php echo esc_url( $video_webm ); ?>" type="video/webm">
+					<?php endif; ?>
+					<?php if ( $video_mp4 ) : ?>
+						<source src="<?php echo esc_url( $video_mp4 ); ?>" type="video/mp4">
+					<?php endif; ?>
+				</video>
+			</div>
+		<?php endif; ?>		
 	</div>
 </section>
