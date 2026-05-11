@@ -2381,13 +2381,14 @@ main {
   font-family: var(--heading-font-pt);
   font-weight: 700;
   font-size: 1.8rem;
-  font-size: clamp(24px, 4vw, 38px);
+  font-size: clamp(2rem, 4vw, 40px);
 }
 .bottom-form__heading .lined {
-  font-family: var(--manus-font);
+  font-family: var(--heading-font-pt);
+  font-weight: bold;
   color: var(--color-pink);
-  text-transform: capitalize;
-  font-size: clamp(36px, 6vw, 50px);
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 40px);
   display: inline-block;
   position: relative;
 }
@@ -2404,10 +2405,10 @@ main {
   text-align: center;
   color: var(--color-blue);
   margin-top: 1.5rem;
-  max-width: 900px;
+  max-width: 955px;
   margin-left: auto;
   margin-right: auto;
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 .bottom-form__cta {
   text-align: center;
@@ -2427,18 +2428,17 @@ main {
   }
   .bottom-form__heading .lined {
     vertical-align: middle;
-    margin-top: -15px;
   }
   .bottom-form__heading .lined::after {
-    right: -290px;
-    top: 110px;
+    right: -260px;
+    top: 90px;
   }
 }
 .bottom-form__form {
   margin-top: 4.5rem;
 }
 .bottom-form__form .gform_wrapper {
-  max-width: 980px;
+  max-width: 960px;
 }
 .bottom-form .gform_heading {
   display: none;

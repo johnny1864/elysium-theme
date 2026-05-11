@@ -7,7 +7,7 @@ $cta = get_sub_field('cta');
 $form_shortcode = get_sub_field('form_shortcode');
 ?>
 
-<section class="bottom-form">
+<section id="form-block" class="bottom-form">
     <div class="container">
 
         <?php if ($heading_thin || $heading_bold || $heading_line): ?>
