@@ -51,6 +51,7 @@
             right: 0;
             margin: 0 auto;
             bottom: -22px;
+            max-width: 450px;
         }
 
         .thin {
@@ -68,12 +69,12 @@
         }
 
         .lined {
-            font-family: var(--manus-font);
-            color: var(--color-blue);
-            text-transform: capitalize;
-            font-size: clamp(36px, 6vw, 50px);
-            margin-top: -20px;
             display: block;
+            font-family: var(--heading-font-pt);
+            color: var(--color-blue);
+            text-transform: uppercase;
+            font-size: clamp(36px, 6vw, 50px);
+            font-weight: bold;
         }
     }
 
@@ -156,7 +157,7 @@
             }
 
             .lined {
-                margin-top: -25px;
+                
             }
         }
     }

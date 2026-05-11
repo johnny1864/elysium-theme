@@ -47,11 +47,21 @@
 
     &__eyebrow {
         display: inline-block;
-        font-family: var(--heading-font-pt);
+        font-family: var(--body-font);
         font-weight: 700;
         font-size: 1.8rem;
         margin-top: 5px;
-        font-size: clamp(28px, 4vw, 48px);
+        font-size: clamp(1.5rem, 4vw, 48px);
+        color: var(--color-blue);
+        text-transform: uppercase;
+    }
+
+    &__title {
+        display: block;
+        font-family: var(--heading-font-pt);
+        font-size: clamp(3rem, 6vw, 50px);
+        font-weight: bold;
+        line-height: 1;
         background: linear-gradient(90deg,
                 #ec0d6c 0%,
                 #a097b4 40%,
@@ -62,15 +72,6 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
-    }
-
-    &__title {
-        font-family: var(--manus-font);
-        color: var(--color-blue);
-        font-size: clamp(62px, 6vw, 50px);
-        display: block;
-        line-height: 0.7;
-        margin-top: -10px;
     }
 
     &__description {

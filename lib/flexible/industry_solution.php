@@ -10,16 +10,17 @@ $cta = get_sub_field('cta'); // Add this field if needed
     <div class="container">
 
         <div class="industry-solutions__header">
-            <?php if ($subtext): ?>
-                <p class="industry-solutions__eyebrow">
-                    <?php echo esc_html($subtext); ?>
-                </p>
-            <?php endif; ?>
-
+        
             <?php if ($heading): ?>
                 <h2 class="industry-solutions__title">
                     <?php echo esc_html($heading); ?>
                 </h2>
+            <?php endif; ?>
+
+            <?php if ($subtext): ?>
+                <p class="industry-solutions__eyebrow">
+                    <?php echo esc_html($subtext); ?>
+                </p>
             <?php endif; ?>
 
             <?php if ($content): ?>

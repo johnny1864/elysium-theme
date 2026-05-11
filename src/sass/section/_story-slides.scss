@@ -55,9 +55,9 @@
         font-size: clamp(18px, 2vw, 24px);
 
         span {
-            font-family: var(--manus-font);
+            font-family: var(--heading-font-pt);
             display: block;
-            font-weight: 400;
+            font-weight: bold;
             font-size: 1.7em;
         }
     }

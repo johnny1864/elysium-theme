@@ -29,7 +29,7 @@
             width: 120%;
             height: 8rem;
             background-color: var(--color-blue);
-            mask: radial-gradient(45% 8rem at top,#0000 98%,#000); 
+            mask: radial-gradient(45% 8rem at top, #0000 98%, #000);
         }
 
         img {
@@ -76,6 +76,7 @@
         color: transparent;
         font-size: clamp(70px, 10vw, 100px);
         letter-spacing: 8px;
+        line-height: 0.9;
     }
 
     &__title-img {
@@ -145,6 +146,22 @@
         }
     }
 
+    .svg-code {
+        &--hero-crop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+            transform: translateX(-75%);
+
+            svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
 
     @media (min-width: 768px) {
         .container {
@@ -174,10 +191,6 @@
     @media (min-width: 1140px) {
         &__title {
             letter-spacing: 24px;
-        }
-
-        &__intro-text {
-            margin-bottom: -20px;
         }
     }
 

@@ -53,7 +53,7 @@ $mobile_image_id = get_sub_field( 'mobile_image' )['ID'];
 
 			<p class="hero__bottom-text">Now, the best brands do too.</p>
 
-			<a href="#contact" class="btn">Let’s talk</a>
+			<a href="#form-block" class="btn btn--white">Let’s talk</a>
 			<img class="hero__video-arrow"
 				src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/video-arrow.svg' ); ?>" alt=""
 				aria-hidden="true" loading="lazy" />
@@ -80,7 +80,9 @@ $mobile_image_id = get_sub_field( 'mobile_image' )['ID'];
 						<source src="<?php echo esc_url( $video_mp4 ); ?>" type="video/mp4">
 					<?php endif; ?>
 				</video>
+				<?php echo getSVG('hero-crop', false, false); ?>
 			</div>
+			
 		<?php endif; ?>		
 	</div>
 </section>
