@@ -12,10 +12,13 @@
             <div class="row">
                 <div class="col col--left">
                     <div class="gfooter-content">
-                        <div class="gfooter__logo">
-                            <a class="site-logo" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
-                        </div>
-                        <?php echo getSocialLinks(); ?>
+                        <?php if(!empty($footer['footer_content'])) echo $footer['footer_content']; ?>
+                        <p class="copy">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col col--middle">
+                    <div class="gfooter__logo">
+                        <a class="site-logo" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
                     </div>
                 </div>
                 <div class="col col--right">
@@ -32,14 +35,6 @@
                         </nav>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="gfooter__bottom">
-        <div class="container">
-            <div class="gfooter__copy">
-                <p class="copy">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
             </div>
         </div>
     </div>

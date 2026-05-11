@@ -2,6 +2,7 @@
 @use './includes/base';  
 @use './includes/variables';
 @use './includes/fonts';
+@use './includes/_mixins.scss';
 
 @use './layout/general';
 @use './layout/header';

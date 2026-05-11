@@ -21,6 +21,22 @@
     }
 }
 
+.hidden {
+    display: none !important;
+}
+
+.desk-only {
+    @media (max-width: (1024px)) {
+        display: none !important;
+    }
+}
+
+.mobile-only {
+    @media (min-width: 1025px) {
+        display: none !important;
+    }
+}
+
 .svg-icon {
     position: relative;
     width: 1rem;

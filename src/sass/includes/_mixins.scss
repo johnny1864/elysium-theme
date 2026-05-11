@@ -1,0 +1,19 @@
+@mixin row {
+    display: flex;
+    flex-direction: column;
+    margin: -.5rem;
+
+    .col {
+        margin: .5rem;
+        flex: 1 auto;
+    }
+
+    @media (min-width: 1025px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
