@@ -103,7 +103,7 @@ $stories = get_sub_field('stories');
             </div>
 
             <!-- Pagination -->
-            <div class="swiper-pagination custom-pagination ">
+            <!-- <div class="swiper-pagination custom-pagination ">
                 <?php foreach ($stories as $index => $slide): ?>
                     <?php
                     $label = $slide['card_title'] ?: $slide['heading'];
@@ -121,7 +121,7 @@ $stories = get_sub_field('stories');
                         <span class="bullet-line"></span>
                     </div>
                 <?php endforeach; ?>
-            </div>
+            </div> -->
 
         </div>
     <?php endif; ?>
