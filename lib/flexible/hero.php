@@ -54,9 +54,9 @@ $mobile_image_id = get_sub_field( 'mobile_image' )['ID'];
 			<p class="hero__bottom-text">Now, the best brands do too.</p>
 
 			<a href="#form-block" class="btn btn--white">Let’s talk</a>
-			<img class="hero__video-arrow"
+			<!-- <img class="hero__video-arrow"
 				src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/video-arrow.svg' ); ?>" alt=""
-				aria-hidden="true" loading="lazy" />
+				aria-hidden="true" loading="lazy" /> -->
 		</div>
 
 		<div class="hero__video-spacer desk-only"></div>

@@ -203,6 +203,30 @@
                                     "parent_repeater": "field_69eadb54fb9f9"
                                 },
                                 {
+                                    "key": "field_6a026784cc95f",
+                                    "label": "Background Color",
+                                    "name": "bg_color",
+                                    "aria-label": "",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "#003b71",
+                                    "enable_opacity": 0,
+                                    "return_format": "string",
+                                    "allow_in_bindings": 0,
+                                    "show_custom_palette": 0,
+                                    "show_color_wheel": 1,
+                                    "custom_palette_source": "",
+                                    "palette_colors": "",
+                                    "parent_repeater": "field_69eadb54fb9f9"
+                                },
+                                {
                                     "key": "field_69eadba5fb9fc",
                                     "label": "CTA",
                                     "name": "cta",
@@ -1381,5 +1405,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1778453353
+    "modified": 1778542543
 }

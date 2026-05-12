@@ -1,16 +1,24 @@
 .story-slides {
-
     color: #fff;
     position: relative;
     z-index: 2;
     padding-top: 2.5rem;
-    margin-top: -90px;
     padding-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
     overflow: visible;
     min-height: auto;
     height: auto;
 
     &.bg-1 {
+        background-color: #e21c78;
+
+        &::before {
+            background-image: url(./images/stories-before-img3.png);
+        }
+    }
+
+    &.bg-2 {
         background-color: #003b71;
 
         &::before {
@@ -18,19 +26,11 @@
         }
     }
 
-    &.bg-2 {
+    &.bg-3 {
         background-color: #71d9d2;
 
         &::before {
             background-image: url(./images/stories-before-img2.png);
-        }
-    }
-
-    &.bg-3 {
-        background-color: #e21c78;
-
-        &::before {
-            background-image: url(./images/stories-before-img3.png);
         }
     }
 
@@ -132,12 +132,24 @@
         width: 100%;
         height: auto;
 
-        &-wrapper {
+        &-wrapper-off {
             height: auto;
+            display:flex;
+            width:fit-content; 
+            flex-wrap:nowrap;
         }
 
         &-pagination {
             // keep empty if needed later
+        }
+
+        &-slide-off {
+            width: 100vw;
+            padding: 3rem 1.5rem;
+
+            @media screen and (min-width: 990px) {
+    
+            }
         }
 
         &-slide {
@@ -156,49 +168,49 @@
         gap: 40px;
         position: static;
         margin-top: 50px;
+    }
 
-        .custom-bullet {
-            flex: 1;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            transition: .2s all;
+    .custom-bullet {
+        flex: 1;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        transition: .2s all;
 
-            &:not(.active):hover {
-                opacity: .3;
-            }
+        &:not(.active):hover {
+            opacity: .3;
+        }
 
-            .bullet-number {
-                color: rgba(255, 255, 255, 0.6);
-                text-align: left;
-                font-family: var(--heading-font-pt);
-                font-weight: 700;
+        .bullet-number {
+            color: rgba(255, 255, 255, 0.6);
+            text-align: left;
+            font-family: var(--heading-font-pt);
+            font-weight: 700;
+        }
+
+        .bullet-line {
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .bullet-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            display: none;
+        }
+
+        &.active {
+
+            .bullet-number,
+            .bullet-label {
+                color: #fff;
+                font-weight: 400;
             }
 
             .bullet-line {
-                height: 2px;
-                background: rgba(255, 255, 255, 0.3);
-            }
-
-            .bullet-label {
-                font-size: 11px;
-                color: rgba(255, 255, 255, 0.7);
-                text-transform: uppercase;
-                display: none;
-            }
-
-            &.active {
-
-                .bullet-number,
-                .bullet-label {
-                    color: #fff;
-                    font-weight: 400;
-                }
-
-                .bullet-line {
-                    background: #fff;
-                }
+                background: #fff;
             }
         }
     }
@@ -233,7 +245,11 @@
             padding-bottom: 4.5rem;
         }
 
-        .custom-pagination .bullet-number {
+        .custom-bullet {
+            width: 33%;
+        }
+
+        .bullet-number {
             display: flex;
             align-items: center;
             flex-direction: row;
@@ -241,13 +257,13 @@
             font-family: var(--heading-font-pt);
         }
 
-        .custom-pagination .custom-bullet .bullet-label {
+         .custom-bullet .bullet-label {
             font-family: var(--body-font);
             font-weight: 400;
             font-size: .8rem;
         }
 
-        .custom-pagination .custom-bullet.active .bullet-label {
+        .custom-bullet.active .bullet-label {
             display: block;
         }
 

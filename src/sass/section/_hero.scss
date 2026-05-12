@@ -9,6 +9,7 @@
         padding-right: 0;
 
         &__content {
+            padding-top: 0;
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
@@ -27,7 +28,7 @@
             bottom: -1px;
             left: -10%;
             width: 120%;
-            height: 8rem;
+            height: 10rem;
             background-color: var(--color-blue);
             mask: radial-gradient(45% 8rem at top, #0000 98%, #000);
         }
@@ -159,6 +160,14 @@
                 height: 100%;
                 width: 100%;
             }
+        }
+    }
+
+     @media screen and (max-width: 750px) {
+        &__content {
+            padding-top: 0;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
     }
 

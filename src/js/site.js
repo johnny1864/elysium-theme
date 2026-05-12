@@ -13,7 +13,7 @@ if (window.location.hash) {
 jQuery(document).ready(function ($) {
   /*-----------------------------------------------------------------------------GLOBAL ON LOAD----*/
 
-  var SmoothScroll = (function () { 
+  var SmoothScroll = (function () {
     var $anchorLinks = $('a[href^="#"]').not('a[href="#"]');
 
     $('a[href="#"]').click(function (e) {
@@ -401,7 +401,7 @@ jQuery(document).ready(function ($) {
         $burgerMenu.removeClass("active").attr("title", "Menu");
         $text.text("Menu");
         $nav.removeClass("active").find(".active").removeClass("active");
-        $body.removeClass("no-scroll"); 
+        $body.removeClass("no-scroll");
 
         var styles = { position: "fixed" };
         if ($adminBar.length) {
@@ -580,7 +580,7 @@ jQuery(document).ready(function ($) {
       fadeEffect: {
         crossFade: true,
       },
-    }); 
+    });
 
     const bullets = document.querySelectorAll(".custom-bullet");
     const bgClasses = ["bg-1", "bg-2", "bg-3"];
@@ -609,6 +609,56 @@ jQuery(document).ready(function ($) {
 
     setActiveBullet(0);
     updateBg(0);
+    // swiper.destroy(true, true);
+  })();
+
+  (function () {
+    const section = document.querySelector(".story-slides");
+    if (!section) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const wrapper = section.querySelector(".swiper-wrapper-off");
+    const panels = gsap.utils.toArray(".swiper-slide-off");
+    function initHorizontalScroll() {
+      const scrollDistance = wrapper.scrollWidth - window.innerWidth;
+
+      gsap.to(wrapper, {
+        x: -scrollDistance,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top-=100",
+          end: () => `+=${scrollDistance}`,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      panels.forEach((panel, index) => {
+        ScrollTrigger.create({
+          trigger: section,
+          start: () => `top+=${index * window.innerWidth} top`,
+          end: () => `top+=${(index + 1) * window.innerWidth} top`,
+          onEnter: () => changeSectionBg(panel),
+          onEnterBack: () => changeSectionBg(panel),
+        });
+      });
+
+      function changeSectionBg(panel) {
+        const bgColor = panel.dataset.bg;
+
+        gsap.to(section, {
+          backgroundColor: bgColor,
+          duration: 0.35,
+          ease: "power2.out",
+        });
+      }
+    }
+
+    initHorizontalScroll();
   })();
 
   // ================= AWARDS SLIDER =================
@@ -619,7 +669,7 @@ jQuery(document).ready(function ($) {
       loop: true,
       spaceBetween: 70,
       autoplay: {
-        delay: 3000
+        delay: 3000,
       },
       navigation: {
         nextEl: ".swiper-button-next",

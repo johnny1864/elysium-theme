@@ -16,7 +16,7 @@
         <div class="container">
             <div class="top-bar__content">
                 <div class="top-bar__phone-number">
-                    Call Us: 123-1323-13431
+                    Call Us 484-684-7420
                 </div>
                 <?php echo getSocialLinks(); ?>
             </div>
