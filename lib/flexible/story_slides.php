@@ -4,7 +4,8 @@ $heading = get_sub_field('heading');
 $stories = get_sub_field('stories');
 ?>
 
-<section class="story-slides">
+<section class="story-slides bg-1">
+    <div class="story-slides__wrapper"> 
     <div class="container">
         <div class="story-slides__intro">
             <?php if ($eyebrow || $heading): ?>
@@ -18,8 +19,8 @@ $stories = get_sub_field('stories');
         </div>
     </div>
     <?php if ($stories): ?>
-        <div class="swiper-off">
-            <div class="swiper-wrapper-off">
+        <div class="story-slides__panels">
+            <div class="story-slides__track">
 
                 <?php foreach ($stories as $index => $slide): ?>
 
@@ -33,68 +34,77 @@ $stories = get_sub_field('stories');
                     $bg_color = $slide['bg_color'];
                     ?>
 
-                    <div class="swiper-slide-off" data-bg="<?php echo $bg_color; ?>">
-                        <div class="swiper-slide__container .container">
-                            <div class="story-slides__content">
+                    <div class="story-slides__panel" data-bg="<?php echo $bg_color; ?>">
+                        <div class="story-slides__panel--inner">
+                            <div class="swiper-slide__container">
+                                <div class="story-slides__content">
 
-                                <?php if ($heading): ?>
-                                    <h3 class="story-slides__content-heading">
-                                        <?php echo esc_html($heading); ?>
-                                    </h3>
-                                <?php endif; ?>
-
-                                <?php if ($content): ?>
-                                    <?php echo wp_kses_post($content); ?>
-                                <?php endif; ?>
-
-                                <?php if ($cta): ?>
-                                    <a href="<?php echo esc_url($cta['url']); ?>" class="btn btn--white"
-                                        target="<?php echo esc_attr($cta['target'] ?: '_self'); ?>">
-                                        <?php echo esc_html($cta['title']); ?>
-                                    </a>
-                                <?php endif; ?>
-
-                            </div>
-
-                            <div class="story-slides__image-area">
-
-                                <?php if ($card_image): ?>
-                                    <div class="story-slides__image">
-                                        <?php echo wp_get_attachment_image($card_image, 'full'); ?>
-                                    </div>
-                                <?php endif; ?>
-
-                                <div class="story-slides__image-content">
-
-                                    <?php if ($card_title): ?>
-                                        <h4 class="story-slides__card-title">
-                                            <?php echo esc_html($card_title); ?>
-                                        </h4>
+                                    <?php if ($heading): ?>
+                                        <h3 class="story-slides__content-heading <?php if($index != 0) : ?>reveal<?php endif;?>">
+                                            <?php echo esc_html($heading); ?>
+                                        </h3>
                                     <?php endif; ?>
 
-                                    <?php if ($card_body): ?>
-                                        <div class="story-slides__card-content">
-                                            <?php echo wp_kses_post($card_body); ?>
+                                    <?php if ($content): ?>
+                                        <div class="story-slides__content-text <?php if($index != 0) : ?>reveal<?php endif;?>">
+                                            <?php echo wp_kses_post($content); ?>
+                                        </div>     
+                                    <?php endif; ?>
+
+                                    <?php if ($cta): ?>
+                                        <a href="<?php echo esc_url($cta['url']); ?>" class="btn btn--white <?php if($index != 0) : ?>reveal<?php endif;?>"
+                                            target="<?php echo esc_attr($cta['target'] ?: '_self'); ?>">
+                                            <?php echo esc_html($cta['title']); ?>
+                                        </a>
+                                    <?php endif; ?>
+
+                                    <?php
+                                    $label = $slide['card_title'] ?: $slide['heading'];
+                                    ?>
+                                    <div class="custom-bullet__wrapper <?php if($index != 0) : ?>reveal<?php endif;?>">
+                                        <div class="custom-bullet active"
+                                            data-index="<?php echo esc_attr($index); ?>">
+                                            <span class="bullet-number">
+                                                <?php echo esc_html(str_pad($index + 1, 2, '0', STR_PAD_LEFT)); ?>
+                                                <?php if ($label): ?>
+                                                    <span class="bullet-label">
+                                                        <?php echo esc_html($label); ?>
+                                                    </span>
+                                                <?php endif; ?>
+                                            </span>
+                                            <span class="bullet-line"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="story-slides__image-area">
+
+                                    <?php if ($card_image): ?>
+                                        <div class="story-slides__image">
+                                            <?php echo wp_get_attachment_image($card_image, 'full'); ?>
                                         </div>
                                     <?php endif; ?>
 
+                                    <div class="story-slides__image-content">
+
+                                        <?php if ($card_title): ?>
+                                            <h4 class="story-slides__card-title <?php if($index != 0) : ?>reveal<?php endif;?>">
+                                                <?php echo esc_html($card_title); ?>
+                                            </h4>
+                                        <?php endif; ?>
+
+                                        <?php if ($card_body): ?>
+                                            <div class="story-slides__card-content <?php if($index != 0) : ?>reveal<?php endif;?>">
+                                                <?php echo wp_kses_post($card_body); ?>
+                                            </div>
+                                        <?php endif; ?>
+
+                                    </div>
                                 </div>
+                                
                             </div>
-                        </div>
-                        <?php
-                        $label = $slide['card_title'] ?: $slide['heading'];
-                        ?>
-                        <div class="custom-bullet <?php echo $index === 0 ? 'active' : ''; ?>"
-                            data-index="<?php echo esc_attr($index); ?>">
-                            <span class="bullet-number">
-                                <?php echo esc_html(str_pad($index + 1, 2, '0', STR_PAD_LEFT)); ?>
-                                <?php if ($label): ?>
-                                    <span class="bullet-label">
-                                        <?php echo esc_html($label); ?>
-                                    </span>
-                                <?php endif; ?>
-                            </span>
-                            <span class="bullet-line"></span>
+                            
                         </div>
                     </div>
 
@@ -125,5 +135,5 @@ $stories = get_sub_field('stories');
 
         </div>
     <?php endif; ?>
-    
+    </div>
 </section>

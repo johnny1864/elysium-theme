@@ -610,15 +610,102 @@ jQuery(document).ready(function ($) {
     setActiveBullet(0);
     updateBg(0);
     // swiper.destroy(true, true);
-  })();
+  });
 
   (function () {
+    const header = document.querySelector(".gheader");
     const section = document.querySelector(".story-slides");
     if (!section) return;
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const wrapper = section.querySelector(".swiper-wrapper-off");
+    function initHorizontalScroll() {
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 990px)", () => {
+        const track = section.querySelector(".story-slides__track");
+        const panels = gsap.utils.toArray(".story-slides__panel");
+
+        const setActivePanel = (index) => {
+          // Strip any existing panel-N class, then add the current one.
+          section.className = section.className.replace(/\bbg-\d+\b/g, "").trim();
+          section.classList.add("bg-" + index);
+        };
+
+        // 1. Horizontal scroll: translate the track by the width of (n - 1) panels.
+        const scrollTween = gsap.to(track, {
+          x: () => -(track.scrollWidth - window.innerWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            pin: true,
+            scrub: 1,
+            start: "top-=20 top",
+            end: () => "+=" + (track.scrollWidth - window.innerWidth),
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+            onEnter: () => {
+              section.classList.add("active");
+              header.classList.add("hide");
+            },
+            onEnterBack: () => {
+              section.classList.add("active");
+              header.classList.add("hide");
+            },
+            onLeave: () => {
+              section.classList.remove("active");
+              header.classList.remove("hide");
+            },
+            onLeaveBack: () => {
+              section.classList.remove("active");
+              header.classList.remove("hide");
+            },
+          },
+        });
+
+        // 2. Fade each panel's content in as that panel enters the viewport.
+        //    containerAnimation hooks the trigger into the horizontal tween,
+        //    so "start: left 80%" means "when the panel's left edge crosses
+        //    80% of the viewport width during the horizontal scroll."
+        panels.forEach((panel, i) => {
+          const items = panel.querySelectorAll(".reveal");
+          const panelIndex = i + 1;
+
+          // Resolve the panel's target color from its CSS custom property.
+          const targetBg = getComputedStyle(panel)
+            .getPropertyValue("--target-bg")
+            .trim();
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: panel,
+              containerAnimation: scrollTween,
+              start: "left 80%",
+              toggleActions: "play none none reverse",
+              onEnter:     () => setActivePanel(panelIndex),
+              onEnterBack: () => setActivePanel(panelIndex),
+            },
+          });
+
+          // Background color shifts in first, content reveals on top.
+          tl.to(panel, {
+            duration: 1,
+            ease: "power2.inOut",
+          }).to(
+            items,
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power2.out",
+              stagger: 0.12,
+            },
+            "-=0.6", // overlap so they feel simultaneous
+          );
+        });
+      });
+    }
+
+    /*const wrapper = section.querySelector(".swiper-wrapper-off");
     const panels = gsap.utils.toArray(".swiper-slide-off");
     function initHorizontalScroll() {
       const scrollDistance = wrapper.scrollWidth - window.innerWidth;
@@ -656,7 +743,7 @@ jQuery(document).ready(function ($) {
           ease: "power2.out",
         });
       }
-    }
+    }*/
 
     initHorizontalScroll();
   })();

@@ -36,9 +36,9 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 999;
+        z-index: 100;
         border-bottom: 1px solid transparent;
-        transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
+        transition: all .2s ease, box-shadow .15s ease, border-color .15s ease;
         &--scrolled {
             position: fixed;
             margin: 0;
@@ -47,6 +47,10 @@
             0 .35rem .5rem -2px rgba(0,0,0, .1),
             0 2px 1rem -.25rem rgba(0,0,0, .08);
         }
+    }
+
+    &.hide {
+        transform: translateY(-100%);
     }
 }
 

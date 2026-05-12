@@ -156,7 +156,7 @@ $slides = get_sub_field( 'slides' );
                                     );
                                     ?>
                                     <img class="testimonial-slider__card-frame"
-                                        src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/picture-frame.webp' ); ?>"
+                                        src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/picture-frame-v2.webp' ); ?>"
                                         alt="">
                                     <div class="testimonial-slider__card-content">
                                         <img class="testimonial-slider__card-stars"

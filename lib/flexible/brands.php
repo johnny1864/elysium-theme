@@ -19,17 +19,18 @@ $cta = get_sub_field('cta');
                     <div class="swiper-wrapper">
 
                         <?php foreach ($logos as $index => $logo): ?>
+                            <?php $logo_icon = $logo['logo']; ?>
                             <div class="swiper-slide">
-                                <div class="brands-slider__logo">
+                                <div class="brands-slider__logo <?php if($logo['full_width']) : ?>brands-slider__logo--full-width<?php endif; ?>">
                                     <?php
                                     echo wp_get_attachment_image(
-                                        is_array($logo) ? $logo['ID'] : $logo,
+                                        is_array($logo) ? $logo_icon['ID'] : $logo,
                                         'full',
                                         false,
                                         [
                                             'alt' => esc_attr(
-                                                is_array($logo) && !empty($logo['alt'])
-                                                ? $logo['alt']
+                                                is_array($logo) && !empty($logo_icon['alt'])
+                                                ? $logo_icon['alt']
                                                 : 'Brand ' . ($index + 1)
                                             ),
                                             'loading' => 'lazy'

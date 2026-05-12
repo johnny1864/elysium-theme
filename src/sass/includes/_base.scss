@@ -47,3 +47,17 @@ main {
         height: auto;
     }
 }
+
+
+/* Fade-in elements start hidden on desktop */
+  @media (min-width: 990px) {
+    .reveal { opacity: 0; transform: translateY(40px); }
+    .pin-spacer {
+        // z-index: 999 !important;
+    }
+  }
+ 
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
