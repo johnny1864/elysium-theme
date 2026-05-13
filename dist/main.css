@@ -476,9 +476,10 @@ main {
 .menu--main.active {
   left: 0;
 }
-@media (max-width: 989px) {
+@media (max-width: 1024px) {
   .menu--main.active {
     background-color: var(--color-blue);
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 1025px) {
@@ -1470,7 +1471,7 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  font-size: clamp(70px, 10vw, 100px);
+  font-size: clamp(64px, 10vw, 100px);
   letter-spacing: 8px;
   line-height: 0.9;
 }

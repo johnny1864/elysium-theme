@@ -158,9 +158,15 @@ $slides = get_sub_field( 'slides' );
                                         src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/picture-frame-v2.webp' ); ?>"
                                         alt="">
                                     <div class="testimonial-slider__card-content">
+                                        <?php if($index == 2) : ?>
+                                        <img class="testimonial-slider__card-stars"
+                                            src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/stars-blue.webp' ); ?>"
+                                            alt="">
+                                        <?php else : ?>
                                         <img class="testimonial-slider__card-stars"
                                             src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/stars.png' ); ?>"
                                             alt="">
+                                        <?php endif; ?>
                                         <p class="testimonial-slider__card-quote">
                                             <?php echo $slide['quote'] ?>
                                         </p>

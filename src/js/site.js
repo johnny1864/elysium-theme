@@ -393,6 +393,8 @@ jQuery(document).ready(function ($) {
           styles.top = $adminBar.innerHeight();
         }
 
+        console.log($header.innerHeight())
+        $nav.css({ marginTop: $header.innerHeight() + 20 });
         $header.css(styles);
         $body.css({ marginTop: $header.innerHeight() });
       }

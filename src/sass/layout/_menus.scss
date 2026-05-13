@@ -192,8 +192,9 @@
 
     &.active {
         left: 0;
-        @media (max-width: 989px) {
+        @media (max-width: 1024px) {
             background-color: var(--color-blue);
+            padding-top: 1.5rem;
         }
     }
 
