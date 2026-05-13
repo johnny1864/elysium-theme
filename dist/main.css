@@ -589,7 +589,7 @@ main {
   font-family: var(--heading-font-pt);
 }
 .gfooter__content, .gfooter__bottom {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
   overflow: hidden;
   text-align: center;
 }
@@ -623,14 +623,15 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: nowrap;
   }
   .gfooter-menus ul li:last-child .menu-item__link::before {
     display: none;
   }
   .gfooter-menus .menu-item__link {
     position: relative;
-    padding: 0 1rem;
-    margin: 0.5rem 0;
+    padding: 0 0.75rem;
+    margin: 0.25rem 0;
     white-space: nowrap;
     text-transform: capitalize;
     font-family: var(--body-font);
