@@ -88,27 +88,28 @@ $stories = get_sub_field( 'stories' );
                     <?php endforeach; ?>
 
                 </div>
-			</div>
 				<!-- Pagination -->
-			<div class="swiper-pagination custom-pagination mobile-only">
-				<?php foreach ( $stories as $index => $slide ) : ?>
-					<?php
-					$label = $slide['card_title'] ?: $slide['heading'];
-					?>
-					<div class="custom-bullet <?php echo $index === 0 ? 'active' : ''; ?>"
-						data-index="<?php echo esc_attr( $index ); ?>">
-						<span class="bullet-number">
-							<?php echo esc_html( str_pad( $index + 1, 2, '0', STR_PAD_LEFT ) ); ?>
-							<?php if ( $label ) : ?>
-								<span class="bullet-label">
-									<?php echo esc_html( $label ); ?>
-								</span>
-							<?php endif; ?>
-						</span>
-						<span class="bullet-line"></span>
-					</div>
-				<?php endforeach; ?>
+				<div class="swiper-pagination custom-pagination mobile-only">
+					<?php foreach ( $stories as $index => $slide ) : ?>
+						<?php
+						$label = $slide['card_title'] ?: $slide['heading'];
+						?>
+						<div class="custom-bullet <?php echo $index === 0 ? 'active' : ''; ?>"
+							data-index="<?php echo esc_attr( $index ); ?>">
+							<span class="bullet-number">
+								<?php echo esc_html( str_pad( $index + 1, 2, '0', STR_PAD_LEFT ) ); ?>
+								<?php if ( $label ) : ?>
+									<span class="bullet-label">
+										<?php echo esc_html( $label ); ?>
+									</span>
+								<?php endif; ?>
+							</span>
+							<span class="bullet-line"></span>
+						</div>
+					<?php endforeach; ?>
+				</div>
 			</div>
+			
 			<div class="story-slides__panels desk-only">
 				<div class="story-slides__track">
 

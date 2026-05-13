@@ -35,13 +35,13 @@ $mobile_image_url = get_sub_field( 'mobile_image' )['url'];
 		<div class="hero__content">
 
 			<?php if ( $headline = get_sub_field( 'headline' ) ) : ?>
-				<span class="hero__intro-text preheading">
+				<span class="hero__intro-text preheading" >
 					<?php echo esc_html( $headline ); ?>
 				</span>
 			<?php endif; ?>
 
 			<?php if ( $gradient_text = get_sub_field( 'gradient_text' ) ) : ?>
-				<h2 class="hero__title gradient-text">
+				<h2 class="hero__title gradient-text" >
 					<?php echo esc_html( $gradient_text ); ?>
 				</h2>
 			<?php endif; ?>
