@@ -43,7 +43,7 @@
 
         .thin {
             letter-spacing: 3px;
-            font-size: clamp(22px, 4vw, 28px);
+            font-size: clamp(20px, 4vw, 28px);
         }
 
         .bolded {
@@ -64,13 +64,19 @@
             position: relative;
 
             &::after {
+                content: "";
                 position: absolute;
                 width: 160px;
                 top: 30px;
                 aspect-ratio: 1 / 1;
                 right: -130px;
-                content: "";
                 background: url(./images/bottom-form-arrow.svg) no-repeat center;
+
+                @media screen and (max-width: 560px) {
+                    width: 115px;
+                    top: 90px;
+                    right: -90%;
+                }
             }
         }
     }

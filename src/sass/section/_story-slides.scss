@@ -8,7 +8,6 @@
     padding-right: 0;
     overflow: visible;
     transition: background-color 300ms ease;
-    
 
     &.bg-1 {
         background-color: #e21c78;
@@ -118,6 +117,7 @@
         color: var(--color-blue);
         padding: 1.5rem 2.5rem;
         text-align: center;
+        margin-top: -1px;
     }
 
     &__card-title {
@@ -150,8 +150,6 @@
         &-slide-off {
             width: 100vw;
             padding: 3rem 1.5rem;
-
-            @media screen and (min-width: 990px) {}
         }
 
         &-slide {
@@ -218,7 +216,11 @@
         }
     }
 
-    @media (min-width: 990px) {
+    &__panel {
+        padding: 1.5rem;
+    }
+
+    @media (min-width: 1025px) {
         &.active {
             .story-slides__intro {
                 padding-top: 3rem;
@@ -250,6 +252,7 @@
             // min-height: 100vh;
             padding: 6rem 8vw 3rem;
             padding-right: 0;
+            background-color: unset !important;
         }
 
         &__image-area {
@@ -270,6 +273,7 @@
 
         .custom-bullet {
             width: 33%;
+            max-width: 500px;
 
             &__wrapper {
                 position: absolute;
@@ -317,7 +321,7 @@
 
     }
 
-    @media (min-width: 1140px) {
+    @media (min-width: 1200px) {
 
         &__content p {
             padding-right: 5rem;
@@ -330,6 +334,12 @@
             &::before {
                 margin-top: -50px;
             }
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        &__panel {
+            padding-bottom: 6rem;
         }
     }
 

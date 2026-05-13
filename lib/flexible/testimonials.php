@@ -14,7 +14,7 @@ $slides = get_sub_field( 'slides' );
 
     .stack {
         position: relative;
-        height: 650px;
+        height: 625px;
         perspective: 1000px;
         margin: 4rem 0 1rem;
         transform: translateX(10%);
@@ -43,7 +43,7 @@ $slides = get_sub_field( 'slides' );
 
     /* Stacking positions */
   .card[data-pos="0"] {
-    transform: translateX(-15%) translateY(-5%) scale(1) rotate(-5deg);
+    transform: translateX(-15%) translateY(-5%) scale(1) rotate(-4deg);
     opacity: 1;
     z-index: 4;
   }

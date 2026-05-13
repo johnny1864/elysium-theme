@@ -577,6 +577,7 @@ jQuery(document).ready(function ($) {
     const swiper = new Swiper(".story-slides .swiper", {
       loop: false,
       effect: "fade",
+      draggable: true,
       fadeEffect: {
         crossFade: true,
       },
@@ -610,7 +611,7 @@ jQuery(document).ready(function ($) {
     setActiveBullet(0);
     updateBg(0);
     // swiper.destroy(true, true);
-  });
+  })();
 
   (function () {
     const header = document.querySelector(".gheader");
@@ -621,7 +622,7 @@ jQuery(document).ready(function ($) {
 
     function initHorizontalScroll() {
       const mm = gsap.matchMedia();
-      mm.add("(min-width: 990px)", () => {
+      mm.add("(min-width: 1025px)", () => {
         const track = section.querySelector(".story-slides__track");
         const panels = gsap.utils.toArray(".story-slides__panel");
 
@@ -703,6 +704,19 @@ jQuery(document).ready(function ($) {
           );
         });
       });
+
+      /* -------- Mobile / tablet: stacked-card pin -------- */
+      mm.add("(max-width: 1024px)", () => {
+        const panels = gsap.utils.toArray(".story-slides__panel");
+    
+     
+        panels.forEach((panel, i) => {
+          const bgColor = panel.dataset.bg;
+          panel.style.backgroundColor = bgColor;        
+    
+    
+        });
+      });
     }
 
     /*const wrapper = section.querySelector(".swiper-wrapper-off");
@@ -765,7 +779,7 @@ jQuery(document).ready(function ($) {
       breakpoints: {
         0: { slidesPerView: 1 },
         768: { slidesPerView: 3 },
-        1024: { slidesPerView: 5 },
+        1024: { slidesPerView: 5, spaceBetween: 40 },
       },
     });
   })();

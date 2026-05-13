@@ -1,10 +1,13 @@
 .top-bar {
     background-color: var(--color-turquoise-blue);
     padding: 0.25rem 1rem;
+    transition: all 200ms ease;
+    overflow: hidden;
 
     &__phone-number {
         margin-right: 0.5rem;
         color: var(--color-blue);
+        font-family: var(--heading-font-pt);
     }
 
     &__content {

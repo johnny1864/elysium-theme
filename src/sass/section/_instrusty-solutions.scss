@@ -50,9 +50,7 @@
         display: inline-block;
         font-family: var(--body-font);
         font-weight: 700;
-        font-size: 1.8rem;
-        margin-top: 5px;
-        font-size: clamp(1.5rem, 4vw, 48px);
+        font-size: clamp(1.5rem, 4vw, 38px);
         color: var(--color-blue);
         text-transform: uppercase;
     }
@@ -60,7 +58,7 @@
     &__title {
         display: block;
         font-family: var(--heading-font-pt);
-        font-size: clamp(3rem, 6vw, 50px);
+        font-size: clamp(2.5rem, 6vw, 54px);
         font-weight: bold;
         line-height: 1;
         background: linear-gradient(90deg,
