@@ -38,7 +38,7 @@ $cta = get_sub_field('cta'); // Add this field if needed
                     $body = $item['content'] ?? '';
                     ?>
 
-                    <div class="industry-solutions__item">
+                    <div class="industry-solutions__item <?php if($index > 1) echo "no-border-bottom" ?>">
                         <button class="industry-solutions__trigger" type="button">
                             <?php if ($title): ?>
                                 <span class="industry-solutions__label">

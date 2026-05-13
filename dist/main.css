@@ -1706,9 +1706,6 @@ main {
   gap: 3rem;
   padding: 0 1rem;
 }
-.story-slides .swiper-slide__container .story-slides__image {
-  aspect-ratio: 3/2;
-}
 .story-slides .custom-pagination {
   display: flex;
   gap: 40px;
@@ -1753,6 +1750,9 @@ main {
 }
 .story-slides__panel {
   padding: 1.5rem;
+}
+.story-slides__image {
+  aspect-ratio: 3/2;
 }
 @media (min-width: 1025px) {
   .story-slides.active .story-slides__intro {
@@ -2080,6 +2080,9 @@ main {
 .industry-solutions__item {
   border-bottom: 1px solid var(--color-blue);
 }
+.industry-solutions__item.no-border-bottom {
+  border-bottom: none;
+}
 .industry-solutions__item.active .industry-solutions__content {
   display: block;
   color: var(--color-blue);
@@ -2097,6 +2100,11 @@ main {
   border: 0;
   cursor: pointer;
   text-align: left;
+}
+@media screen and (min-width: 1025px) {
+  .industry-solutions__trigger {
+    padding: 1.5rem 0;
+  }
 }
 .industry-solutions__icon {
   font-size: 16px;

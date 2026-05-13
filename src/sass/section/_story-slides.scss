@@ -161,9 +161,6 @@
                 flex-direction: column;
                 gap: 3rem;
                 padding: 0 1rem;
-                .story-slides__image {
-                    aspect-ratio: 3/2;
-                }
             }
         }
     }
@@ -225,6 +222,10 @@
         padding: 1.5rem;
     }
 
+    &__image {
+        aspect-ratio: 3/2;
+    }
+
     @media (min-width: 1025px) {
         &.active {
             .story-slides__intro {
@@ -274,7 +275,7 @@
             padding-bottom: 4.5rem;
         }
 
-        &__panel {}
+        
 
         .custom-bullet {
             width: 33%;
