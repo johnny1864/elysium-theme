@@ -6,7 +6,7 @@ $stories = get_sub_field( 'stories' );
 
 <section class="story-slides bg-1">
 	<div class="story-slides__wrapper">
-		<div class="container">
+		<div class="">
 			<div class="story-slides__intro">
 				<?php if ( $eyebrow || $heading ) : ?>
 					<h2 class="story-slides__intro-heading">

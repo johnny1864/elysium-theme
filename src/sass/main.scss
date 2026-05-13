@@ -1,8 +1,8 @@
 @use './includes/reset';
-@use './includes/base';  
-@use './includes/variables';
 @use './includes/fonts';
+@use './includes/variables';
 @use './includes/_mixins.scss';
+@use './includes/base';
 
 @use './layout/general';
 @use './layout/header';

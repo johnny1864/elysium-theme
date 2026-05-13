@@ -3,8 +3,10 @@
     &__item {
         border-bottom: 1px solid var(--color-blue);
 
-        &.no-border-bottom {
-            border-bottom: none;
+        @media screen and (min-width: 1025px) {
+            &.no-border-bottom {
+                border-bottom: none;
+            }
         }
 
         &.active {

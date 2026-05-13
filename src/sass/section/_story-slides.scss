@@ -52,16 +52,22 @@
 
 
     &__intro-heading {
+        font-family: var(--body-font);
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
-        font-size: clamp(18px, 2vw, 24px);
+        font-size: clamp(16px, 2vw, 32px);
+
+        @media screen and (min-width: 1200px) {
+            letter-spacing: 3px;
+        }
 
         span {
             font-family: var(--heading-font-pt);
             display: block;
             font-weight: bold;
-            font-size: 1.7em;
+            font-size: 1.5em;
+            letter-spacing: 0;
         }
     }
 
@@ -315,7 +321,7 @@
             gap: 10px;
 
             span {
-                margin-top: -5px;
+                margin-top: -4px;
             }
         }
 
@@ -347,10 +353,6 @@
         &__panel {
             padding-top: 6rem;
             padding-bottom: 6rem;
-        }
-
-        &__track {
-            padding-right: 9rem;
         }
     }
 

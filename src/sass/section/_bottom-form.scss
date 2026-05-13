@@ -4,6 +4,11 @@
     z-index: 2;
     padding-top: 3rem;
 
+    @media screen and (max-width: 560px) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
     .container {
         position: relative;
     }

@@ -95,8 +95,18 @@
 
     .solution {
         &-card {
+            position: relative;
             color: var(--color-white);
             text-align: center;
+            height: 100%;
+            padding-bottom: 3rem;
+            .btn {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
         }
 
         &-icon {
