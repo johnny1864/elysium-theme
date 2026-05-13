@@ -263,6 +263,12 @@ main {
 .gheader__logo img {
   height: auto;
 }
+@media screen and (min-width: 1025px) {
+  .gheader:not(.sticky--scrolled) .btn--white:not(:hover) {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
+}
 @media screen and (min-width: 1200px) {
   .gheader:not(.sticky--scrolled) .gheader__logo {
     max-width: 240px;
@@ -292,7 +298,7 @@ main {
     max-width: 200px;
   }
 }
-@media (max-width: 1139px) {
+@media (max-width: 1024px) {
   .gheader__logo {
     margin-right: auto;
   }
@@ -370,7 +376,7 @@ main {
 .menu-burger.active .menu-burger__icon span:after {
   opacity: 0;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1025px) {
   .menu-burger {
     display: none;
   }
@@ -398,7 +404,7 @@ main {
   transform: rotate(90deg);
   transform-origin: center;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1025px) {
   .menu .mobile-arrow {
     height: 2.5rem;
     width: 2.5rem;
@@ -433,7 +439,7 @@ main {
 .menu .menu-item__dropdown.active > .menu-item__submenu {
   display: block;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1025px) {
   .menu .menu-item__link {
     padding: 0;
   }
@@ -466,8 +472,11 @@ main {
     background-color: var(--color-blue);
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1025px) {
   .menu--main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     top: initial;
     left: initial;
@@ -475,6 +484,9 @@ main {
     bottom: initial;
     margin: 0;
     margin-left: 4rem;
+  }
+  .menu--main .btn {
+    margin: 0;
   }
   .menu--main ul#menu-main-menu {
     display: flex;
@@ -2250,7 +2262,7 @@ main {
 .testimonials .testimonial-slider__card-frame {
   position: relative;
   border-radius: 5px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
 }
 .testimonials .testimonial-slider__card-author {
   font-family: var(--manus-font);
@@ -2398,18 +2410,25 @@ main {
   text-align: center;
 }
 .brands-slider .swiper-slide img {
-  max-height: 100%;
+  width: 100%;
   object-fit: contain;
 }
-@media (min-width: 980px) {
+.brands-slider__logo {
+  max-width: 150px;
+}
+.brands-slider__logo--full-width {
+  max-width: 100% !important;
+}
+@media (min-width: 1025px) {
   .brands-slider__logo {
     padding: 2rem 0;
+    max-width: 200px;
   }
 }
 .brands-button-prev, .brands-button-next {
   width: 15px;
 }
-@media (min-width: 980px) {
+@media (min-width: 990px) {
   .brands__logo {
     padding: 1rem 0;
   }
@@ -2642,6 +2661,7 @@ main {
 }
 .gform_wrapper .gform_footer {
   margin-top: 1.5rem;
+  text-align: right;
 }
 .gform_wrapper .gform_button,
 .gform_wrapper input[type=submit] {
@@ -2688,7 +2708,7 @@ main {
 }
 .top-bar__phone-number {
   margin-right: 0.5rem;
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 .top-bar__content {
   display: flex;

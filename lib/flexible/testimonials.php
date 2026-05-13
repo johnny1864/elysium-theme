@@ -29,7 +29,7 @@ $slides = get_sub_field( 'slides' );
         user-select: none;
     }
 
-    .card::before {
+    /* .card::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -39,7 +39,7 @@ $slides = get_sub_field( 'slides' );
         border-radius: 2rem;
         filter: blur(1.5rem);
         box-shadow: 0 20px 20px rgba(0,0,0,0.15);
-    }
+    } */
 
     /* Stacking positions */
   .card[data-pos="0"] {

@@ -38,6 +38,7 @@
                         'theme_location' => 'main'
                     ));
                 ?>
+                <a class="btn btn--white" href="/contact">Contact Us</a>
             </nav>
 
             <button type="button" class="menu-burger" title="Menu">
