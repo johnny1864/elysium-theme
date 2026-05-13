@@ -623,7 +623,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   .gfooter-menus ul li:last-child .menu-item__link::before {
     display: none;
