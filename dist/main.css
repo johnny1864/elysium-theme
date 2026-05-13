@@ -1548,12 +1548,18 @@ main {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .hero__video-spacer, .hero__video-wrapper {
+    display: none !important;
+  }
 }
 @media (min-width: 768px) {
   .hero .container {
     display: flex;
     align-items: center;
     gap: 50px;
+  }
+  .hero__mobile-image {
+    display: none !important;
   }
   .hero__content {
     flex: 1;
@@ -2360,7 +2366,7 @@ main {
     font-size: 0.8rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .testimonials {
     padding-top: 6rem;
     padding-bottom: 2rem;
@@ -2381,6 +2387,7 @@ main {
   }
   .testimonials__intro {
     width: 40%;
+    padding-bottom: 5rem;
   }
   .testimonials__heading {
     text-align: left;
@@ -2477,7 +2484,7 @@ main {
 @media (min-width: 1025px) {
   .brands-slider__logo {
     padding: 2rem 0;
-    max-width: 200px;
+    max-width: 180px;
   }
 }
 .brands-button-prev, .brands-button-next {

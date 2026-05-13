@@ -18,7 +18,7 @@ $mobile_image_url = get_sub_field( 'mobile_image' )['url'];
 
 
 	<?php if ( ! empty( $mobile_image_id ) ) : ?>
-		<div class="hero__mobile-image mobile-only">
+		<div class="hero__mobile-image">
 			<?php
 			echo wp_get_attachment_image(
 				$mobile_image_id,
@@ -60,10 +60,10 @@ $mobile_image_url = get_sub_field( 'mobile_image' )['url'];
 				aria-hidden="true" loading="lazy" /> -->
 		</div>
 
-		<div class="hero__video-spacer desk-only"></div>
+		<div class="hero__video-spacer"></div>
 	</div>
 
-	<div class="hero__video-wrapper desk-only">
+	<div class="hero__video-wrapper">
 		<?php
 		$video_mp4 = get_sub_field( 'video_mp4' );
 		$video_webm = get_sub_field( 'video_webm' );

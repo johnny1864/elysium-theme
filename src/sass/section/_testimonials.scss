@@ -162,7 +162,7 @@
     
 
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1025px) {
         & {
             padding-top: 6rem;
             padding-bottom: 2rem;
@@ -187,6 +187,7 @@
 
         &__intro {
             width: 40%;
+            padding-bottom: 5rem;
         }
 
         &__heading {
