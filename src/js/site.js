@@ -583,7 +583,7 @@ jQuery(document).ready(function ($) {
       },
     });
 
-    const bullets = document.querySelectorAll(".custom-bullet");
+    const bullets = document.querySelectorAll(".swiper-pagination .custom-bullet");
     const bgClasses = ["bg-1", "bg-2", "bg-3"];
 
     bullets.forEach((bullet) => {
