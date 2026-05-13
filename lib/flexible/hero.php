@@ -1,5 +1,6 @@
 <?php
 $mobile_image_id = get_sub_field( 'mobile_image' )['ID'];
+$mobile_image_url = get_sub_field( 'mobile_image' )['url'];
 ?>
 
 <section class="hero">
@@ -72,7 +73,7 @@ $mobile_image_id = get_sub_field( 'mobile_image' )['ID'];
 		<?php if ( $video_mp4 || $video_webm ) : ?>
 			<div class="hero__video">
 				<video autoplay loop muted playsinline preload="metadata"
-					poster="<?php echo $video_poster ? esc_url( $video_poster ) : ''; ?>">
+					poster="<?php echo $video_poster ? esc_url( $video_poster ) : $mobile_image_url; ?>">
 					<?php if ( $video_webm ) : ?>
 						<source src="<?php echo esc_url( $video_webm ); ?>" type="video/webm">
 					<?php endif; ?>

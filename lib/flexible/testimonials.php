@@ -14,7 +14,7 @@ $slides = get_sub_field( 'slides' );
 
     .stack {
         position: relative;
-        height: 700px;
+        height: 650px;
         perspective: 1000px;
         margin: 4rem 0 1rem;
         transform: translateX(10%);

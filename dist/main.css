@@ -564,10 +564,12 @@ main {
 .gfooter__logo {
   text-align: center;
 }
+.gfooter-content {
+  font-family: var(--heading-font-pt);
+}
 .gfooter__content, .gfooter__bottom {
   padding: 2rem 1.5rem;
   overflow: hidden;
-  font-weight: 600;
   text-align: center;
 }
 @media screen and (min-width: 1025px) {
@@ -1905,7 +1907,7 @@ main {
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 .solutions__heading::after {
   content: "";
@@ -1999,7 +2001,7 @@ main {
 @media (min-width: 768px) {
   .solutions__heading {
     vertical-align: middle;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
   .solutions__heading .thin,
   .solutions__heading .bolded {
@@ -2027,9 +2029,13 @@ main {
   .solutions .solution-body {
     margin-bottom: 1rem;
     display: block;
+    text-wrap: balance;
   }
   .solutions .solution-icon {
-    height: 155px;
+    height: 175px;
+  }
+  .solutions .solution-icon img {
+    max-width: 180px;
   }
   .solutions__cta {
     margin-top: 4rem;
@@ -2217,7 +2223,7 @@ main {
 }
 .testimonials .testimonial-slider__card {
   position: relative;
-  max-width: 450px;
+  max-width: 425px;
   margin: 0 auto;
 }
 @media screen and (max-width: 749px) {
@@ -2238,7 +2244,7 @@ main {
 }
 @media screen and (max-width: 749px) {
   .testimonials .testimonial-slider__card-stars {
-    max-width: 100px;
+    max-width: 90px;
   }
 }
 .testimonials .testimonial-slider__card-frame {
@@ -2252,13 +2258,18 @@ main {
   color: var(--color-turquoise-blue);
   margin-bottom: 0.25rem;
 }
+.testimonials .testimonial-slider__card-author-title {
+  display: inline-block;
+  width: 60%;
+  min-width: 130px;
+}
 .testimonials .testimonial-slider__card-quote {
   margin-bottom: 1rem;
 }
 .testimonials .testimonial-slider__card-content {
   position: absolute;
-  width: 65%;
-  top: 10%;
+  width: 70%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -2269,7 +2280,7 @@ main {
   }
   .testimonials .testimonial-slider__card-quote {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .testimonials .testimonial-slider__card-author {
     font-size: 2.25rem;

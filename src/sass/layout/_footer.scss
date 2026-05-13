@@ -31,11 +31,14 @@
         text-align: center;
     }
 
+    &-content {
+        font-family: var(--heading-font-pt);
+    }
+
     &__content,
     &__bottom {
         padding: 2rem 1.5rem;
         overflow: hidden;
-        font-weight: 600;
         text-align: center;
 
         @media screen and (min-width: 1025px) {
