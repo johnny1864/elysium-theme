@@ -43,18 +43,17 @@ $slides = get_sub_field( 'slides' );
 
     /* Stacking positions */
   .card[data-pos="0"] {
-    transform: translateX(-15%) translateY(-5%) scale(1) rotate(-4deg);
+    transform: translateX(-12%) translateY(-5%) scale(1) rotate(-4deg);
     opacity: 1;
     z-index: 4;
   }
   .card[data-pos="1"] {
-    transform: translateY(10%) scale(0.94) rotate(10deg);
+    transform: translateY(6%) scale(0.96) rotate(5deg);
     
     z-index: 3;
   }
   .card[data-pos="2"] {
-    transform: translateY(-32px) scale(0.88);
-    
+    transform: translateY(-32px) translateX(10%) scale(0.92) rotate(-2deg);
     z-index: 2;
   }
   .card[data-pos="3"] {
