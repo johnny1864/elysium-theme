@@ -110,8 +110,8 @@
                 },
                 {
                     "key": "field_69ea5a7ba0533",
-                    "label": "Subtext",
-                    "name": "subtext",
+                    "label": "Subheading",
+                    "name": "subheading",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -216,5 +216,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1779231424
+    "modified": 1779252360
 }

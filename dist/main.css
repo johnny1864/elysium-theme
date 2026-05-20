@@ -1587,15 +1587,43 @@ main {
   }
 }
 .hero--basic {
+  background-color: var(--color-turquoise-blue);
   padding: 0;
 }
 .hero--basic .container {
   display: block;
 }
+.hero--basic__title {
+  font-family: var(--heading-font-pt);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.hero--basic__content {
+  padding: 3rem 0.5rem 0;
+}
+@media screen and (min-width: 1025px) {
+  .hero--basic__content {
+    padding: 5rem 3rem;
+    padding-left: 0;
+    width: 50%;
+  }
+}
 .hero--basic__image img {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+@media screen and (min-width: 1025px) {
+  .hero--basic__image {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+  }
+  .hero--basic__image img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .story-slides {
@@ -2658,6 +2686,9 @@ main {
   display: none;
 }
 
+.media-content {
+  padding: 2rem 1.5rem;
+}
 @media (min-width: 1400px) {
   .media-content .container {
     max-width: 1400px;
