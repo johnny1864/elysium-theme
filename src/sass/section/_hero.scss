@@ -164,7 +164,7 @@
         }
     }
 
-     @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__content {
             padding-top: 0;
             padding-left: 1.5rem;
@@ -220,6 +220,22 @@
 
         &__video-arrow {
             bottom: 9%;
+        }
+    }
+
+    &--basic {
+        padding: 0;
+
+        .container {
+            display: block;
+        }
+
+        &__image {
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
         }
     }
 
