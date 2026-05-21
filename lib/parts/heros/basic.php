@@ -13,6 +13,7 @@
                 </div>
 			<?php endif; ?>
 		</div>
+		<div class="hero__video-spacer"></div>
 	</div>
 
 	<div class="hero--basic__image">
