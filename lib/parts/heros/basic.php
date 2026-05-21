@@ -16,8 +16,15 @@
 	</div>
 
 	<div class="hero--basic__image">
-		<?php echo wp_get_attachment_image( $hero['image'], 'full', false, [ 'loading' => 'eager',
+		<?php echo wp_get_attachment_image( $hero['image'], 'full', false, [ 
+			'loading' => 'eager',
 			'fetchpriority' => 'high',
-			'decoding' => 'async' ] ); ?>
+			'decoding' => 'async',
+			'class' => 'desk-only'] ); ?>
+		<?php echo wp_get_attachment_image( $hero['mobile_image'], 'full', false, [ 
+			'loading' => 'eager',
+			'fetchpriority' => 'high',
+			'decoding' => 'async',
+			'class' => 'mobile-only' ] ); ?>
 	</div>
 </section>
