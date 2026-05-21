@@ -21,11 +21,11 @@ $attr = buildAttr( $section_attrs );
 			echo 'reverse'; ?>">
 			<div class="row <?php if ( $invert )
 				echo 'row--reverse'; ?> ">
-				<div class="col col--left col--media">
+				<div class="col col--left col--media media-content__media">
 					<?php if ( ! empty( $heading ) ) : ?>
 						<h2 class="mobile-only text-center">
-                            <?php echo $heading; ?>
-                        </h2>
+							<?php echo $heading; ?>
+						</h2>
 					<?php endif; ?>
 
 					<?php if ( $type == 'image' ) : ?>
@@ -38,7 +38,11 @@ $attr = buildAttr( $section_attrs );
 						<div class="media-content__video">
 							<?php // get_template_part( 'lib/parts/video-embed', null, $video ); ?>
 							<div class="video-embed">
-								<iframe class="lazy" data-src="<?php echo $video; ?>" frameborder="0"></iframe>
+								<?php if ( $video ) : ?>
+									<video autoplay loop muted playsinline preload="metadata">
+										<source src="<?php echo esc_url( $video['url'] ); ?>" type="video/mp4">
+									</video>
+								<?php endif; ?>
 							</div>
 						</div>
 					<?php endif; ?>

@@ -20,9 +20,12 @@
 @use './section/brands';
 @use './section/bottom-form';
 @use './section/media-content';
+@use './section/accordions-block';
+@use './section/text-icon-blocks';
 
 @use './parts/button';  
 @use './parts/forms';
 @use './parts/top-bar';
-@use './parts/social-links';  
+@use './parts/social-links';
+@use './parts/accordion';  
 

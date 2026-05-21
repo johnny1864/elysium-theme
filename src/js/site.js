@@ -73,7 +73,9 @@ jQuery(document).ready(function ($) {
 
   //Global function to toggle simple accordions
   var Accordions = (function () {
+    
     var $accordions = $(".accordion");
+    console.log($accordions);
     if (!$accordions.length) {
       return;
     }
@@ -91,6 +93,8 @@ jQuery(document).ready(function ($) {
       var $siblings = $accordion.siblings().length
         ? $accordion.siblings()
         : $accordions.filter('[data-group="' + $accordion.data("group") + '"]');
+
+      
 
       if ($accordion.hasClass("active")) {
         $accordion.removeClass("active");

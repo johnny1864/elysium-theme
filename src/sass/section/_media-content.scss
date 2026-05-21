@@ -1,5 +1,8 @@
 .media-content {
     padding: 2rem 1.5rem;
+    @media screen and (max-width: 1025px) {
+        padding: 2rem 1.5rem;
+    }
     .container {
         @media (min-width: 1400px) {
             max-width: 1400px;
@@ -39,13 +42,13 @@
 
     h2 {
         color: var(--color-blue);
-        font-size: clamp(1.5rem, 4vw, 38px);
+        font-size: clamp(1.25rem, 4vw, 38px);
         text-transform: uppercase;
         margin-bottom: 0.5em;
         span {
             display: block;
             font-family: var(--heading-font-pt);
-            font-size: clamp(2.5rem, 4.5vw, 50px);
+            font-size: clamp(2rem, 4.5vw, 50px);
             font-weight: bold;
             line-height: 1;
             background: linear-gradient(90deg, #ec0d6c 0%, #a097b4 40%, #72aaba 45%, #01527f 100%);
@@ -57,8 +60,9 @@
         }
     }
 
-    &__img {
-        img {
+    &__media {
+        img,
+        video {
             object-fit: contain;
             width: 100%;
             height: auto;

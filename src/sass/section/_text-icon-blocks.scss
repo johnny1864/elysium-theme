@@ -1,0 +1,65 @@
+.text-icon-blocks {
+    &__title {
+        font-family: var(--body-font);
+        text-transform: uppercase;
+        font-weight: normal;
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 2rem);
+        color: var(--color-blue);
+
+        @media screen and (min-width: 1200px) {
+            letter-spacing: 3px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        span {
+            font-family: var(--heading-font-pt);
+            display: block;
+            font-weight: bold;
+            font-size: 1.3em;
+            letter-spacing: 0;
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
+
+        &-wrapper {
+            padding: 2rem 0;
+        }
+
+        @media screen and (min-width: 1025px) {
+            gap: 3rem;
+            font-size: 1.25rem;
+
+            &-wrapper {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            &-icon {
+                width: 17%;
+            }
+
+            &-content {
+                width: 83%;
+            }
+        }
+
+        &-title {
+            font-family: var( --heading-font-pt);
+            color: var(--color-pink);
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+    }
+}

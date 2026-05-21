@@ -1,0 +1,69 @@
+.accordions-block {
+    background-color: var(--color-blue);
+
+    .accordion {
+        color: var(--color-white);
+        border-bottom: 1px solid var(--color-white);
+
+        &__trigger {
+            @media screen and (min-width: 1025px) {
+                padding: 2rem 0;
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            font-family: var(--heading-font-pt);
+            font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+            color: var(--color-turquoise-blue);
+
+            span {
+                color: var(--color-white);
+                margin: 0 0.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        &__subtitle {
+            font-family: var(--body-font);
+            font-size: clamp(1.1rem, 3vw, 1.8rem);
+            color: var(--color-white);
+            text-transform: capitalize;
+        }
+
+        &__content {
+
+            @media screen and (min-width: 1025px) {
+                font-size: 1.25rem;
+            }
+
+            strong {
+                color: var(--color-turquoise-blue);
+            }
+
+            p {
+                &:first-child {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            ul {
+                padding-left: 2rem;
+                list-style: disc;
+
+                ::marker {
+                    color: var(--color-turquoise-blue);
+                }
+
+                li {
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
