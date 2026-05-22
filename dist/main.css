@@ -2904,8 +2904,8 @@ main {
   }
 }
 .accordions-block .accordion__content strong {
+  font-family: var(--heading-font-pt);
   color: var(--color-turquoise-blue);
-  font-weight: bold;
 }
 .accordions-block .accordion__content p:first-child {
   margin-bottom: 1rem;
