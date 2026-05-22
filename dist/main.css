@@ -2917,6 +2917,9 @@ main {
     font-size: 1.25rem;
     padding-bottom: 1rem;
   }
+  .accordions-block .accordion__content .btn {
+    margin-top: 1.5rem;
+  }
 }
 .accordions-block .accordion__content strong {
   font-family: var(--heading-font-pt);
