@@ -4,6 +4,7 @@ $group = 'accordion_block';
 ?>
 
 <section class="accordions-block">
+    <img loading="lazy" class="accordions-block__bg-image" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/accordions-bg.webp' ); ?>" alt="">
 	<div class="container">
 		<div class="accordions-block__wrapper">
 			<?php foreach ( $accordions as $index => $accordion ) : ?>

@@ -17,15 +17,17 @@
         @media screen and (min-width: 1025px) {
             .svg-code--curly-arrow {
                 position: absolute;
-                top: 100%;
-                right: 0;
-                width: 90px;
+                top: 15%;
+                right: 8%;
+                width: 93px;
             }
         }
 
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1400px) {
             .svg-code--curly-arrow {
-                transform: unset;
+                top: 100%;
+                right: 0;
+                transform: translateX(-50%);
             }
         }
     }
@@ -73,6 +75,13 @@
             padding: 0 1.5rem 2rem;
         }
 
+        &-title {
+            font-family: var(--heading-font-pt);
+            color: var(--color-pink);
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            text-transform: uppercase;
+        }
+
         @media screen and (min-width: 1025px) {
             gap: 3rem;
             font-size: 1.25rem;
@@ -81,6 +90,11 @@
             &-wrapper {
                 max-width: 1000px;
                 margin: 0 auto;
+                padding: 3rem 1.5rem;
+            }
+
+            &-title {
+                padding-bottom: 0.5rem;
             }
 
             &-icon {
@@ -92,18 +106,13 @@
             }
         }
 
-        &-title {
-            font-family: var(--heading-font-pt);
-            color: var(--color-pink);
-            font-size: clamp(1.4rem, 2vw, 2rem);
-            text-transform: uppercase;
-        }
+        
     }
 
     &__cta {
         margin-top: 1rem;
         @media screen and (min-width: 1025px) {
-            margin-top: 3rem;
+            margin-top: 1.5rem;
         }
     }
 }

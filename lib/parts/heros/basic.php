@@ -36,4 +36,5 @@
 			'decoding' => 'async',
 			'class' => 'mobile-only' ] ); ?>
 	</div>
+	<img loading="eager" class="hero--basic__bottom-border" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/hero-bottom.webp' ); ?>" alt="">
 </section>
