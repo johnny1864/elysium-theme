@@ -283,7 +283,8 @@
         &__subheading {
             font-family: var(--heading-font-pt);
             color: var(--color-pink);
-            font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+            font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+            text-transform: uppercase;
         }
 
         &__content {
@@ -302,6 +303,9 @@
 
             @media screen and (min-width: 1025px) {
                 font-size: 1.5rem;
+                .btn {
+                    margin-top: 1.5rem;
+                }
             } 
         }
 
