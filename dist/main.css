@@ -1611,6 +1611,7 @@ main {
   .hero--basic .container {
     position: relative;
     z-index: 2;
+    padding: 1.5rem 0;
   }
   .hero--basic__title, .hero--basic__subheading {
     margin-bottom: 1rem;
