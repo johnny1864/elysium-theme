@@ -2925,6 +2925,11 @@ main {
 .accordions-block .accordion__content p:first-child {
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 1025px) {
+  .accordions-block .accordion__content p:first-child {
+    margin-bottom: 1.5rem;
+  }
+}
 .accordions-block .accordion__content ul {
   padding-top: 0.5rem;
   padding-left: 1.5rem;
