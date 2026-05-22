@@ -1,13 +1,16 @@
 .media-content {
     padding: 2rem 1.5rem;
+
     @media screen and (max-width: 1025px) {
         padding: 2rem 1.5rem;
     }
+
     .container {
         @media (min-width: 1400px) {
-            max-width: 1400px;
+            max-width: 1300px;
         }
     }
+    
     .row {
         display: flex;
         flex-direction: column;

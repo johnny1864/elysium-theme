@@ -266,6 +266,7 @@
             color: transparent;
             letter-spacing: 1px;
             line-height: 1;
+            
         }
 
         &__subheading {
@@ -275,12 +276,17 @@
         }
 
         &__content {
+            position: relative;
             padding: 4rem 0.5rem 0;
+            transform: translateY(4rem);
+            z-index: 2;
+  
 
             @media screen and (min-width: 768px) {
                 padding: 5rem 0;
                 padding-left: 0;
                 width: 60%;
+                transform: unset;
             }
 
             @media screen and (min-width: 1025px) {
@@ -315,7 +321,7 @@
                 right: 0;
 
                 &::after {
-                    background: linear-gradient(to right, rgba(113, 217, 210, 1) 10%, rgba(113, 217, 210, 0.3) 60%, rgba(107, 218, 213, 0) 100%);
+                    background: linear-gradient(to right, rgba(113, 217, 210, 0.9) 10%, rgba(113, 217, 210, 0.3) 60%, rgba(107, 218, 213, 0) 100%);
                 }
 
                 img {

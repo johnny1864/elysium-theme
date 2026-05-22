@@ -1633,13 +1633,17 @@ main {
   font-size: clamp(1.25rem, 2.5vw, 1.9rem);
 }
 .hero--basic__content {
+  position: relative;
   padding: 4rem 0.5rem 0;
+  transform: translateY(4rem);
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .hero--basic__content {
     padding: 5rem 0;
     padding-left: 0;
     width: 60%;
+    transform: unset;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1673,7 +1677,7 @@ main {
     right: 0;
   }
   .hero--basic__image::after {
-    background: linear-gradient(to right, rgb(113, 217, 210) 10%, rgba(113, 217, 210, 0.3) 60%, rgba(107, 218, 213, 0) 100%);
+    background: linear-gradient(to right, rgba(113, 217, 210, 0.9) 10%, rgba(113, 217, 210, 0.3) 60%, rgba(107, 218, 213, 0) 100%);
   }
   .hero--basic__image img {
     height: 100%;
@@ -2751,7 +2755,7 @@ main {
 }
 @media (min-width: 1400px) {
   .media-content .container {
-    max-width: 1400px;
+    max-width: 1300px;
   }
 }
 .media-content .row {
@@ -2826,6 +2830,13 @@ main {
   color: var(--color-white);
   border-bottom: 1px solid var(--color-white);
 }
+.accordions-block .accordion.active .accordion__title {
+  color: var(--color-turquoise-blue);
+}
+.accordions-block .accordion.active .accordion__subtitle .svg-code--underline {
+  width: 100%;
+  opacity: 1;
+}
 @media screen and (min-width: 1025px) {
   .accordions-block .accordion__trigger {
     padding: 2rem 0;
@@ -2839,7 +2850,8 @@ main {
   align-items: center;
   font-family: var(--heading-font-pt);
   font-size: clamp(1.25rem, 3.5vw, 2.25rem);
-  color: var(--color-turquoise-blue);
+  color: var(--color-white);
+  transition: all 200ms ease;
 }
 .accordions-block .accordion__title span {
   color: var(--color-white);
@@ -2847,10 +2859,20 @@ main {
   font-size: 1rem;
 }
 .accordions-block .accordion__subtitle {
+  position: relative;
   font-family: var(--body-font);
   font-size: clamp(1.1rem, 3vw, 1.8rem);
   color: var(--color-white);
   text-transform: capitalize;
+}
+.accordions-block .accordion__subtitle .svg-code--underline {
+  position: absolute;
+  width: 0;
+  left: -0.25rem;
+  bottom: 0;
+  transform: translateY(70%);
+  transition: all 100ms ease;
+  opacity: 0;
 }
 @media screen and (min-width: 1025px) {
   .accordions-block .accordion__content {
@@ -2864,8 +2886,14 @@ main {
   margin-bottom: 1rem;
 }
 .accordions-block .accordion__content ul {
-  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-left: 1.5rem;
   list-style: disc;
+}
+@media screen and (min-width: 1025px) {
+  .accordions-block .accordion__content ul {
+    padding-left: 3rem;
+  }
 }
 .accordions-block .accordion__content ul ::marker {
   color: var(--color-turquoise-blue);
@@ -2874,12 +2902,40 @@ main {
   padding-bottom: 0.5rem;
 }
 
+@media screen and (max-width: 560px) {
+  .text-icon-blocks {
+    padding-top: 3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+.text-icon-blocks__intro {
+  position: relative;
+}
+.text-icon-blocks__intro .svg-code--curly-arrow {
+  width: 50px;
+  margin: 0 auto;
+  transform: translateX(100%) translateY(10%) rotate(-33deg);
+}
+@media screen and (min-width: 1025px) {
+  .text-icon-blocks__intro .svg-code--curly-arrow {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 90px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .text-icon-blocks__intro .svg-code--curly-arrow {
+    transform: unset;
+  }
+}
 .text-icon-blocks__title {
   font-family: var(--body-font);
   text-transform: uppercase;
   font-weight: normal;
   text-align: center;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
   color: var(--color-blue);
 }
 @media screen and (min-width: 1200px) {
@@ -2903,12 +2959,14 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-blue);
 }
 .text-icon-blocks__block:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 .text-icon-blocks__block-wrapper {
-  padding: 2rem 0;
+  padding: 0 1.5rem 2rem;
 }
 @media screen and (min-width: 1025px) {
   .text-icon-blocks__block {
@@ -2929,7 +2987,16 @@ main {
 .text-icon-blocks__block-title {
   font-family: var(--heading-font-pt);
   color: var(--color-pink);
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  text-transform: uppercase;
+}
+.text-icon-blocks__cta {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1025px) {
+  .text-icon-blocks__cta {
+    margin-top: 3rem;
+  }
 }
 
 .btn {

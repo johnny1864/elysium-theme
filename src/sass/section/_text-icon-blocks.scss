@@ -1,10 +1,41 @@
 .text-icon-blocks {
+    @media screen and (max-width: 560px) {
+        padding-top: 3rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    &__intro {
+        position: relative;
+
+        .svg-code--curly-arrow {
+            width: 50px;
+            margin: 0 auto;
+            transform: translateX(100%) translateY(10%) rotate(-33deg);
+        }
+
+        @media screen and (min-width: 1025px) {
+            .svg-code--curly-arrow {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 90px;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            .svg-code--curly-arrow {
+                transform: unset;
+            }
+        }
+    }
+
     &__title {
         font-family: var(--body-font);
         text-transform: uppercase;
         font-weight: normal;
         text-align: center;
-        font-size: clamp(1rem, 2vw, 2rem);
+        font-size: clamp(1.4rem, 2.5vw, 2.5rem);
         color: var(--color-blue);
 
         @media screen and (min-width: 1200px) {
@@ -25,22 +56,27 @@
         }
     }
 
+
+
     &__block {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--color-blue);
 
         &:nth-of-type(even) {
             flex-direction: row-reverse;
         }
 
         &-wrapper {
-            padding: 2rem 0;
+            padding: 0 1.5rem 2rem;
         }
 
         @media screen and (min-width: 1025px) {
             gap: 3rem;
             font-size: 1.25rem;
+            
 
             &-wrapper {
                 max-width: 1000px;
@@ -57,9 +93,17 @@
         }
 
         &-title {
-            font-family: var( --heading-font-pt);
+            font-family: var(--heading-font-pt);
             color: var(--color-pink);
-            font-size: clamp(1rem, 2vw, 2rem);
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            text-transform: uppercase;
+        }
+    }
+
+    &__cta {
+        margin-top: 1rem;
+        @media screen and (min-width: 1025px) {
+            margin-top: 3rem;
         }
     }
 }

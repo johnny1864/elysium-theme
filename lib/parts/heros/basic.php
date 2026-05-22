@@ -1,3 +1,11 @@
+<style>
+	.top-bar {
+		background-color: var(--color-blue);
+	}
+	.top-bar__phone-number {
+		color: var(--color-white);
+	}
+</style>
 <section <?php echo $classes; ?>>
 	<div class="container">
 		<div class="hero--basic__content">
