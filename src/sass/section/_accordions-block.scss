@@ -27,6 +27,11 @@
         &.active {
             .accordion__title {
                 color: var(--color-turquoise-blue);
+                .svg-code--underline {
+                    width: 100%;
+                    opacity: 1;
+                    max-width: 350px;
+                }
             }
 
             .accordion__subtitle {
@@ -51,6 +56,18 @@
             border-bottom: none;
         }
 
+        &__label {
+            .svg-code--underline {
+                position: absolute;
+                width: 0;
+                left: -0.25rem;
+                bottom: 0;
+                transform: translateY(70%);
+                transition: all 100ms ease;
+                opacity: 0;
+            }
+        }
+
         &__title {
             display: flex;
             align-items: center;
@@ -65,6 +82,8 @@
                 font-size: clamp(1.25rem, 2vw, 1.2rem);;
                 transition: all 200ms ease;
             }
+
+            
         }
 
         &__subtitle {
@@ -74,15 +93,7 @@
             color: var(--color-white);
             text-transform: capitalize;
 
-            .svg-code--underline {
-                position: absolute;
-                width: 0;
-                left: -0.25rem;
-                bottom: 0;
-                transform: translateY(70%);
-                transition: all 100ms ease;
-                opacity: 0;
-            }
+            
         }
 
         &__content {

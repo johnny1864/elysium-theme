@@ -2864,6 +2864,11 @@ main {
 .accordions-block .accordion.active .accordion__title {
   color: var(--color-turquoise-blue);
 }
+.accordions-block .accordion.active .accordion__title .svg-code--underline {
+  width: 100%;
+  opacity: 1;
+  max-width: 350px;
+}
 .accordions-block .accordion.active .accordion__subtitle .svg-code--underline {
   width: 100%;
   opacity: 1;
@@ -2878,6 +2883,15 @@ main {
 }
 .accordions-block .accordion:last-child {
   border-bottom: none;
+}
+.accordions-block .accordion__label .svg-code--underline {
+  position: absolute;
+  width: 0;
+  left: -0.25rem;
+  bottom: 0;
+  transform: translateY(70%);
+  transition: all 100ms ease;
+  opacity: 0;
 }
 .accordions-block .accordion__title {
   display: flex;
@@ -2899,15 +2913,6 @@ main {
   font-size: clamp(1.1rem, 3vw, 1.8rem);
   color: var(--color-white);
   text-transform: capitalize;
-}
-.accordions-block .accordion__subtitle .svg-code--underline {
-  position: absolute;
-  width: 0;
-  left: -0.25rem;
-  bottom: 0;
-  transform: translateY(70%);
-  transition: all 100ms ease;
-  opacity: 0;
 }
 .accordions-block .accordion__content {
   padding: 0.5rem 0;
