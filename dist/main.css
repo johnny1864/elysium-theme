@@ -1607,6 +1607,12 @@ main {
   z-index: 2;
   pointer-events: none;
 }
+.hero--basic p {
+  margin-top: 1rem;
+}
+.hero--basic p:first-child {
+  margin-top: 0;
+}
 @media screen and (min-width: 1025px) {
   .hero--basic .container {
     position: relative;
@@ -2864,14 +2870,17 @@ main {
 .accordions-block .accordion.active .accordion__title {
   color: var(--color-turquoise-blue);
 }
+.accordions-block .accordion.active .accordion__title .svg-code--title-underline,
 .accordions-block .accordion.active .accordion__title .svg-code--underline {
-  width: 100%;
+  width: 80%;
   opacity: 1;
   max-width: 350px;
 }
-.accordions-block .accordion.active .accordion__subtitle .svg-code--underline {
+.accordions-block .accordion.active .svg-code--underline,
+.accordions-block .accordion.active .svg-code--title-underline {
   width: 100%;
   opacity: 1;
+  max-width: 350px;
 }
 .accordions-block .accordion.active .accordion__title span {
   transform: rotate(45deg);
@@ -2884,6 +2893,7 @@ main {
 .accordions-block .accordion:last-child {
   border-bottom: none;
 }
+.accordions-block .accordion__label .svg-code--title-underline,
 .accordions-block .accordion__label .svg-code--underline {
   position: absolute;
   width: 0;
@@ -2916,6 +2926,35 @@ main {
 }
 .accordions-block .accordion__content {
   padding: 0.5rem 0;
+}
+.accordions-block .accordion__content .custom-blockquote {
+  position: relative;
+  max-width: 725px;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 750px) {
+  .accordions-block .accordion__content .custom-blockquote {
+    margin: 1.5rem 0;
+  }
+}
+.accordions-block .accordion__content .custom-blockquote img {
+  width: 100%;
+  max-width: 100%;
+}
+.accordions-block .accordion__content .custom-blockquote__content {
+  position: absolute;
+  inset: 0.8rem;
+  font-size: 0.8rem;
+}
+.accordions-block .accordion__content .custom-blockquote__content strong {
+  color: var(--color-turquoise-blue) !important;
+}
+@media screen and (min-width: 750px) {
+  .accordions-block .accordion__content .custom-blockquote__content {
+    font-size: 1.5rem;
+    inset: 2.5rem;
+    line-height: 1.1;
+  }
 }
 @media screen and (min-width: 1025px) {
   .accordions-block .accordion__content {
@@ -2957,7 +2996,7 @@ main {
 
 @media screen and (max-width: 560px) {
   .text-icon-blocks {
-    padding-top: 3rem;
+    padding-top: 5rem;
     padding-left: 0rem;
     padding-right: 0rem;
   }
@@ -3283,6 +3322,7 @@ main {
   transform: rotate(90deg);
 }
 .accordion__label {
+  position: relative;
   margin-right: 0.5rem;
   text-transform: uppercase;
   line-height: 1.1;
@@ -3305,6 +3345,41 @@ main {
   .accordion__content {
     margin-bottom: 1.5rem;
   }
+}
+
+.page-public-relations .hero--basic {
+  background-color: var(--color-blue);
+}
+.page-public-relations .hero--basic__title {
+  background: linear-gradient(to right, #5f8fd8 0%, #71d9d2 10%, #71d9d2 50%, #5f8fd8 55%, #5f8fd8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.page-public-relations .hero--basic__image::after {
+  background: linear-gradient(to bottom, rgb(0, 59, 113) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
+}
+@media screen and (min-width: 768px) {
+  .page-public-relations .hero--basic__image::after {
+    background: linear-gradient(to right, rgb(0, 59, 113) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
+  }
+}
+.page-public-relations .text-icon-blocks__title {
+  font-size: clamp(1.4rem, 2.25vw, 2rem);
+}
+.page-public-relations .accordions-block .accordion__title {
+  position: relative;
+  color: var(--color-blue);
+}
+.page-public-relations .accordions-block .accordion__title span {
+  color: inherit;
+}
+.page-public-relations .accordions-block .accordion strong {
+  color: var(--color-blue);
+}
+.page-public-relations .accordions-block .accordion.active .accordion__title {
+  color: var(--color-blue);
 }
 
 /*# sourceMappingURL=main.css.map */

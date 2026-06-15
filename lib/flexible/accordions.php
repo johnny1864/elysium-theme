@@ -28,7 +28,7 @@ $group = 'accordion_block';
                             <p class="accordion__title">
                                 <?= $title; ?>
                                 <span class="icon-plus">+</span>
-                                <?php if(empty($subtitle)) echo getSVG('underline', false, false); ?>
+                                <?php if(empty($subtitle)) echo getSVG('title-underline', false, false); ?>
                             </p>
                             <?php if(!empty($subtitle)) : ?>
                                 <span class="accordion__subtitle">

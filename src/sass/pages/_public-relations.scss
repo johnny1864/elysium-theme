@@ -1,0 +1,51 @@
+.page-public-relations {
+    .hero {
+        &--basic {
+            background-color: var(--color-blue);
+
+            &__title {
+                background: linear-gradient(to right, #5f8fd8 0%, #71d9d2 10%, #71d9d2 50%, #5f8fd8 55%,  #5f8fd8 100%);
+                -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            }
+
+            &__image {
+                &::after {
+                    background: linear-gradient(to bottom, rgba(0, 59, 113, 1) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
+
+                     @media screen and (min-width: 768px) {
+                        background: linear-gradient(to right, rgba(0, 59, 113, 1) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
+                     }
+                }
+            }
+        }
+    }
+
+    .text-icon-blocks__title {
+        font-size: clamp(1.4rem, 2.25vw, 2rem);
+    }
+
+    .accordions-block {
+        .accordion {
+            &__title{
+                position: relative;
+                color: var(--color-blue);
+                span {
+                    color: inherit;
+                }
+            }
+ 
+            strong {
+                color: var(--color-blue);
+            }
+
+            &.active {
+                .accordion__title {
+                    color: var(--color-blue);
+                }
+            }
+        }
+    }
+}

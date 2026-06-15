@@ -204,3 +204,33 @@ function italic_shortcode($user_attr, $content){
 	
 		return '<em '.$classes.'>'.$content .'</em>';
 }
+
+add_shortcode( 'blockquote', 'custom_blockquote_shortcode' );
+function custom_blockquote_shortcode( $atts, $content = null ) {
+    $atts = shortcode_atts(
+        array(
+            'author' => '',
+            'class'  => '',
+        ),
+        $atts,
+        'blockquote'
+    );
+
+    ob_start();
+    ?>
+    <blockquote class="custom-blockquote <?php echo esc_attr( $atts['class'] ); ?>">
+
+		<img src="/wp-content/uploads/2026/06/callout-bg.png" alt="">
+        <div class="custom-blockquote__content">
+            <?php echo wpautop( do_shortcode( $content ) ); ?>
+        </div>
+
+        <?php if ( ! empty( $atts['author'] ) ) : ?>
+            <cite class="custom-blockquote__author">
+                <?php echo esc_html( $atts['author'] ); ?>
+            </cite>
+        <?php endif; ?>
+    </blockquote>
+    <?php
+    return ob_get_clean();
+}

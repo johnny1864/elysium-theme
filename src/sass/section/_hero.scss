@@ -243,6 +243,14 @@
             pointer-events: none;
         }
 
+        p {
+            margin-top: 1rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
         @media screen and (min-width: 1025px) {
             .container {
                 position: relative;
