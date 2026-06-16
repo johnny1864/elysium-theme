@@ -3369,6 +3369,11 @@ main {
   background-clip: text;
   color: transparent;
 }
+@media screen and (min-width: 1400px) {
+  .page-public-relations .hero--basic__image {
+    width: 65%;
+  }
+}
 .page-public-relations .hero--basic__image::after {
   background: linear-gradient(to bottom, rgb(0, 59, 113) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
 }

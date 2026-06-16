@@ -12,12 +12,17 @@
             }
 
             &__image {
+                 @media screen and (min-width: 1400px) {
+                    width: 65%;        
+                }
                 &::after {
                     background: linear-gradient(to bottom, rgba(0, 59, 113, 1) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
 
                     @media screen and (min-width: 768px) {
                         background: linear-gradient(to right, rgba(0, 59, 113, 1) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
                     }
+
+                   
                 }
             }
         }
