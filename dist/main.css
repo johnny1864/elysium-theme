@@ -2834,6 +2834,12 @@ main {
 .media-content__content {
   color: var(--color-blue);
 }
+.media-content__content p {
+  margin-top: 1rem;
+}
+.media-content__content p:first-child {
+  margin-top: 0;
+}
 @media (min-width: 1025px) {
   .media-content__content {
     font-size: 1.25rem;

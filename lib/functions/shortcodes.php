@@ -223,13 +223,13 @@ function custom_blockquote_shortcode( $atts, $content = null ) {
 		<img src="/wp-content/uploads/2026/06/callout-bg.png" alt="">
         <div class="custom-blockquote__content">
             <?php echo wpautop( do_shortcode( $content ) ); ?>
-        </div>
-
-        <?php if ( ! empty( $atts['author'] ) ) : ?>
-            <cite class="custom-blockquote__author">
-                <?php echo esc_html( $atts['author'] ); ?>
-            </cite>
-        <?php endif; ?>
+        
+			<?php if ( ! empty( $atts['author'] ) ) : ?>
+				<cite class="custom-blockquote__author">
+					<?php echo esc_html( $atts['author'] ); ?>
+				</cite>
+			<?php endif; ?>
+		</div>
     </blockquote>
     <?php
     return ob_get_clean();

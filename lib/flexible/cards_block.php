@@ -218,6 +218,17 @@ $slides = get_sub_field( 'slides' );
 			}
 		});
 
+    // Autoplay
+    let timer;
+    const start = () => {
+      timer = setInterval(() => goTo((active + 1) % cards.length), 4000);
+    };
+    const stop = () => clearInterval(timer);
+
+    stack.addEventListener('mouseenter', stop);
+    stack.addEventListener('mouseleave', start);
+
 		render();
+    start();
 	});
 </script>
