@@ -13,8 +13,9 @@ $attr = buildAttr( array( 'id' => $id, 'class' => $classList ) );
 			<div class="text-icon-blocks__intro">
 				<h2 class="section-title text-center text-icon-blocks__title">
 					<?php echo $heading; ?>
+					<?= getSVG( 'curly-arrow', false, false ) ?>
 				</h2>
-				<?= getSVG( 'curly-arrow', false, false ) ?>
+				
 			</div>
 		<?php endif; ?>
 		<div class="text-icon-blocks__block-wrapper">

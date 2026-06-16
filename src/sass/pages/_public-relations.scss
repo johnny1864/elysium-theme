@@ -4,20 +4,20 @@
             background-color: var(--color-blue);
 
             &__title {
-                background: linear-gradient(to right, #5f8fd8 0%, #71d9d2 10%, #71d9d2 50%, #5f8fd8 55%,  #5f8fd8 100%);
+                background: linear-gradient(to right, #5f8fd8 0%, #71d9d2 10%, #71d9d2 50%, #5f8fd8 55%, #5f8fd8 100%);
                 -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
             }
 
             &__image {
                 &::after {
                     background: linear-gradient(to bottom, rgba(0, 59, 113, 1) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
 
-                     @media screen and (min-width: 768px) {
+                    @media screen and (min-width: 768px) {
                         background: linear-gradient(to right, rgba(0, 59, 113, 1) 20%, rgba(0, 59, 113, 0.4) 60%, rgba(107, 218, 213, 0) 100%);
-                     }
+                    }
                 }
             }
         }
@@ -29,14 +29,23 @@
 
     .accordions-block {
         .accordion {
-            &__title{
+            &__title {
                 position: relative;
                 color: var(--color-blue);
+
                 span {
                     color: inherit;
                 }
             }
- 
+
+            &__content {
+                ul {
+                    ::marker {
+                        color: var(--color-blue);
+                    }
+                }
+            }
+
             strong {
                 color: var(--color-blue);
             }
@@ -44,6 +53,32 @@
             &.active {
                 .accordion__title {
                     color: var(--color-blue);
+                }
+            }
+        }
+    }
+
+    .text-icon-blocks {
+
+        &__intro {
+            margin-bottom: 1.5rem;
+            .svg-code--curly-arrow {
+                display: none;
+            }
+
+             @media screen and (min-width: 750px) {
+                margin-bottom: 0;
+             }
+
+            @media screen and (min-width: 1400px) {
+                display: flex;
+                justify-content: center;
+
+                .svg-code--curly-arrow {
+                    display: block;
+                    top: 0;
+                    width: 85px;
+                    transform: translateX(100%) translateY(10%) rotate(-50deg);
                 }
             }
         }
