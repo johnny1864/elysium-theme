@@ -1,6 +1,7 @@
 <?php
 $eyebrow = get_sub_field( 'eyebrow_text' );
 $heading = get_sub_field( 'heading' );
+$content = get_sub_field( 'content' );
 $stories = get_sub_field( 'stories' );
 ?>
 
@@ -8,7 +9,7 @@ $stories = get_sub_field( 'stories' );
 	<div class="story-slides__wrapper container">
 
 		<div class="story-slides__intro text-center">
-			<?php if ( $eyebrow || $heading ) : ?>
+			<?php if ( $eyebrow ) : ?>
 				<span class="story-slides__intro-preheading">
 					<?php echo esc_html( $eyebrow ); ?>
 				</span>
@@ -17,6 +18,12 @@ $stories = get_sub_field( 'stories' );
 				<h2 class="story-slides__intro-heading">
 					<?php echo esc_html( $heading ); ?>
 				</h2>
+			<?php endif; ?>
+
+			<?php if ( !empty($content) ) : ?>
+				<div class="story-slides__intro-content text-center">
+					<?= $content ?>
+				</div>
 			<?php endif; ?>
 		</div>
 

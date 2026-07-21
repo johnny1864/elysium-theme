@@ -144,6 +144,7 @@ h1,
 h2,
 h3 {
   line-height: 1;
+  text-wrap: balance;
 }
 
 *,
@@ -1752,12 +1753,19 @@ main {
 .story-slides__intro {
   transition: all 300ms ease;
 }
+@media screen and (min-width: 1200px) {
+  .story-slides__intro {
+    padding-top: 1rem;
+  }
+}
 .story-slides__intro-preheading {
   font-family: var(--body-font);
   text-transform: uppercase;
   font-weight: normal;
   text-align: center;
   font-size: clamp(1rem, 2vw, 2rem);
+  display: block;
+  text-wrap: balance;
 }
 @media screen and (min-width: 1200px) {
   .story-slides__intro-preheading {
@@ -1783,6 +1791,14 @@ main {
   color: transparent;
   letter-spacing: 1px;
   line-height: 1;
+}
+.story-slides__intro-content {
+  padding: 0.5rem 0 1rem;
+}
+@media screen and (min-width: 1025px) {
+  .story-slides__intro-content {
+    font-size: 1.25rem;
+  }
 }
 .story-slides__content {
   padding: 0 10px;
