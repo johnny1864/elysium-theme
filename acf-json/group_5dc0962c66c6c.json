@@ -665,6 +665,27 @@
                             "append": ""
                         },
                         {
+                            "key": "field_6a5e5d88eae95",
+                            "label": "Content",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
                             "key": "field_69eadb54fb9f9",
                             "label": "Stories",
                             "name": "stories",
@@ -685,92 +706,6 @@
                             "button_label": "Add Row",
                             "rows_per_page": 20,
                             "sub_fields": [
-                                {
-                                    "key": "field_69eadb87fb9fa",
-                                    "label": "Heading",
-                                    "name": "heading",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "33",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_69eadb54fb9f9"
-                                },
-                                {
-                                    "key": "field_69eadb96fb9fb",
-                                    "label": "Content",
-                                    "name": "content",
-                                    "aria-label": "",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "33",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "allow_in_bindings": 0,
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0,
-                                    "parent_repeater": "field_69eadb54fb9f9"
-                                },
-                                {
-                                    "key": "field_6a026784cc95f",
-                                    "label": "Background Color",
-                                    "name": "bg_color",
-                                    "aria-label": "",
-                                    "type": "color_picker",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "#003b71",
-                                    "enable_opacity": 0,
-                                    "return_format": "string",
-                                    "allow_in_bindings": 0,
-                                    "show_custom_palette": 0,
-                                    "show_color_wheel": 1,
-                                    "custom_palette_source": "",
-                                    "palette_colors": "",
-                                    "parent_repeater": "field_69eadb54fb9f9"
-                                },
-                                {
-                                    "key": "field_69eadba5fb9fc",
-                                    "label": "CTA",
-                                    "name": "cta",
-                                    "aria-label": "",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "33",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "allow_in_bindings": 0,
-                                    "parent_repeater": "field_69eadb54fb9f9"
-                                },
                                 {
                                     "key": "field_69eadbc4fb9fd",
                                     "label": "Card Image",
@@ -2065,5 +2000,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781546006
+    "modified": 1784569294
 }

@@ -582,43 +582,22 @@ jQuery(document).ready(function ($) {
     if (!container) return;
     const swiper = new Swiper(".story-slides .swiper", {
       loop: false,
-      effect: "fade",
       draggable: true,
+      pagination: {
+        el: container.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
       fadeEffect: {
         crossFade: true,
       },
     });
 
-    const bullets = document.querySelectorAll(".swiper-pagination .custom-bullet");
-    const bgClasses = ["bg-1", "bg-2", "bg-3"];
-
-    bullets.forEach((bullet) => {
-      bullet.addEventListener("click", () => {
-        const index = Number(bullet.dataset.index);
-        swiper.slideTo(index);
-      });
-    });
-
-    function setActiveBullet(index) {
-      bullets.forEach((b) => b.classList.remove("active"));
-      if (bullets[index]) bullets[index].classList.add("active");
-    }
-
-    function updateBg(index) {
-      container.classList.remove(...bgClasses);
-      if (bgClasses[index]) container.classList.add(bgClasses[index]);
-    }
-
-    swiper.on("slideChange", function () {
-      setActiveBullet(swiper.activeIndex);
-      updateBg(swiper.activeIndex);
-    });
-
-    setActiveBullet(0);
-    updateBg(0);
+    
+   
     // swiper.destroy(true, true);
   })();
 
+  /*
   (function () {
     const header = document.querySelector(".gheader");
     const section = document.querySelector(".story-slides");
@@ -711,7 +690,7 @@ jQuery(document).ready(function ($) {
         });
       });
 
-      /* -------- Mobile / tablet: stacked-card pin -------- */
+      // Mobile / tablet: stacked-card pin 
       mm.add("(max-width: 1024px)", () => {
         const panels = gsap.utils.toArray(".story-slides__panel");
     
@@ -725,7 +704,7 @@ jQuery(document).ready(function ($) {
       });
     }
 
-    /*const wrapper = section.querySelector(".swiper-wrapper-off");
+    const wrapper = section.querySelector(".swiper-wrapper-off");
     const panels = gsap.utils.toArray(".swiper-slide-off");
     function initHorizontalScroll() {
       const scrollDistance = wrapper.scrollWidth - window.innerWidth;
@@ -763,10 +742,11 @@ jQuery(document).ready(function ($) {
           ease: "power2.out",
         });
       }
-    }*/
+    }
 
     initHorizontalScroll();
   })();
+  */
 
   // ================= AWARDS SLIDER =================
   (function () {

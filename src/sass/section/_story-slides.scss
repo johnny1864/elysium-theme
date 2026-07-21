@@ -8,13 +8,15 @@
     padding-right: 0;
     overflow: visible;
     transition: background-color 300ms ease;
+    background-color: var(--color-pink);
+    &::before {
+            background-image: url(./images/stories-before-img3.png);
+        }
 
     &.bg-1 {
         background-color: #e21c78;
 
-        &::before {
-            background-image: url(./images/stories-before-img3.png);
-        }
+        
     }
 
     &.bg-2 {
@@ -48,26 +50,39 @@
 
     &__intro {
         transition: all 300ms ease;
-    }
 
+        &-preheading {
+            font-family: var(--body-font);
+            text-transform: uppercase;
+            font-weight: normal;
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 2rem);
 
-    &__intro-heading {
-        font-family: var(--body-font);
-        text-transform: uppercase;
-        font-weight: normal;
-        text-align: center;
-        font-size: clamp(1rem, 2vw, 2rem);
+            @media screen and (min-width: 1200px) {
+                letter-spacing: 3px;
+            }
 
-        @media screen and (min-width: 1200px) {
-            letter-spacing: 3px;
+            span {
+                font-family: var(--heading-font-pt);
+                display: block;
+                font-weight: bold;
+                font-size: 1.5em;
+                letter-spacing: 0;
+            }
         }
 
-        span {
+        &-heading {
+            font-size: clamp(1.75rem, 4.5vw, 50px);
             font-family: var(--heading-font-pt);
-            display: block;
-            font-weight: bold;
-            font-size: 1.5em;
-            letter-spacing: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: linear-gradient(to right, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.5) 20%, #fff 30%, #fff 70%, rgba(255,255,255,0.25) 80%,  rgba(255,255,255,0.1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+            line-height: 1;
         }
     }
 
@@ -104,13 +119,12 @@
 
     &__image {
         line-height: 0;
-        border-radius: 10px;
-        overflow: hidden;
-
+    
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 10px;
         }
     }
 
@@ -142,16 +156,22 @@
         width: 100%;
         height: auto;
         max-width: 750px;
+        --swiper-pagination-bullet-horizontal-gap: 2px;
+        --swiper-pagination-color: #fff;
+        --swiper-pagination-bullet-inactive-color: #fff;
+        --swiper-pagination-bottom: 0;
+        padding-bottom: 1rem;
+
+        @media screen and (min-width: 1025px) {
+            max-width: unset;
+            padding: 3rem 0;
+        }
 
         &-wrapper-off {
             height: auto;
             display: flex;
             width: fit-content;
             flex-wrap: nowrap;
-        }
-
-        &-pagination {
-            // keep empty if needed later
         }
 
         &-slide-off {
@@ -161,6 +181,9 @@
 
         &-slide {
             height: auto;
+            @media screen and (min-width: 1025px) {
+                padding: 0 3rem;
+            }
 
             &__container {
                 position: relative;
@@ -235,8 +258,8 @@
 
     @media (min-width: 768px) {
         &__image {
-        aspect-ratio: 2/1;
-    }
+            aspect-ratio: 9/5;
+        }
     }
 
     @media (min-width: 1025px) {
@@ -245,6 +268,7 @@
                 padding-top: 3rem;
             }
         }
+
         .swiper {
             &-slide {
                 &__container {
@@ -274,10 +298,6 @@
             background-color: unset !important;
         }
 
-        &__image-area {
-            width: 55%;
-        }
-
         &__content {
             flex: 1;
             margin-top: 2.5rem;
@@ -288,7 +308,7 @@
             padding-bottom: 4.5rem;
         }
 
-        
+
 
         .custom-bullet {
             width: 33%;
@@ -334,6 +354,32 @@
         }
     }
 
+    &__card {
+        @media screen and (min-width: 1025px) {
+            display: flex;
+            justify-content: center;
+
+            &-image,
+            &-text-box {
+                width: 50%;
+            }
+
+            &-image {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            &-text-box {
+                position: relative;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                border-radius: 10px;
+            }
+        }
+    }
+
     @media (min-width: 1200px) {
 
         &__content p {
@@ -353,6 +399,8 @@
             padding: 1.5rem 2.5rem;
         }
 
+        
+
         &__card-title {
             font-size: 1.4rem;
         }
@@ -361,12 +409,4 @@
             font-size: 1.2rem;
         }
     }
-
-    @media screen and (min-width: 1600px) {
-        &__panel {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-    }
-
 }
