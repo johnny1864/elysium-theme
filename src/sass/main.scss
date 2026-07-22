@@ -22,6 +22,7 @@
 @use './section/media-content';
 @use './section/accordions-block';
 @use './section/text-icon-blocks';
+@use './section/tabs-blocks';
 
 @use './parts/button';  
 @use './parts/forms';
@@ -30,4 +31,5 @@
 @use './parts/accordion'; 
 
 @use './pages/public-relations';
+@use './pages/web-design';
 
