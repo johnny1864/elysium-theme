@@ -9,17 +9,78 @@
         object-position: left top;
     }
 
+    .container {
+        position: relative;
+         @media screen and (max-width: 1024px) {
+            max-width: 650px;
+         }
+    }
+
+    &__nav {
+        margin-bottom: 1.5rem;
+        &-item {
+            
+        }
+        
+        @media screen and (min-width: 1025px) {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+
+            &-item {
+                width: 20%;
+                &.active {
+                    background-color: var(--color-turquoise-blue);
+                }
+            }
+        }
+
+    }
+
     &__panels {
         position: relative;
     }
 
+    &__panel {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
     &__card {
         color: var(--color-white);
-         &-subtitle {
+        padding: 0 1rem 1.5rem;
+
+        background-image: url('http://lightpink-sparrow-470852.hostingersite.com/wp-content/uploads/2026/07/mobile-outline.png');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media screen and (max-width: 410px) {
+            background-size: contain;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 0 3rem 2rem;
+            font-size: 1.25rem;
+            background-image: url('http://lightpink-sparrow-470852.hostingersite.com/wp-content/uploads/2026/07/outline.png');
+        }
+
+        &-title {
+            font-family: var(--heading-font-pt);
+            font-size: clamp(1.25rem, 3vw, 2.25rem);
+            text-transform: uppercase;
+        }
+
+        &-subtitle {
             display: inline-block;
             position: relative;
             font-family: var(--body-font);
-            font-size: clamp(1.1rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 3vw, 1.5rem);
             color: var(--color-white);
             text-transform: capitalize;
             padding: 0.5rem 0 1rem;
@@ -32,11 +93,39 @@
                 bottom: 0;
                 transform: translateX(-50%);
             }
-            
+
         }
 
         &-body {
+            padding-top: 1rem;
 
+            @media screen and (min-width: 1200px) {
+                width: 85%;
+                padding-top: 2rem;
+                margin: 0 auto;
+            }
+        }
+
+        &-row {
+            @media screen and (min-width: 1025px) {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+
+        &-image {
+            padding-bottom: 1rem;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                height: auto;
+            }
+
+            @media screen and (min-width: 1025px) {
+                width: 45%;
+                padding-bottom: 0;
+            }
         }
     }
 }

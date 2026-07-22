@@ -13,6 +13,22 @@ $tabs = get_sub_field('tabs');
     <img loading="lazy" class="accordions-block__bg-image" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/accordions-bg.webp' ); ?>" alt="">
     <?php endif ?>
     <div class="container">
+        <div class="tabs-block__nav">
+            <?php foreach($tabs as $index => $tab) : ?>
+                <?php 
+                $tab = $tab['tab'];
+                $title = $tab['title'];
+                $label = $tab['nav_label'];
+
+                if(empty($label)) $label = $title;
+                ?>
+                <?php if(!empty($label)) : ?>
+                    <button data-tab="<?php echo handleize($title); ?>" class="btn btn--white tabs-block__nav-item <?php if($index ==  0) : ?>active<?php endif; ?>">
+                        <?= $label; ?>
+                    </button>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
         <div class="tabs-block__panels">
         <?php foreach($tabs as $index => $tab) : ?>
             <?php 
@@ -20,12 +36,15 @@ $tabs = get_sub_field('tabs');
                 $title = $tab['title'];
                 $subtitle = $tab['subtitle'];
                 $content = $tab['content'];
+                $image = $tab['image'];
+                $right_text = $tab['right_text'];
+                $cta = $tab['cta'];
             ?>
-            <div class="tabs-block__panel">
+            <div id="<?php echo handleize($title); ?>" class="tabs-block__panel <?php if($index ==  0) : ?>active<?php endif; ?>">
                 <div class="tabs-block__card">
                     <div class="tabs-block__card-intro text-center">
                         <?php if(!empty($title)) : ?>
-                            <h3 class="title">
+                            <h3 class="tabs-block__card-title">
                                 <?= $title; ?>
                             </h3>
                         <?php endif; ?>
@@ -38,6 +57,29 @@ $tabs = get_sub_field('tabs');
                     </div>
                     <div class="tabs-block__card-body">
                         <?= $content; ?>
+                        <div class="tabs-block__card-row">
+                            <?php if(!empty($image)) : ?>
+                                <div class="tabs-block__card-image">
+                                    <?php echo wp_get_attachment_image( $image['ID'], 'full', false, [ 'loading' => 'lazy',
+                                    'alt' => $image['alt'],
+                                    'fetchpriority' => 'auto',
+                                    'decoding' => 'async' ] ); ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if(!empty($right_text)) : ?>
+                                <div class="tabs-block__card-right-text">
+                                    <?= $right_text; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <?php if ($cta): ?>
+                            <div class="text-center">
+                                <a href="<?php echo esc_url($cta['url']); ?>" class="btn btn--white"
+                                    target="<?php echo esc_attr($cta['target'] ?: '_self'); ?>">
+                                    <?php echo esc_html($cta['title']); ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

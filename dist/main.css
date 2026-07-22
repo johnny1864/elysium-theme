@@ -196,6 +196,43 @@ main {
     transform: none !important;
   }
 }
+main ul,
+main ol {
+  padding-top: 1rem;
+  margin-left: 1rem;
+  font-size: inherit;
+}
+main ul li,
+main ol li {
+  padding-left: 0.5rem;
+  list-style: none;
+  position: relative;
+  box-sizing: border-box;
+}
+main ul li:before,
+main ol li:before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: 100%;
+  color: inherit;
+  white-space: nowrap;
+  top: 0.5rem;
+  bottom: 0px;
+  margin-right: 0.5rem;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  border: 3px solid;
+}
+@media (min-width: 768px) {
+  main ul,
+  main ol {
+    margin-left: 1.25rem;
+  }
+}
+
 #wpadminbar {
   position: fixed;
 }
@@ -3173,17 +3210,71 @@ main {
   object-fit: cover;
   object-position: left top;
 }
+.tabs-block .container {
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .tabs-block .container {
+    max-width: 650px;
+  }
+}
+.tabs-block__nav {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1025px) {
+  .tabs-block__nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .tabs-block__nav-item {
+    width: 20%;
+  }
+  .tabs-block__nav-item.active {
+    background-color: var(--color-turquoise-blue);
+  }
+}
 .tabs-block__panels {
   position: relative;
 }
+.tabs-block__panel {
+  display: none;
+}
+.tabs-block__panel.active {
+  display: block;
+}
 .tabs-block__card {
   color: var(--color-white);
+  padding: 0 1rem 1.5rem;
+  background-image: url("http://lightpink-sparrow-470852.hostingersite.com/wp-content/uploads/2026/07/mobile-outline.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 410px) {
+  .tabs-block__card {
+    background-size: contain;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tabs-block__card {
+    padding: 0 3rem 2rem;
+    font-size: 1.25rem;
+    background-image: url("http://lightpink-sparrow-470852.hostingersite.com/wp-content/uploads/2026/07/outline.png");
+  }
+}
+.tabs-block__card-title {
+  font-family: var(--heading-font-pt);
+  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  text-transform: uppercase;
 }
 .tabs-block__card-subtitle {
   display: inline-block;
   position: relative;
   font-family: var(--body-font);
-  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
   color: var(--color-white);
   text-transform: capitalize;
   padding: 0.5rem 0 1rem;
@@ -3196,6 +3287,37 @@ main {
   bottom: 0;
   transform: translateX(-50%);
 }
+.tabs-block__card-body {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  .tabs-block__card-body {
+    width: 85%;
+    padding-top: 2rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .tabs-block__card-row {
+    display: flex;
+    gap: 1rem;
+  }
+}
+.tabs-block__card-image {
+  padding-bottom: 1rem;
+}
+.tabs-block__card-image img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1025px) {
+  .tabs-block__card-image {
+    width: 45%;
+    padding-bottom: 0;
+  }
+}
+
 .btn {
   font-size: 0.95rem;
   color: #fff;
@@ -3209,6 +3331,9 @@ main {
   margin-top: 1rem;
   font-weight: 700;
   transition: 0.2s all;
+  border: none;
+  word-wrap: balance;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #fff;

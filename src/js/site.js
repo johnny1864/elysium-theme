@@ -73,7 +73,6 @@ jQuery(document).ready(function ($) {
 
   //Global function to toggle simple accordions
   var Accordions = (function () {
-    
     var $accordions = $(".accordion");
     console.log($accordions);
     if (!$accordions.length) {
@@ -93,8 +92,6 @@ jQuery(document).ready(function ($) {
       var $siblings = $accordion.siblings().length
         ? $accordion.siblings()
         : $accordions.filter('[data-group="' + $accordion.data("group") + '"]');
-
-      
 
       if ($accordion.hasClass("active")) {
         $accordion.removeClass("active");
@@ -397,7 +394,7 @@ jQuery(document).ready(function ($) {
           styles.top = $adminBar.innerHeight();
         }
 
-        console.log($header.innerHeight())
+        console.log($header.innerHeight());
         $nav.css({ marginTop: $header.innerHeight() + 20 });
         $header.css(styles);
         $body.css({ marginTop: $header.innerHeight() });
@@ -584,7 +581,7 @@ jQuery(document).ready(function ($) {
       loop: false,
       draggable: true,
       pagination: {
-        el: container.querySelector('.swiper-pagination'),
+        el: container.querySelector(".swiper-pagination"),
         clickable: true,
       },
       fadeEffect: {
@@ -592,8 +589,6 @@ jQuery(document).ready(function ($) {
       },
     });
 
-    
-   
     // swiper.destroy(true, true);
   })();
 
@@ -861,6 +856,26 @@ jQuery(document).ready(function ($) {
         768: { slidesPerView: 3 },
         1024: { slidesPerView: 4 },
       },
+    });
+  })();
+
+  // ================= TESTIMONIAL =================
+  (function () {
+    const section = $(".tabs-block");
+
+    if (!section) return;
+
+    $(".tabs-block__nav-item").on("click", function () {
+      const tab = $(this).data("tab");
+
+      // Active button
+      $(".tabs-block__nav-item").removeClass("active");
+      $(this).addClass("active");
+
+      // Active panel
+      $(".tabs-block__panel").removeClass("active");
+
+      $("#" + tab).addClass("active");
     });
   })();
 });

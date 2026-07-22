@@ -51,14 +51,60 @@ main {
 
 
 /* Fade-in elements start hidden on desktop */
-  @media (min-width: 990px) {
-    .reveal { opacity: 0; transform: translateY(40px); }
+@media (min-width: 990px) {
+    .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
     .pin-spacer {
         // z-index: 999 !important;
     }
-  }
- 
-  /* Respect reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1 !important; transform: none !important; }
-  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+main {
+
+    ul,
+    ol {
+        padding-top: 1rem;
+        margin-left: 1rem;
+        font-size: inherit;
+
+        li {
+            padding-left: 0.5rem;
+            list-style: none;
+            position: relative;
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                display: block;
+                box-sizing: border-box;
+                position: absolute;
+                right: 100%;
+                color: inherit;
+                white-space: nowrap;
+                top: .5rem;
+                bottom: 0px;
+                margin-right: 0.5rem;
+                height: 0;
+                width: 0;
+                border-radius: 50%;
+                border: 3px solid;
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin-left: 1.25rem;
+        }
+    }
+}

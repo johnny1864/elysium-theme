@@ -11,6 +11,9 @@
     margin-top: 1rem;
     font-weight: 700;
     transition: .2s all;
+    border: none;
+    word-wrap: balance;
+    cursor: pointer;
 
     &:hover {
         background-color: #fff;
