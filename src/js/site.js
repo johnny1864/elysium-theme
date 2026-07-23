@@ -859,7 +859,7 @@ jQuery(document).ready(function ($) {
     });
   })();
 
-  // ================= TESTIMONIAL =================
+  // ================= TABS =================
   (function () {
     const section = $(".tabs-block");
 
@@ -868,14 +868,31 @@ jQuery(document).ready(function ($) {
     $(".tabs-block__nav-item").on("click", function () {
       const tab = $(this).data("tab");
 
-      // Active button
       $(".tabs-block__nav-item").removeClass("active");
       $(this).addClass("active");
 
-      // Active panel
       $(".tabs-block__panel").removeClass("active");
 
       $("#" + tab).addClass("active");
     });
   })();
+
+  (function() {
+    const section = $('.web-case-studies');
+
+    if(!section) return;
+
+    new Swiper('.web-case-studies .swiper', {
+      loop: true,
+      spaceBetween: 70,
+      pagination: {
+        el: '.web-case-studies .swiper-pagination',
+        clickable: true,
+      }
+    });
+
+
+  }())
+
+
 });

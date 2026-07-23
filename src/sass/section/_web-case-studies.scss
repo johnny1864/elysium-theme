@@ -1,0 +1,89 @@
+.web-case-studies {
+    background-color: #76cccb;
+    color: var(--color-blue);
+
+    &__intro {
+        &-content {
+            padding-top: 0.5rem;
+        }
+
+        @media screen and (min-width: 1025px) {
+            font-size: 1.5rem;
+
+            &-content {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+        }
+
+        &-title {
+            position: relative;
+            font-family: var(--body-font);
+            text-transform: uppercase;
+            font-weight: normal;
+            text-align: center;
+            font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+            color: var(--color-blue);
+
+            @media screen and (min-width: 1200px) {
+                letter-spacing: 3px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            span {
+                font-family: var(--heading-font-pt);
+                display: block;
+                font-weight: bold;
+                font-size: 1.3em;
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    .swiper {
+        --swiper-pagination-bullet-horizontal-gap: 2px;
+        --swiper-pagination-color: #fff;
+        --swiper-pagination-bullet-inactive-color: #fff;
+        --swiper-pagination-bottom: 0;
+        padding-bottom: 1.5rem;
+
+        @media screen and (min-width: 1025px) {
+            .swiper-pagination {
+                width: 40%;
+                right: 0;
+                left: unset;
+            }
+        }
+    }
+
+    &__card {
+        &-block {
+            padding: 0.5rem 0;
+        }
+
+        @media screen and (min-width: 1025px) {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 3rem;
+
+            &-col {
+                width: 50%;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            font-family: var(--heading-font-pt);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
