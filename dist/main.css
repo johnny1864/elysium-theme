@@ -3260,7 +3260,7 @@ main ol li:before {
 }
 @media screen and (min-width: 1200px) {
   .tabs-block__card {
-    padding: 0 3rem 2rem;
+    padding: 1.5rem 3rem 2rem;
     font-size: 1.25rem;
     background-image: url("http://lightpink-sparrow-470852.hostingersite.com/wp-content/uploads/2026/07/outline.png");
   }
@@ -3290,17 +3290,26 @@ main ol li:before {
 .tabs-block__card-body {
   padding-top: 1rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1025px) {
   .tabs-block__card-body {
     width: 85%;
     padding-top: 2rem;
     margin: 0 auto;
   }
 }
+.tabs-block__card-row {
+  padding: 1rem 0;
+}
 @media screen and (min-width: 1025px) {
   .tabs-block__card-row {
     display: flex;
     gap: 1rem;
+    padding: 1.5rem 0 1rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .tabs-block__card-right-text {
+    width: 60%;
   }
 }
 .tabs-block__card-image {
@@ -3313,7 +3322,7 @@ main ol li:before {
 }
 @media screen and (min-width: 1025px) {
   .tabs-block__card-image {
-    width: 45%;
+    width: 40%;
     padding-bottom: 0;
   }
 }
@@ -3322,12 +3331,16 @@ main ol li:before {
   background-color: #76cccb;
   color: var(--color-blue);
 }
+.web-case-studies__intro {
+  margin-bottom: 1rem;
+}
 .web-case-studies__intro-content {
   padding-top: 0.5rem;
 }
 @media screen and (min-width: 1025px) {
   .web-case-studies__intro {
     font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
   .web-case-studies__intro-content {
     max-width: 700px;
@@ -3369,32 +3382,43 @@ main ol li:before {
 }
 @media screen and (min-width: 1025px) {
   .web-case-studies .swiper .swiper-pagination {
-    width: 40%;
+    width: calc(50% - 2rem);
     right: 0;
     left: unset;
   }
 }
 .web-case-studies__card-block {
-  padding: 0.5rem 0;
+  padding: 0.75rem 0.5rem;
+}
+.web-case-studies__card h4 {
+  font-family: var(--heading-font-pt);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 1025px) {
   .web-case-studies__card {
     display: flex;
     flex-direction: row-reverse;
     gap: 3rem;
+    font-size: 1.25rem;
+  }
+  .web-case-studies__card h4 {
+    font-size: 1.5rem;
   }
   .web-case-studies__card-col {
     width: 50%;
+  }
+  .web-case-studies__card-block {
+    padding: 1rem 0.5rem;
+    padding-right: 1.5rem;
+  }
+  .web-case-studies__card .btn {
+    font-size: 1.25rem;
   }
 }
 .web-case-studies__card img {
   width: 100%;
   height: auto;
-}
-.web-case-studies__card h4 {
-  font-family: var(--heading-font-pt);
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
 }
 
 .btn {

@@ -38,16 +38,18 @@ $attr = buildAttr(array('id'=>$id,'class'=>$classList));
                                     <h4>Opportunity</h4>
                                     <?= $block['opportunity']; ?>
                                 </div>
+                                <?= getSVG('straight-underline', false, false); ?>
                                 <div class="web-case-studies__card-outcome web-case-studies__card-block">
                                     <h4>Outcome</h4>
                                     <?= $block['outcome']; ?>
                                 </div>
+                                <?php if($block['link']) : ?>
+                                    <a href="<?= $block['link']; ?>" class="btn btn--white" target="_blank">
+                                        View LIVE Site
+                                    </a>
+                                <?php endif; ?>
                             </div>
-                            <?php if($block['link']) : ?>
-                                <a href="<?= $block['link']; ?>" class="btn btn--white" target="_blank">
-                                    View LIVE Site
-                                </a>
-                            <?php endif; ?>
+                            
                         </div>
                     </div>
 				<?php endforeach; ?>

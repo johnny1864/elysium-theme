@@ -65,7 +65,7 @@
         }
 
         @media screen and (min-width: 1200px) {
-            padding: 0 3rem 2rem;
+            padding: 1.5rem 3rem 2rem;
             font-size: 1.25rem;
             background-image: url('http://lightpink-sparrow-470852.hostingersite.com/wp-content/uploads/2026/07/outline.png');
         }
@@ -99,7 +99,7 @@
         &-body {
             padding-top: 1rem;
 
-            @media screen and (min-width: 1200px) {
+            @media screen and (min-width: 1025px) {
                 width: 85%;
                 padding-top: 2rem;
                 margin: 0 auto;
@@ -107,9 +107,17 @@
         }
 
         &-row {
+            padding: 1rem 0;
             @media screen and (min-width: 1025px) {
                 display: flex;
                 gap: 1rem;
+                padding: 1.5rem 0 1rem;
+            }
+        }
+
+        &-right-text{
+            @media screen and (min-width: 1025px) {
+                width: 60%;
             }
         }
 
@@ -123,7 +131,7 @@
             }
 
             @media screen and (min-width: 1025px) {
-                width: 45%;
+                width: 40%;
                 padding-bottom: 0;
             }
         }

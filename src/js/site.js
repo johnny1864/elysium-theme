@@ -885,6 +885,9 @@ jQuery(document).ready(function ($) {
     new Swiper('.web-case-studies .swiper', {
       loop: true,
       spaceBetween: 70,
+      autoplay: {
+        delay: 10000
+      },
       pagination: {
         el: '.web-case-studies .swiper-pagination',
         clickable: true,
