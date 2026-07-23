@@ -141,7 +141,7 @@ $slides = get_sub_field( 'slides' );
 						<!-- <div class="card-slider"> -->
                         <?php foreach ( $slides as $index => $slide ) : ?>
                             <div class="slider-card card">
-                                <div class="testimonial-slider__card">
+                                <div class="testimonial-slider__card testimonial-slider__card--<?= $index; ?>">
                                     <?php
                                     echo wp_get_attachment_image(
                                         $slide['bg_image']['ID'],

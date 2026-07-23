@@ -2619,7 +2619,7 @@ section {
 }
 .testimonials .testimonial-slider__card-author-title {
   display: inline-block;
-  width: 60%;
+  width: 80%;
   min-width: 130px;
 }
 .testimonials .testimonial-slider__card-quote {
@@ -2627,7 +2627,7 @@ section {
 }
 .testimonials .testimonial-slider__card-content {
   position: absolute;
-  width: 70%;
+  width: 75%;
   top: 8%;
   left: 50%;
   transform: translateX(-50%);
