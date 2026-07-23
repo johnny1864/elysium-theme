@@ -34,12 +34,14 @@
                     },
                     "choices": {
                         "none": "None",
-                        "basic": "Basic"
+                        "basic": "Basic",
+                        "web-design": "Web Design"
                     },
                     "default_value": "none",
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
+                    "allow_in_bindings": 1,
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
@@ -273,5 +275,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781133973
+    "modified": 1784780980
 }

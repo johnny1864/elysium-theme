@@ -1744,6 +1744,62 @@ main ol li:before {
     object-fit: cover;
   }
 }
+.hero--web-design {
+  background-position: right;
+}
+@media screen and (min-width: 1024px) {
+  .hero--web-design {
+    padding-bottom: 0;
+  }
+}
+.hero--web-design .section-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  background: unset;
+  color: var(--color-turquoise-blue);
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+}
+.hero--web-design__row {
+  padding-top: 3rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .hero--web-design__row {
+    max-width: unset;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero--web-design__col {
+    width: 50%;
+  }
+}
+.hero--web-design__content {
+  color: var(--color-white);
+  padding: 1.5rem 0.5rem;
+  transform: unset;
+}
+@media screen and (min-width: 1024px) {
+  .hero--web-design__content {
+    padding-top: 5rem;
+    font-size: 1.5rem;
+  }
+}
+.hero--web-design__image img {
+  height: auto;
+}
+@media screen and (min-width: 1024px) {
+  .hero--web-design__image img {
+    transform: translateY(3%);
+    position: relative;
+    z-index: 5;
+  }
+}
 
 .story-slides {
   color: #fff;
