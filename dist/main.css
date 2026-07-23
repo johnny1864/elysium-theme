@@ -284,6 +284,10 @@ main ol li:before {
   vertical-align: middle;
 }
 
+section {
+  background-size: cover;
+}
+
 .gheader {
   z-index: 0;
   margin: 0;
