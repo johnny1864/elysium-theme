@@ -1,5 +1,8 @@
 .page-web-design {
     .text-icon-blocks {
+        @media screen and (max-width: 1024px) {
+            padding-top: 2rem;
+        }
         &__intro {
             text-align: center;
             @media screen and (max-width: 1024px) {
@@ -9,7 +12,6 @@
             @media screen and (min-width: 1025px) {
                 .section-title {
                     display: inline-flex;
-
                     &::before {
                         content: "";
                         display: block;
