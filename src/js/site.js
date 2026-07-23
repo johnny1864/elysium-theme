@@ -875,6 +875,42 @@ jQuery(document).ready(function ($) {
 
       $("#" + tab).addClass("active");
     });
+
+    $(".tabs-block__nav-next").on('click', function () {
+        const $current = $('.tabs-block__nav button.active');
+        let $next = $current.next('button');
+
+        if (!$next.length) {
+            $next = $('.tabs-block__nav button').first();
+        }
+
+        const tab = $next.data("tab");
+        $(".tabs-block__panel").removeClass("active");
+
+        $("#" + tab).addClass("active");
+
+        $current.removeClass('active');
+        $next.addClass('active');
+    });
+
+    $('.tabs-block__nav-prev').on('click', function () {
+      const $current = $('.tabs-block__nav button.active');
+      let $prev = $current.prev('button');
+
+      if (!$prev.length) {
+          $prev = $('.tabs-block__nav button').last();
+      }
+
+      const tab = $prev.data("tab");
+      $(".tabs-block__panel").removeClass("active");
+
+      $("#" + tab).addClass("active");
+
+      $current.removeClass('active');
+      $prev.addClass('active');
+  });
+
+
   })();
 
   (function() {

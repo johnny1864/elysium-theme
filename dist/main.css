@@ -3275,13 +3275,49 @@ main ol li:before {
   }
 }
 .tabs-block__nav {
+  position: relative;
   margin-bottom: 1.5rem;
+}
+.tabs-block__nav-item.active {
+  background-color: var(--color-turquoise-blue);
+}
+@media screen and (max-width: 1024px) {
+  .tabs-block__nav {
+    background-color: var(--color-turquoise-blue);
+    border-radius: 2rem;
+    padding: 1rem 0.5rem;
+  }
+  .tabs-block__nav-item {
+    display: none !important;
+    width: 100%;
+    margin-top: 0 !important;
+    pointer-events: none;
+  }
+  .tabs-block__nav-item.active {
+    display: block !important;
+  }
+  .tabs-block__nav-arrow {
+    position: absolute;
+    top: 50%;
+    width: 1rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .tabs-block__nav-prev {
+    left: 5px;
+  }
+  .tabs-block__nav-next {
+    right: 5px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .tabs-block__nav {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+  }
+  .tabs-block__nav-arrow {
+    display: none;
   }
   .tabs-block__nav-item {
     width: 20%;

@@ -28,6 +28,15 @@ $tabs = get_sub_field('tabs');
                     </button>
                 <?php endif; ?>
             <?php endforeach; ?>
+            <div class="tabs-block__nav-prev tabs-block__nav-arrow">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/brands-prev.svg'); ?>" alt=""
+                    aria-hidden="true" />
+            </div>
+
+            <div class="tabs-block__nav-next tabs-block__nav-arrow">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/brands-next.svg'); ?>" alt=""
+                    aria-hidden="true" />
+            </div>
         </div>
         <div class="tabs-block__panels">
         <?php foreach($tabs as $index => $tab) : ?>
