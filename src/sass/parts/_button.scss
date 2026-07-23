@@ -16,8 +16,8 @@
     cursor: pointer;
 
     &:hover {
-        background-color: #fff;
-        color: var(--color-blue);
+        background-color: var(--color-turquoise-blue);
+        color: var(--color-white);
     }
 
     @media (min-width: 768px) {
