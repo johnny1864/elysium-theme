@@ -3836,4 +3836,16 @@ section {
   }
 }
 
+.page-web-design .text-icon-blocks__intro .svg-code--curly-arrow {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .page-web-design .text-icon-blocks__block-icon {
+    width: 20px;
+  }
+  .page-web-design .text-icon-blocks__block-content {
+    width: 80%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

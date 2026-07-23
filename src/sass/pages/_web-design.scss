@@ -1,3 +1,20 @@
 .page-web-design {
-    
+    .text-icon-blocks {
+        &__intro {
+            .svg-code--curly-arrow {
+                display: none;
+            }
+        }
+
+        &__block {
+            @media screen and (max-width: 1024px) {
+                &-icon {
+                    width: 20px;
+                }
+                &-content {
+                    width: 80%;
+                }
+            }
+        }
+    }
 }
