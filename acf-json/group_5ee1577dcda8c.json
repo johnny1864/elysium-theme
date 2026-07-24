@@ -35,7 +35,8 @@
                     "choices": {
                         "none": "None",
                         "basic": "Basic",
-                        "web-design": "Web Design"
+                        "web-design": "Web Design",
+                        "contact": "Contact"
                     },
                     "default_value": "none",
                     "return_format": "value",
@@ -275,5 +276,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1784780980
+    "modified": 1784841350
 }

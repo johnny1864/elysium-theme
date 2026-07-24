@@ -1,5 +1,5 @@
 <?php
-    $thumbnail_id = get_field('blog_default_thumbnail', 'option')['ID'];
+    // $thumbnail_id = get_field('blog_default_thumbnail', 'option')['ID'];
 
     if(!empty(get_post_thumbnail_id())) $thumbnail_id = get_post_thumbnail_id();
 

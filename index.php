@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<section class="blog__hero">
+    <div class="container">
+        <h1>Blog</h1>
+    </div>
+</section>
+
 <section class="blog-content">
     <div class="container">
 

@@ -8,6 +8,7 @@
 @use './layout/header';
 @use './layout/menus';
 @use './layout/footer';
+// @use './layout/reset-styles';
 
 @use './vendor/swiper';  
 
@@ -30,6 +31,7 @@
 @use './parts/top-bar';
 @use './parts/social-links';
 @use './parts/accordion'; 
+@use './parts/post-card';
 
 @use './pages/public-relations';
 @use './pages/web-design';
