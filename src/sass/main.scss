@@ -25,6 +25,7 @@
 @use './section/text-icon-blocks';
 @use './section/tabs-blocks';
 @use './section/web-case-studies';
+@use './section/contact-block';
 
 @use './parts/button';  
 @use './parts/forms';
@@ -35,4 +36,5 @@
 
 @use './pages/public-relations';
 @use './pages/web-design';
+@use './pages/contact';
 

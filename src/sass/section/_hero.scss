@@ -416,7 +416,9 @@
 
     &--contact {
         padding-top: 0;
+        padding-bottom: 0;
         color: var(--color-white);
+
         &__row {
             max-width: 650px;
             margin: 0 auto;
@@ -443,6 +445,9 @@
             color: var(--color-white);
             text-transform: uppercase;
             font-weight: bold;
+            @media screen and (min-width: 1400px) {
+                white-space: nowrap;
+            }
             span {
                 color: var(--color-pink);
             }
@@ -452,6 +457,18 @@
             font-family: var(--body-font); 
             font-size: clamp(1.75rem, 2.5vw, 2.5rem); 
             text-transform: uppercase; 
+            margin-bottom: 0.5rem;
+        }
+
+        &__content {
+            margin-top: -2rem;
+            @media screen and (min-width: 1024px) {
+                margin-top: 0;
+                padding-bottom: 3rem;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: 1.25rem;
+            }
         }
     }
 }
