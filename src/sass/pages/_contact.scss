@@ -1,4 +1,10 @@
 .template-contact {
+    @media screen and (min-width: 1025px) {
+        .gheader:not(.sticky--scrolled) .btn--white:not(:hover) {
+            color: var(--color-blue);
+            background-color: var(--color-white);
+        }
+    }
     main {
        
     }
