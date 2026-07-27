@@ -28,6 +28,8 @@
     </div>
 </section>
 
+<?php get_template_part('lib/blocks/email', 'banner'); ?>
+
 <?php get_template_part('lib/layout/flexible'); ?>
 
 <?php get_footer(); ?>

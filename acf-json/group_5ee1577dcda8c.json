@@ -169,6 +169,35 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_6a66d373127be",
+                    "label": "Headline Underline",
+                    "name": "headline_underline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6218778dc4141",
+                                "operator": "==",
+                                "value": "contact"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_69ea5a7ba0533",
                     "label": "Subheading",
                     "name": "subheading",
@@ -276,5 +305,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1784841350
+    "modified": 1785125147
 }

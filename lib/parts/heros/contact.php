@@ -17,7 +17,15 @@
                     'class' => ''] ); ?>
             </div>
             <div class="hero--contact__content hero--contact__col">
-                <h1 class="section-title"><?php echo $title; ?></h1>
+                <h1 class="section-title">
+                    <?php echo $title; ?>
+                    <?php if(!empty($hero['headline_underline'])) : ?>
+                        <span>
+                            <?= $hero['headline_underline'] ?>
+                            <?= getSVG('contact-underline', false, false); ?>
+                        </span>
+                    <?php endif; ?>
+                </h1>
                 <?php if ( ! empty( $hero['subheading'] ) ) : ?>
                     <p class="hero--contact__subheading">
                         <?php echo $hero['subheading']; ?>
