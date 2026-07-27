@@ -42,6 +42,6 @@
 <body id="top" <?php body_class(); ?>>
     <?php echo get_field('body_scripts_top', 'option'); ?>
     <?php include locate_template( 'lib/layout/header.php' ); ?>
-    <?php include locate_template( 'lib/parts/hero.php' ); ?>
 
     <main>
+        <?php include locate_template( 'lib/parts/hero.php' ); ?>

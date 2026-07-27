@@ -3735,6 +3735,11 @@ section {
   padding-right: 1.5rem;
   padding-bottom: 2rem;
 }
+@media screen and (min-width: 1024px) {
+  .contact-block__form {
+    padding-bottom: 4rem;
+  }
+}
 .contact-block__form::before {
   content: "";
   background-color: #6bdad5;
@@ -4198,12 +4203,6 @@ section {
   }
   .page-web-design .text-icon-blocks__block-content {
     width: 80%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .template-contact main {
-    overflow: visible;
   }
 }
 

@@ -94,6 +94,10 @@
         padding-right: 1.5rem;
         padding-bottom: 2rem;
 
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 4rem;
+        }
+
         &::before {
             content: "";
             background-color: #6bdad5;
