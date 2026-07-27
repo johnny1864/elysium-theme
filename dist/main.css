@@ -3818,6 +3818,9 @@ section {
 .contact-block__form-wrapper .gform_wrapper {
   max-width: unset;
 }
+.contact-block__form-wrapper .gform_wrapper ::placeholder {
+  color: var(--color-blue);
+}
 
 .btn {
   font-size: 0.95rem;

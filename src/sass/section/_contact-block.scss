@@ -169,6 +169,9 @@
 
             .gform_wrapper {
                 max-width: unset;
+                ::placeholder {
+                    color: var(--color-blue);
+                }
             }
         }
     }
