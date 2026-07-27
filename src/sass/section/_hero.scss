@@ -462,7 +462,10 @@
                     width: 108%;
 
                     svg {
-                        transform: translate(-1%, 115%);
+                        transform: translate(-1%, 120%);
+                        @media screen and (min-width: 1024px) {
+                            transform: translate(-1%, 105%);
+                        }
                     }
 
                     .cls-underline {
@@ -476,7 +479,7 @@
             img {
                 transform: scale(1.1) translate(5%, 0);
             }
-            
+
             @media screen and (min-width: 1024px) {
                 img {
                     transform: scale(1.2) translate(5%, 0);
