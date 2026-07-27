@@ -1906,10 +1906,13 @@ section {
   width: 108%;
 }
 .hero--contact .section-title span .svg-code svg {
-  transform: translate(-1%, 105%);
+  transform: translate(-1%, 115%);
 }
 .hero--contact .section-title span .svg-code .cls-underline {
   fill: var(--color-pink);
+}
+.hero--contact__image img {
+  transform: scale(1.1) translate(5%, 0);
 }
 @media screen and (min-width: 1024px) {
   .hero--contact__image img {
