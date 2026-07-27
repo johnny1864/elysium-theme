@@ -10,7 +10,25 @@
 
 
     &__intro {
+        position: relative;
         padding: 1rem 0 1.5rem;
+
+        &::before {
+                content: "";
+                position: absolute;
+                width: 80px;
+                right: 0;
+                bottom: 0;
+                aspect-ratio: 1 / 1;
+                background: url(./images/bottom-form-arrow.svg) no-repeat center;
+                z-index: 3;
+                pointer-events: none;
+                transform: translate(50%, 50%);
+
+                @media screen and (min-width: 1025px) {
+                    width: 140px;
+                }
+            }
 
         &-float-image {
             z-index: 2;

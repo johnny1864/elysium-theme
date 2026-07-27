@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <section class="blog__hero">
-    <div class="container">
+    <img class="blog__hero-image" src="<?php echo get_template_directory_uri() ?>/dist/images/blog-bg.png" alt="">
+    <div class="container text-center">
         <h1>Blog</h1>
     </div>
 </section>

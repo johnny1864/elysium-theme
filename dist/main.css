@@ -3642,7 +3642,25 @@ section {
   }
 }
 .contact-block__intro {
+  position: relative;
   padding: 1rem 0 1.5rem;
+}
+.contact-block__intro::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  right: 0;
+  bottom: 0;
+  aspect-ratio: 1/1;
+  background: url(./images/bottom-form-arrow.svg) no-repeat center;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(50%, 50%);
+}
+@media screen and (min-width: 1025px) {
+  .contact-block__intro::before {
+    width: 140px;
+  }
 }
 .contact-block__intro-float-image {
   z-index: 2;
@@ -3786,6 +3804,15 @@ section {
   .btn {
     font-size: 18px;
   }
+}
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+}
+.btn--outline:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 .btn--white {
   background-color: #fff;
@@ -4014,11 +4041,34 @@ section {
   }
 }
 
+.post-card {
+  background-color: rgba(236, 237, 237, 0.5);
+}
 .post-card__thumb {
   display: block;
-  padding-bottom: 56%;
   position: relative;
+  aspect-ratio: 1/1;
+}
+.post-card__content {
+  padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 1025px) {
+  .post-card__content {
+    font-size: 1.2rem;
+  }
+}
+.post-card__title {
+  color: var(--color-blue);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.post-card__meta {
+  text-transform: capitalize;
   margin-bottom: 1rem;
+  color: var(--color-pink);
+  font-size: 1rem a;
+  font-size-color: inherit;
 }
 
 .page-public-relations .hero--basic {
@@ -4135,6 +4185,47 @@ section {
   .template-contact main {
     overflow: visible;
   }
+}
+
+.blog__hero {
+  overflow: visible;
+  background-color: var(--color-blue);
+}
+.blog__hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.blog__hero h1 {
+  font-family: var(--heading-font-pt);
+  color: var(--color-white);
+  font-size: clamp(3rem, 3vw, 4rem);
+}
+.blog__hero .container {
+  position: relative;
+  padding-top: 80px;
+}
+@media screen and (min-width: 1024px) {
+  .blog__hero .container {
+    padding-top: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .blog-posts {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+.blog .post-card {
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

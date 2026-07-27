@@ -533,7 +533,7 @@ jQuery(document).ready(function ($) {
 
     $loadmore.click(function () {
       var $this = $(this);
-      var $postlist = $this.siblings(".blog-posts");
+      var $postlist = $this.closest(".blog-content").find('.blog-posts');
       var query = WP.query;
       var page = WP.current_page;
       var max = WP.max_page;
@@ -560,7 +560,7 @@ jQuery(document).ready(function ($) {
             page = WP.current_page++;
             $loadmore.attr("disabled", false).text($loadmore_text);
             $postlist.append(posts);
-            LazyLoading.update();
+            // LazyLoading.update();
 
             if (WP.current_page >= max) {
               $loadmore.remove();

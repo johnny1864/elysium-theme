@@ -1,8 +1,34 @@
 .post-card {
+    background-color: rgba($color: #eceded, $alpha: 0.50);
+
     &__thumb {
         display: block;
-        padding-bottom: 56%;
         position: relative;
+        aspect-ratio: 1/1;
+    }
+
+    &__content {
+        padding: 1.5rem 1rem;
+
+        @media screen and (min-width: 1025px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__title {
+        color: var(--color-blue);
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    &__meta {
+        text-transform: capitalize;
         margin-bottom: 1rem;
+        color: var(--color-pink);
+        font-size: 1rem
+        a {
+            color: inherit;
+        }
     }
 }
