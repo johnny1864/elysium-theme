@@ -1,0 +1,43 @@
+.featured-post {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    @media screen and (min-width: 1200px) {
+        padding: 2rem 3rem;
+    }
+
+    &__section {
+        padding-top: 0;
+    }
+
+    &__wrapper {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__thumb {
+        display: block;
+        position: relative;
+        aspect-ratio: 1/1;
+        width: 100%;
+        margin-bottom: 1rem;
+        @media screen and (min-width: 1024px) {
+            width: 30%;
+        }
+    }
+
+    &__content {
+        color: var(--color-white);
+        @media screen and (min-width: 1024px) {
+            width: 60%;
+            font-size: 1.25rem;
+        }
+    }
+}

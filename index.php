@@ -9,22 +9,26 @@
 </section>
 
 <?php
-$featured_query = new WP_Query(
-    [
-        'post_type'           => 'post',
-        'posts_per_page'      => 1,
-        'ignore_sticky_posts' => true,
-    ]
-);
+$featured_post = new WP_Query([
+    'post_type'           => 'post',
+    'posts_per_page'      => 1,
+    'ignore_sticky_posts' => true,
+]);
 
 $featured_post_id = 0;
-if ( $featured_query->have_posts() ) : 
-    while ( $featured_query->have_posts() ) :
-        get_template_part('lib/blocks/featured-post');
+if ( $featured_post->have_posts() ) : 
+    while ( $featured_post->have_posts() ) :
+        $featured_post->the_post();
+        ?>
+        <section class="section featured-post__section"> 
+            <div class="container">
+                <?php get_template_part('lib/blocks/featured-post'); ?>
+            </div>
+        </section>
+    <?php
     endwhile;
     wp_reset_postdata();
 endif;
-
 ?>
 
 
