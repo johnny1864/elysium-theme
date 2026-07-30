@@ -179,3 +179,35 @@
         }
         if ($load) exit(); // just exit if template was found and loaded
     });
+
+
+    // Start loop after first post
+    function theme_exclude_featured_post_from_blog( $query ) {
+    if (
+        is_admin() ||
+        ! $query->is_main_query() ||
+        ! $query->is_home()
+    ) {
+        return;
+    }
+
+    $featured_posts = get_posts([
+        'post_type'           => 'post',
+        'posts_per_page'      => 1,
+        'fields'              => 'ids',
+        'ignore_sticky_posts' => true,
+        'no_found_rows'       => true,
+    ]);
+
+    if ( ! empty( $featured_posts ) ) {
+        $excluded_posts = (array) $query->get( 'post__not_in' );
+
+        $query->set(
+            'post__not_in',
+            array_unique(
+                array_merge( $excluded_posts, $featured_posts )
+            )
+        );
+    }
+}
+add_action( 'pre_get_posts', 'theme_exclude_featured_post_from_blog' );

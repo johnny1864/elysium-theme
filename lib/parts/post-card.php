@@ -36,11 +36,11 @@
                 <?php echo esc_html( get_the_date( 'F j, Y' ) ); ?>
             </time>
             <?php if ( $first_category ) : ?>
-                <span aria-hidden="true">|</span>
+                <!-- <span aria-hidden="true">|</span>
 
                 <a href="<?php echo esc_url( get_category_link( $first_category->term_id ) ); ?>">
                     <?php echo esc_html( $first_category->name ); ?>
-                </a>
+                </a> -->
             <?php endif; ?>
         </div>
         <p class="post-card__excerpt">

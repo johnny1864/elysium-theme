@@ -1,11 +1,33 @@
 <?php get_header(); ?>
 
+
 <section class="blog__hero">
     <img class="blog__hero-image" src="<?php echo get_template_directory_uri() ?>/dist/images/blog-bg.png" alt="">
     <div class="container text-center">
         <h1>Blog</h1>
     </div>
 </section>
+
+<?php
+$featured_query = new WP_Query(
+    [
+        'post_type'           => 'post',
+        'posts_per_page'      => 1,
+        'ignore_sticky_posts' => true,
+    ]
+);
+
+$featured_post_id = 0;
+if ( $featured_query->have_posts() ) : 
+    while ( $featured_query->have_posts() ) :
+        get_template_part('lib/blocks/featured-post');
+    endwhile;
+    wp_reset_postdata();
+endif;
+
+?>
+
+
 
 <section class="blog-content">
     <div class="container">
