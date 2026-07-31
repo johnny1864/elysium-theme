@@ -16,10 +16,12 @@
     }
 
     &__title {
+        font-family: var(--heading-font-pt);
         color: var(--color-blue);
         font-size: 1.25rem;
         text-transform: uppercase;
         margin-bottom: 0.5rem;
+        font-weight: 600;
     }
 
     &__meta {

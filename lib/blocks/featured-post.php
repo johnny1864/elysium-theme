@@ -24,14 +24,14 @@ $permalink = get_the_permalink();
 			</div>
 		</a>
 		<div class="featured-post__content">
-			<h3>Featured</h3>
+			<h3 class="featured-post__feature gradiant-text">Featured</h3>
 			<h4 class="featured-post__title">
 				<?php the_title(); ?>
 			</h4>
             
 			<p class="featured-post__excerpt">
 				<?php
-					echo limit(get_the_content(), 35);
+					echo limit(get_the_content(), 60, false);
 				?>
 			</p>
 			<a class="btn btn--white" href="<?php echo $permalink; ?>">

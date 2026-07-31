@@ -44,7 +44,7 @@
 		return $string;
 	}
 
-    function limit($content, $limit = 25) {
+    function limit($content, $limit = 25, $dots = false) {
         if(empty($content)) return;
 
         $excerpt = explode(' ', $content, $limit);
@@ -53,13 +53,15 @@
 
         if (count($excerpt) >= $limit) {
             array_pop($excerpt);
-            $excerpt = implode(" ", $excerpt) . '...';
+            $excerpt = implode(" ", $excerpt);
         } else {
             $excerpt = implode(" ", $excerpt);
         }
 
         $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
         $excerpt = wp_strip_all_tags($excerpt);
+
+        if($dots) $excerpt . '[...]';
         
         return $excerpt;
     }

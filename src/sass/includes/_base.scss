@@ -142,3 +142,42 @@ h3,
     font-size: var(--heading-h3);
   }
 }
+
+h4,
+.h4 {
+  font-size: var(--heading-h4-mobile);
+
+  @media (min-width: 1024px) {
+    font-size: var(--heading-h4);
+  }
+}
+
+h5,
+.h5 {
+  font-size: var(--heading-h5-mobile);
+
+  @media (min-width: 1024px) {
+    font-size: var(--heading-h5);
+  }
+}
+
+h6,
+.h6 {
+  font-size: var(--heading-h6-mobile);
+
+  @media (min-width: 1024px) {
+    font-size: var(--heading-h6);
+  }
+}
+
+.gradiant-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text !important;
+    color: transparent;
+}
+
+b,
+strong {
+    font-weight: bold;
+}

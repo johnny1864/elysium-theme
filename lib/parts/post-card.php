@@ -45,12 +45,7 @@
         </div>
         <p class="post-card__excerpt">
             <?php
-            echo limit(get_the_content(), 35);
-                if(!empty(get_the_excerpt())) {
-                    echo excerpt(30); 
-                }else {
-                    echo limit(get_the_content(), 35);
-                }
+                echo limit(get_the_content(), 35, true);
             ?>
         </p>
         <a class="post-card__link" href="<?php echo $permalink; ?>">
