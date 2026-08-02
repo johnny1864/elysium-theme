@@ -4,7 +4,12 @@
 <section class="blog__hero">
     <img class="blog__hero-image" src="<?php echo get_template_directory_uri() ?>/dist/images/blog-bg.png" alt="">
     <div class="container text-center">
-        <h1>Blog</h1>
+        <h1>
+            <span>
+                <?= getSVG('title-circle'); ?>
+                Blog
+            </span>
+        </h1>
     </div>
 </section>
 

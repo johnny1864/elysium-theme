@@ -48,9 +48,9 @@
                 echo limit(get_the_content(), 35, true);
             ?>
         </p>
-        <a class="post-card__link" href="<?php echo $permalink; ?>">
+        <a class="post-card__link btn btn--arrow" href="<?php echo $permalink; ?>">
             Read More
-            <?= getSVG('') ?>
+            <?= getSVG('btn-arrow'); ?>
         </a>
     </div>
 </article>

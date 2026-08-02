@@ -357,7 +357,8 @@
         }
     }
 
-    &--web-design {
+    &--web-design,
+    &--basic-v2 {
         background-position: right;
         @media screen and (min-width: 1024px) {
             padding-bottom: 0;
@@ -408,6 +409,38 @@
                     transform: translateY(3%);
                     position: relative;
                     z-index: 5;
+                }
+            }
+        }
+    }
+
+    &--basic-v2 {
+
+        &__row {
+            @media screen and (min-width: 1024px) {
+                padding: 3.5rem 0 1.5rem;
+            }
+        }
+
+        &__content {
+            @media screen and (min-width: 1024px) {
+                padding-top: 0;
+                padding-bottom: 3rem;
+                font-size: 1.5rem;
+
+            }
+        }
+        &__image {
+            img {
+                height: auto;
+                @media screen and (min-width: 1024px) {
+                    transform: translateY(5%);
+                    position: relative;
+                    z-index: 5;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateY(0) scale(1.15);
                 }
             }
         }
