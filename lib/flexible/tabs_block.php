@@ -51,7 +51,8 @@ $tabs = get_sub_field('tabs');
             ?>
             <div id="<?php echo handleize($title); ?>" class="tabs-block__panel <?php if($index ==  0) : ?>active<?php endif; ?>">
                 <div class="tabs-block__card">
-                    <div class="tabs-block__card-intro text-center">
+                    <?= getSVG('tabs-border', false, false); ?>
+                    <div class="tabs-block__card-intro text-center position-relative">
                         <?php if(!empty($title)) : ?>
                             <h3 class="tabs-block__card-title">
                                 <?= $title; ?>
@@ -64,7 +65,7 @@ $tabs = get_sub_field('tabs');
                             </span>
                         <?php endif; ?>
                     </div>
-                    <div class="tabs-block__card-body">
+                    <div class="tabs-block__card-body position-relative">
                         <?= $content; ?>
                         <div class="tabs-block__card-row">
                             <?php if(!empty($image)) : ?>
