@@ -3565,6 +3565,7 @@ section {
 }
 .tabs-block__panels {
   position: relative;
+  overflow: hidden;
 }
 .tabs-block__panel {
   display: none;
@@ -4387,6 +4388,11 @@ section {
     color: var(--color-white);
   }
 }
+@media screen and (max-width: 1024px) {
+  .page-public-relations .tabs-block__panels {
+    overflow: hidden;
+  }
+}
 .page-public-relations .tabs-block__card {
   color: var(--color-blue);
 }
@@ -4479,9 +4485,7 @@ section {
     width: 80%;
   }
 }
-.page-web-design .tabs-block__card {
-  color: var(--color-blue);
-}
+.page-web-design .tabs-block__card .tabs-border-mobile .cls-1,
 .page-web-design .tabs-block__card .tabs-border .cls-1 {
   fill: var(--color-turquoise-blue);
 }
