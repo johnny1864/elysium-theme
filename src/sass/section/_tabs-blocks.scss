@@ -11,9 +11,10 @@
 
     .container {
         position: relative;
-         @media screen and (max-width: 1024px) {
+
+        @media screen and (max-width: 1024px) {
             max-width: 650px;
-         }
+        }
     }
 
     &__nav {
@@ -30,11 +31,13 @@
             background-color: var(--color-turquoise-blue);
             border-radius: 2rem;
             padding: 1rem 0.5rem;
+
             &-item {
                 display: none !important;
                 width: 100%;
                 margin-top: 0 !important;
                 pointer-events: none;
+
                 &.active {
                     display: block !important;
                 }
@@ -56,7 +59,7 @@
                 right: 5px;
             }
         }
-        
+
         @media screen and (min-width: 1025px) {
             display: flex;
             gap: 1rem;
@@ -68,6 +71,7 @@
 
             &-item {
                 width: 20%;
+
                 &.active {
                     background-color: var(--color-turquoise-blue);
                 }
@@ -109,6 +113,8 @@
 
         .svg-code,
         .svg-icon {
+
+            &--tabs-border-mobile,
             &--tabs-border {
                 position: absolute;
                 left: 0;
@@ -117,15 +123,31 @@
                 height: auto;
                 pointer-events: none;
             }
+
+            &--tabs-border {
+                display: none;
+            }
+
+            @media screen and (min-width: 1024px) {
+                &--tabs-border-mobile {
+                    display: none;
+                }
+
+                &--tabs-border {
+                    display: block;
+                }
+            }
         }
 
         &-title {
             font-family: var(--heading-font-pt);
             font-size: clamp(1.25rem, 3vw, 2.25rem);
             text-transform: uppercase;
+
             span {
                 display: inline-block;
                 position: relative;
+
                 .svg-code--title-underline,
                 .svg-code--underline {
                     position: absolute;
@@ -170,6 +192,7 @@
 
         &-row {
             padding: 1rem 0;
+
             @media screen and (min-width: 1025px) {
                 display: flex;
                 gap: 1rem;
@@ -177,7 +200,7 @@
             }
         }
 
-        &-right-text{
+        &-right-text {
             @media screen and (min-width: 1025px) {
                 width: 60%;
             }

@@ -51,6 +51,7 @@ $tabs = get_sub_field('tabs');
             ?>
             <div id="<?php echo handleize($title); ?>" class="tabs-block__panel <?php if($index ==  0) : ?>active<?php endif; ?>">
                 <div class="tabs-block__card">
+                    <?= getSVG('tabs-border-mobile', false, false); ?>
                     <?= getSVG('tabs-border', false, false); ?>
                     <div class="tabs-block__card-intro text-center position-relative">
                         <?php if(!empty($title)) : ?>
