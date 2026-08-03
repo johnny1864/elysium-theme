@@ -55,7 +55,12 @@ $tabs = get_sub_field('tabs');
                     <div class="tabs-block__card-intro text-center position-relative">
                         <?php if(!empty($title)) : ?>
                             <h3 class="tabs-block__card-title">
+                                <span>
                                 <?= $title; ?>
+                                <?php if(empty($subtitle)) : ?>
+                                    <?= getSVG('underline', false, false); ?>
+                                <?php endif; ?>
+                                </span>
                             </h3>
                         <?php endif; ?>
                         <?php if(!empty($subtitle)) : ?>

@@ -123,6 +123,19 @@
             font-family: var(--heading-font-pt);
             font-size: clamp(1.25rem, 3vw, 2.25rem);
             text-transform: uppercase;
+            span {
+                display: inline-block;
+                position: relative;
+                .svg-code--title-underline,
+                .svg-code--underline {
+                    position: absolute;
+                    width: 90%;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translate(-50%, 70%);
+                    pointer-events: none;
+                }
+            }
         }
 
         &-subtitle {

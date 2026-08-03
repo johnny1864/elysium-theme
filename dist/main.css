@@ -1908,14 +1908,23 @@ section {
 }
 @media screen and (min-width: 1024px) {
   .hero--basic-v2__row {
-    padding: 3.5rem 0 1.5rem;
+    padding: 5rem 0 0rem;
   }
+}
+.hero--basic-v2__content p {
+  margin-top: 1rem;
+}
+.hero--basic-v2__content p:first-child {
+  margin-top: 0;
 }
 @media screen and (min-width: 1024px) {
   .hero--basic-v2__content {
     padding-top: 0;
     padding-bottom: 3rem;
     font-size: 1.5rem;
+  }
+  .hero--basic-v2__content .section-title {
+    margin-top: 0;
   }
 }
 .hero--basic-v2__image img {
@@ -1930,7 +1939,7 @@ section {
 }
 @media screen and (min-width: 1024px) {
   .hero--basic-v2__image img {
-    transform: translateY(0) scale(1.15);
+    transform: translateY(-2%) scale(1.15);
   }
 }
 .hero--contact {
@@ -3598,6 +3607,19 @@ section {
   font-size: clamp(1.25rem, 3vw, 2.25rem);
   text-transform: uppercase;
 }
+.tabs-block__card-title span {
+  display: inline-block;
+  position: relative;
+}
+.tabs-block__card-title span .svg-code--title-underline,
+.tabs-block__card-title span .svg-code--underline {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 70%);
+  pointer-events: none;
+}
 .tabs-block__card-subtitle {
   display: inline-block;
   position: relative;
@@ -4316,11 +4338,9 @@ section {
   background-color: var(--color-blue);
 }
 .page-public-relations .hero--basic__title {
-  background: linear-gradient(to right, #5f8fd8 0%, #71d9d2 10%, #71d9d2 50%, #5f8fd8 55%, #5f8fd8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-turquoise-blue);
+  background: unset;
+  -webkit-text-fill-color: unset;
 }
 @media screen and (min-width: 1400px) {
   .page-public-relations .hero--basic__image {
@@ -4337,6 +4357,19 @@ section {
 }
 .page-public-relations .text-icon-blocks__title {
   font-size: clamp(1.4rem, 2.25vw, 2rem);
+}
+.page-public-relations .tabs-block__nav-item.active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+@media screen and (max-width: 1024px) {
+  .page-public-relations .tabs-block__nav {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
+}
+.page-public-relations .tabs-block__card-intro .cls-underline {
+  fill: var(--color-blue);
 }
 .page-public-relations .accordions-block .accordion__title {
   position: relative;

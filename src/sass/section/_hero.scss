@@ -278,14 +278,14 @@
             font-family: var(--heading-font-pt);
             font-weight: 700;
             text-transform: uppercase;
-            background: linear-gradient(to right, #5f8fd8 0%, #015182 8%, #015182 70%, #5f8fd8 80%,  #5f8fd8 100%);
+            background: linear-gradient(to right, #5f8fd8 0%, #015182 8%, #015182 70%, #5f8fd8 80%, #5f8fd8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
             letter-spacing: 1px;
             line-height: 1;
-            
+
         }
 
         &__subheading {
@@ -300,7 +300,7 @@
             padding: 4rem 0.5rem 0;
             transform: translateY(4rem);
             z-index: 2;
-  
+
 
             @media screen and (min-width: 768px) {
                 padding: 5rem 0;
@@ -311,10 +311,11 @@
 
             @media screen and (min-width: 1025px) {
                 font-size: 1.5rem;
+
                 .btn {
                     margin-top: 1.5rem;
                 }
-            } 
+            }
         }
 
         &__image {
@@ -360,9 +361,11 @@
     &--web-design,
     &--basic-v2 {
         background-position: right;
+
         @media screen and (min-width: 1024px) {
             padding-bottom: 0;
         }
+
         .section-title {
             font-size: clamp(1.8rem, 2.5vw, 2.2rem);
             background: unset;
@@ -396,6 +399,7 @@
             color: var(--color-white);
             padding: 1.5rem 0.5rem;
             transform: unset;
+
             @media screen and (min-width: 1024px) {
                 padding-top: 5rem;
                 font-size: 1.5rem;
@@ -405,7 +409,8 @@
         &__image {
             img {
                 height: auto;
-                @media screen and (min-width: 1024px)  {
+
+                @media screen and (min-width: 1024px) {
                     transform: translateY(3%);
                     position: relative;
                     z-index: 5;
@@ -418,21 +423,34 @@
 
         &__row {
             @media screen and (min-width: 1024px) {
-                padding: 3.5rem 0 1.5rem;
+                padding: 5rem 0 0rem;
             }
         }
 
         &__content {
+            p {
+                margin-top: 1rem;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
             @media screen and (min-width: 1024px) {
                 padding-top: 0;
                 padding-bottom: 3rem;
                 font-size: 1.5rem;
 
+                .section-title {
+                    margin-top: 0;
+                }
             }
         }
+
         &__image {
             img {
                 height: auto;
+
                 @media screen and (min-width: 1024px) {
                     transform: translateY(5%);
                     position: relative;
@@ -440,7 +458,7 @@
                 }
 
                 @media screen and (min-width: 1024px) {
-                    transform: translateY(0) scale(1.15);
+                    transform: translateY(-2%) scale(1.15);
                 }
             }
         }
@@ -484,6 +502,7 @@
             @media screen and (min-width: 1400px) {
                 white-space: nowrap;
             }
+
             span {
                 position: relative;
                 color: var(--color-pink);
@@ -496,6 +515,7 @@
 
                     svg {
                         transform: translate(-1%, 125%);
+
                         @media screen and (min-width: 1024px) {
                             transform: translate(-1%, 105%);
                         }
@@ -527,18 +547,20 @@
         }
 
         &__subheading {
-            font-family: var(--body-font); 
-            font-size: clamp(1.75rem, 2.5vw, 2.5rem); 
-            text-transform: uppercase; 
+            font-family: var(--body-font);
+            font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+            text-transform: uppercase;
             margin-bottom: 0.5rem;
         }
 
         &__content {
             margin-top: -2rem;
+
             @media screen and (min-width: 1024px) {
                 margin-top: 0;
                 padding-bottom: 3rem;
             }
+
             @media screen and (min-width: 1200px) {
                 font-size: 1.25rem;
             }
