@@ -88,6 +88,10 @@
         }
     }
 
+    .testimonials::before {
+        display: none;
+    }
+
     .text-icon-blocks {
 
         &__intro {

@@ -45,7 +45,23 @@
         }
     }
 
-    .tab-block {
-        
+    .tabs-block {
+        &__nav {
+            
+        }
+
+        &__card {
+            color: var(--color-blue);
+            
+            .tabs-border .cls-1 {
+                fill: var(--color-turquoise-blue);
+            }
+    
+            &-intro {
+                .cls-underline {
+                    fill: var(--color-turquoise-blue);
+                }
+            }
+        }
     }
 }

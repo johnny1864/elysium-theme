@@ -4405,6 +4405,9 @@ section {
 .page-public-relations .accordions-block .accordion.active .accordion__title {
   color: var(--color-blue);
 }
+.page-public-relations .testimonials::before {
+  display: none;
+}
 .page-public-relations .text-icon-blocks__intro {
   margin-bottom: 1.5rem;
 }
@@ -4472,6 +4475,16 @@ section {
     width: 80%;
   }
 }
+.page-web-design .tabs-block__card {
+  color: var(--color-blue);
+}
+.page-web-design .tabs-block__card .tabs-border .cls-1 {
+  fill: var(--color-turquoise-blue);
+}
+.page-web-design .tabs-block__card-intro .cls-underline {
+  fill: var(--color-turquoise-blue);
+}
+
 @media screen and (min-width: 1025px) {
   .template-contact .gheader:not(.sticky--scrolled) .btn--white:not(:hover) {
     color: var(--color-blue);
