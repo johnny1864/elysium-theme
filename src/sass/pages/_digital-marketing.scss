@@ -59,11 +59,22 @@
 
             @media screen and (min-width: 1400px) {
                 transform: translateY(-45%);
+                margin-bottom: 0;
             }
         }
 
         &__card {
             color: var(--color-white);
+
+            @media screen and (min-width: 1024px) {
+                padding-top: 0;
+            }
+
+            &-body {
+                @media screen and (min-width: 1400px) {
+                    padding-top: 1.5rem;
+                }
+            }
 
             .tabs-border .cls-1 {
                 fill: var(--color-turquoise-blue);

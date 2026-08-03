@@ -4687,10 +4687,21 @@ section {
 @media screen and (min-width: 1400px) {
   .page-digital-marketing-solutions .tabs-block__nav {
     transform: translateY(-45%);
+    margin-bottom: 0;
   }
 }
 .page-digital-marketing-solutions .tabs-block__card {
   color: var(--color-white);
+}
+@media screen and (min-width: 1024px) {
+  .page-digital-marketing-solutions .tabs-block__card {
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page-digital-marketing-solutions .tabs-block__card-body {
+    padding-top: 1.5rem;
+  }
 }
 .page-digital-marketing-solutions .tabs-block__card .tabs-border .cls-1 {
   fill: var(--color-turquoise-blue);
