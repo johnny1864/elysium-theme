@@ -13,6 +13,11 @@ $tabs = get_sub_field('tabs');
     <img loading="lazy" class="accordions-block__bg-image" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/accordions-bg.webp' ); ?>" alt="">
     <?php endif ?>
     <div class="container">
+        <?php
+        if (strpos($_SERVER['REQUEST_URI'], 'digital-marketing-solutions') !== false) {
+            echo getSVG('dm-tab-border', false, false);
+        }
+        ?>
         <div class="tabs-block__nav">
             <?php foreach($tabs as $index => $tab) : ?>
                 <?php 

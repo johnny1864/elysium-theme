@@ -1,0 +1,79 @@
+.page-digital-marketing-solutions {
+    .hero {
+
+        .section-title,
+        .hero--basic__subheading {
+            color: var(--color-blue);
+        }
+
+        &--basic-v2__content {
+            color: var(--color-blue);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .hero--basic-v2__image img {
+                transform: translateY(-4%) scale(1.1);
+            }
+
+            &--basic-v2__content {
+                padding-bottom: 4rem;
+            }
+
+            .hero--basic__subheading {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .tabs-block {
+        .svg-code {
+            &--dm-tab-border {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                pointer-events: none;
+                display: none;
+
+                @media screen and (min-width: 1400px) {
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 1400px) {
+                &--tabs-border {
+                    display: none;
+                }
+            }
+
+        }
+
+        &__nav {
+            @media screen and (min-width: 1024px) {
+                justify-content: center;
+
+                &-item {
+                    margin-top: 0;
+                }
+            }
+
+            @media screen and (min-width: 1400px) {
+                transform: translateY(-45%);
+            }
+        }
+
+        &__card {
+            color: var(--color-white);
+
+            .tabs-border .cls-1 {
+                fill: var(--color-turquoise-blue);
+            }
+
+            &-intro {
+                .cls-underline {
+                    fill: var(--color-turquoise-blue);
+                }
+            }
+        }
+    }
+}

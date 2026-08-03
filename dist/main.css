@@ -3655,6 +3655,10 @@ section {
 .tabs-block__card-body {
   padding-top: 1rem;
 }
+.tabs-block__card-body ul,
+.tabs-block__card-body ol {
+  padding-top: 0.5rem;
+}
 @media screen and (min-width: 1025px) {
   .tabs-block__card-body {
     width: 85%;
@@ -4634,6 +4638,65 @@ section {
 }
 .single-post__title {
   text-wrap: initial;
+}
+
+.page-digital-marketing-solutions .hero .section-title,
+.page-digital-marketing-solutions .hero .hero--basic__subheading {
+  color: var(--color-blue);
+}
+.page-digital-marketing-solutions .hero--basic-v2__content {
+  color: var(--color-blue);
+}
+@media screen and (min-width: 1024px) {
+  .page-digital-marketing-solutions .hero .hero--basic-v2__image img {
+    transform: translateY(-4%) scale(1.1);
+  }
+  .page-digital-marketing-solutions .hero--basic-v2__content {
+    padding-bottom: 4rem;
+  }
+  .page-digital-marketing-solutions .hero .hero--basic__subheading {
+    font-size: 1.5rem;
+  }
+}
+.page-digital-marketing-solutions .tabs-block .svg-code--dm-tab-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  .page-digital-marketing-solutions .tabs-block .svg-code--dm-tab-border {
+    display: block;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page-digital-marketing-solutions .tabs-block .svg-code--tabs-border {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .page-digital-marketing-solutions .tabs-block__nav {
+    justify-content: center;
+  }
+  .page-digital-marketing-solutions .tabs-block__nav-item {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page-digital-marketing-solutions .tabs-block__nav {
+    transform: translateY(-45%);
+  }
+}
+.page-digital-marketing-solutions .tabs-block__card {
+  color: var(--color-white);
+}
+.page-digital-marketing-solutions .tabs-block__card .tabs-border .cls-1 {
+  fill: var(--color-turquoise-blue);
+}
+.page-digital-marketing-solutions .tabs-block__card-intro .cls-underline {
+  fill: var(--color-turquoise-blue);
 }
 
 /*# sourceMappingURL=main.css.map */
