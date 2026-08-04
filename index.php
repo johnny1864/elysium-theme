@@ -54,7 +54,7 @@ endif;
 
         </div>
 
-        <?php if(have_posts()) get_template_part('lib/parts/loadmore'); ?>
+        <?php if(have_posts()) //get_template_part('lib/parts/loadmore'); ?>
 
     </div>
 </section>

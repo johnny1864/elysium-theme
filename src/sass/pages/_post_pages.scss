@@ -203,7 +203,7 @@
         position: absolute;
         top: 1.5rem;
         display: inline-block;
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: var(--heading-font-pt);
         font-weight: bold;
         font-style: italic;
@@ -244,7 +244,7 @@
     }
 
     @media screen and (min-width: 1024px) {
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin: 1rem 0
     }
 }
