@@ -9,6 +9,8 @@
         color: var(--color-pink) !important;
         margin-top: 0;
         margin-bottom: 1rem;
+        padding-left: 0;
+        font-weight: normal;
 
         .svg-icon {
             margin-right: 0.5rem;
@@ -31,6 +33,7 @@
 
         .svg-icon {
             margin-right: 1rem;
+
             @media screen and (min-width: 1024px) {
                 height: 1.25rem;
                 width: 1.25rem;
@@ -68,16 +71,21 @@
             margin: 0.5em 0;
 
             @media screen and (min-width: 1024px) {
-                margin-bottom: 1em 0;
+                margin: 1.5em 0 1em;
             }
         }
 
         p {
             margin-bottom: 1rem;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 1.5rem;
+            }
         }
 
         a:not(.btn) {
             color: var(--color-pink);
+            text-decoration: none;
         }
 
         @media screen and (min-width: 1024px) {
@@ -92,5 +100,143 @@
 
     &__title {
         text-wrap: initial;
+    }
+
+    &__cta {
+        .btn {
+            @media screen and (min-width: 1024px) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__post-share {
+        background-color: var(--color-pink);
+        border-radius: 35px;
+        padding: 1.5rem 1rem;
+        margin-top: 1.5rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 3rem;
+            padding: 2rem;
+            width: 85%;
+        }
+
+        &-title {
+            color: var(--color-white);
+            margin-top: 0 !important;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .post-share {
+
+            &__links {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 0;
+
+                @media screen and (min-width: 1024px) {
+                    justify-content: flex-end;
+
+                }
+            }
+
+            &__item {
+
+                &::before {
+                    display: none;
+                }
+
+                a {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px;
+                    background-color: var(--color-white);
+                    border-radius: 50%;
+
+                    @media screen and (min-width: 1024px) {
+                        padding: 7px;
+                    }
+
+                    svg {
+                        height: 1rem;
+                        width: 1rem;
+
+                        @media screen and (min-width: 1024px) {
+                            height: 1.1rem;
+                            width: 1.1rem;
+                        }
+
+
+                        path {
+                            fill: var(--color-pink);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post-blockquote {
+    position: relative;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.1em;
+
+    &::before,
+    &::after {
+
+        position: absolute;
+        top: 1.5rem;
+        display: inline-block;
+        font-size: 2em;
+        font-family: var(--heading-font-pt);
+        font-weight: bold;
+        font-style: italic;
+
+        @media screen and (min-width: 1024px) {
+            top: 2.5rem;
+        }
+    }
+
+    &::before {
+        content: '“';
+        left: 5%;
+    }
+
+    &::after {
+        content: "”";
+        right: 5%;
+    }
+
+    &__border {
+        display: block;
+        width: 100%;
+    }
+
+    &__content {
+        width: 75%;
+        margin: 0 auto;
+        padding: 1rem 0 1.5rem;
+        text-wrap: balance;
+
+        @media screen and (min-width: 1024px) {
+            padding: 2rem 0 2.5rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.25em;
+        margin: 1rem 0
     }
 }

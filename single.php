@@ -1,7 +1,11 @@
 <?php get_header(); ?>
+
 <div class="single-post__spacer">
     <img class="single-post__spacer-image" src="<?php echo get_template_directory_uri() ?>/dist/images/blog-bg.png" alt="">
 </div>
+<style>
+
+</style>
 <section class="page-content single-post__content">
     <div class="container">
        <a href="/blog" class="back-button btn">
@@ -20,14 +24,28 @@
                         </time>
                     </div>
                 </div>
+                <?php 
+                   /* if ( has_post_thumbnail() ) {
+                        echo get_the_post_thumbnail(
+                            get_the_ID(),
+                            'large',
+                            [
+                                'class' => 'post-featured-image',
+                                'alt'   => get_the_title(),
+                            ]
+                        );
+                    }*/
+                ?>
                 <?php the_content(); ?>
+                <div class="single-post__cta">
+                    <a href="/contact" class="btn btn--pink">
+                        Get Started
+                    </a>
+                </div>
+                <?php get_template_part('lib/parts/share-links'); ?>
             <?php endwhile; ?>
         <?php endif; ?>
-        <div class="cta">
-            <a href="/contact" class="btn btn--pink">
-                Get Started
-            </a>
-        </div>
+        
     </div>
 </section>
 

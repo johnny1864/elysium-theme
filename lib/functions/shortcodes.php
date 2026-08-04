@@ -234,3 +234,68 @@ function custom_blockquote_shortcode( $atts, $content = null ) {
     <?php
     return ob_get_clean();
 }
+
+function post_blockquote_shortcode($atts, $content = null) {
+    $atts = shortcode_atts(
+        array(
+            'author' => '',
+            'source' => '',
+            'class'  => '',
+        ),
+        $atts,
+        'blockquote'
+    );
+
+    $classes = array('custom-blockquote');
+
+    if (!empty($atts['class'])) {
+        $classes[] = sanitize_html_class($atts['class']);
+    }
+
+    ob_start();
+    ?>
+
+    <blockquote class="post-blockquote <?php echo esc_attr(implode(' ', $classes)); ?>">
+
+        <img
+            class="block-quote-top post-blockquote__border"
+            src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/block-quote-top.png'); ?>"
+            alt=""
+            aria-hidden="true"
+        >
+
+        <div class="post-blockquote__content">
+            <?php echo wpautop(do_shortcode($content)); ?>
+        </div>
+
+        <img
+            class="block-quote-bottom post-blockquote__border"
+            src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/block-quote-bottom.png'); ?>"
+            alt=""
+            aria-hidden="true"
+        >
+
+        <?php if ($atts['author'] || $atts['source']) : ?>
+            <footer class="custom-blockquote__footer">
+                <?php if ($atts['author']) : ?>
+                    <cite class="custom-blockquote__author">
+                        <?php echo esc_html($atts['author']); ?>
+                    </cite>
+                <?php endif; ?>
+
+                <?php if ($atts['source']) : ?>
+                    <span class="custom-blockquote__source">
+                        <?php echo esc_html($atts['source']); ?>
+                    </span>
+                <?php endif; ?>
+            </footer>
+        <?php endif; ?>
+
+    </blockquote>
+
+    <?php
+
+    return ob_get_clean();
+}
+
+add_shortcode('post_blockquote', 'post_blockquote_shortcode');
