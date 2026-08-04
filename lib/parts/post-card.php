@@ -29,7 +29,7 @@
         <h4 class="post-card__title"><?php the_title(); ?></h4>
         <div class="post-card__meta">
             <span class="post-card__author">
-                <?php echo esc_html( get_the_author() ); ?>
+                By <?php echo esc_html( get_the_author() ); ?>
             </span>
             <span aria-hidden="true">|</span>
             <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
