@@ -30,6 +30,7 @@
         display: flex;
         align-items: center;
         padding: 0.5rem 0;
+        color: var(--color-pink);
 
         .svg-icon {
             margin-right: 1rem;
@@ -72,6 +73,13 @@
 
             @media screen and (min-width: 1024px) {
                 margin: 1.5em 0 1em;
+            }
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            li {
+                padding-bottom: 0.5rem;
             }
         }
 

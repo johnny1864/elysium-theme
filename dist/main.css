@@ -4028,6 +4028,7 @@ section {
   align-items: center;
   color: var(--color-blue);
   padding-left: 0;
+  font-weight: normal;
 }
 .btn--arrow .svg-icon {
   margin-left: 0.5rem;
@@ -4312,8 +4313,11 @@ section {
   text-transform: capitalize;
   margin-bottom: 1rem;
   color: var(--color-pink);
-  font-size: 1rem a;
-  font-size-color: inherit;
+  font-size: 1rem;
+  font-family: var(--heading-font-pt);
+}
+.post-card__meta a {
+  color: inherit;
 }
 
 .featured-post {
@@ -4772,6 +4776,7 @@ section {
   display: flex;
   align-items: center;
   padding: 0.5rem 0;
+  color: var(--color-pink);
 }
 .single-post__date .svg-icon {
   margin-right: 1rem;
@@ -4818,6 +4823,12 @@ section {
   .single-post__content h6 {
     margin: 1.5em 0 1em;
   }
+}
+.single-post__content ul {
+  margin-bottom: 1rem;
+}
+.single-post__content ul li {
+  padding-bottom: 0.5rem;
 }
 .single-post__content p {
   margin-bottom: 1rem;
